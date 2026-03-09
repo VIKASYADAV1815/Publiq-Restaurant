@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #FDF5E6; /* Lighter parchment - Old Lace */
+  --color-deep-brown: #5D4037; /* Lighter brown - Earthier */
+  --color-golden-highlight: #D4AF37; /* Brighter gold */
+  
+  --font-playfair: var(--font-playfair);
+  --font-cinzel: var(--font-cinzel);
+  --font-libre: var(--font-libre);
+}
+
+:root {
+  --background: #FDF5E6;
+  --foreground: #5D4037;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Vintage Paper Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 50;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-primary {
+    @apply font-playfair text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+  
+  .heading-secondary {
+    @apply font-cinzel text-2xl md:text-3xl font-semibold tracking-wide uppercase;
+  }
+  
+  .text-body {
+    @apply font-libre text-base md:text-lg leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-deep-brown text-parchment font-cinzel tracking-widest uppercase text-sm border border-deep-brown hover:bg-transparent hover:text-deep-brown transition-all duration-300 shadow-md;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 bg-transparent text-deep-brown font-cinzel tracking-widest uppercase text-sm border border-deep-brown hover:bg-deep-brown hover:text-parchment transition-all duration-300 shadow-md;
+  }
+}
