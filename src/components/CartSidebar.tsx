@@ -6,7 +6,11 @@ import { X, Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 
 export default function CartSidebar() {
-  const { items, isOpen, toggleCart, updateQuantity, removeItem } = useCartStore();
+  const items = useCartStore((state) => state.items);
+  const isOpen = useCartStore((state) => state.isOpen);
+  const toggleCart = useCartStore((state) => state.toggleCart);
+  const updateQuantity = useCartStore((state) => state.updateQuantity);
+  const removeItem = useCartStore((state) => state.removeItem);
   const cartRef = useRef<HTMLDivElement>(null);
 
   // Close on click outside
@@ -23,12 +27,16 @@ export default function CartSidebar() {
   // Disable body scroll when cart is open
   useEffect(() => {
     if (isOpen) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     } else {
       document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "0px";
     }
     return () => {
       document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "0px";
     };
   }, [isOpen]);
 

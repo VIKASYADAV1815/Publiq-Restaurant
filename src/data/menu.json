@@ -6,10 +6,10 @@
     "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?q=80&w=800&auto=format&fit=crop",
     "description": "Premium Spirits",
     "items": [
-        {"id": "ba1", "name": "Blender's Pride", "price": 379, "veg": true, "desc": "Whisky", "image": "https://images.unsplash.com/photo-1629243497125-9154a4c688c2?q=80&w=400&auto=format&fit=crop"},
+        {"id": "ba1", "name": "Blender's Pride", "price": 379, "veg": true, "desc": "Whisky", "image": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba2", "name": "100 Pipers 12 Years", "price": 579, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
-        {"id": "ba3", "name": "Black Dog 12 Years", "price": 579, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1616166330003-8e10464618a3?q=80&w=400&auto=format&fit=crop"},
-        {"id": "ba4", "name": "Black & White", "price": 509, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1629243497125-9154a4c688c2?q=80&w=400&auto=format&fit=crop"},
+        {"id": "ba3", "name": "Black Dog 12 Years", "price": 579, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
+        {"id": "ba4", "name": "Black & White", "price": 509, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba5", "name": "Ballantine's", "price": 599, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba6", "name": "Jameson", "price": 649, "veg": true, "desc": "Irish Whiskey", "image": "https://images.unsplash.com/photo-1514218953589-2d7d37efd2dc?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba7", "name": "Camino Tequila", "price": 649, "veg": true, "desc": "Tequila", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
@@ -17,29 +17,29 @@
         {"id": "ba9", "name": "Jack Daniel's", "price": 999, "veg": true, "desc": "Tennessee Whiskey", "image": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba10", "name": "Jim Beam", "price": 549, "veg": true, "desc": "Bourbon", "image": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba11", "name": "Red Label", "price": 699, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?q=80&w=400&auto=format&fit=crop"},
-        {"id": "ba12", "name": "Black Label", "price": 999, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1616166330003-8e10464618a3?q=80&w=400&auto=format&fit=crop"},
+        {"id": "ba12", "name": "Black Label", "price": 999, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba13", "name": "Bacardi White", "price": 399, "veg": true, "desc": "Rum", "image": "https://images.unsplash.com/photo-1614313511387-1436a4480ebb?q=80&w=400&auto=format&fit=crop"},
-        {"id": "ba14", "name": "Jägermeister", "price": 799, "veg": true, "desc": "Liqueur", "image": "https://images.unsplash.com/photo-1629243497125-9154a4c688c2?q=80&w=400&auto=format&fit=crop"},
+        {"id": "ba14", "name": "Jägermeister", "price": 799, "veg": true, "desc": "Liqueur", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba15", "name": "100 Pipers 8 Years", "price": 499, "veg": true, "desc": "Scotch", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba16", "name": "Old Monk", "price": 349, "veg": true, "desc": "Rum", "image": "https://images.unsplash.com/photo-1614313511387-1436a4480ebb?q=80&w=400&auto=format&fit=crop"},
         {"id": "ba17", "name": "Absolut", "price": 549, "veg": true, "desc": "Vodka", "image": "https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=400&auto=format&fit=crop"},
-        {"id": "ba18", "name": "Smirnoff", "price": 399, "veg": true, "desc": "Vodka", "image": "https://images.unsplash.com/photo-1616166330003-8e10464618a3?q=80&w=400&auto=format&fit=crop"}
+        {"id": "ba18", "name": "Smirnoff", "price": 399, "veg": true, "desc": "Vodka", "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=400&auto=format&fit=crop"}
     ]
   },
   {
     "id": "beer-breezer",
     "name": "Beer & Breezer",
     "hindiName": "माल रोड की ठंडी बीयर",
-    "image": "https://images.unsplash.com/photo-1535958636474-b021ee8872a3?q=80&w=800&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1618885472179-5e474019f2a9?q=80&w=800&auto=format&fit=crop",
     "description": "Chilled Perfection",
     "items": [
-        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "Strong Beer", "image": "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?q=80&w=400&auto=format&fit=crop"},
-        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "Premium Beer", "image": "https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=400&auto=format&fit=crop"},
-        {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "Light Beer", "image": "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?q=80&w=400&auto=format&fit=crop"},
-        {"id": "bb4", "name": "Corona", "price": 319, "veg": true, "desc": "Premium Beer", "image": "https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=400&auto=format&fit=crop"},
-        {"id": "bb5", "name": "Breezer", "price": 249, "veg": true, "desc": "Flavored Drink", "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=400&auto=format&fit=crop"},
-        {"id": "bb6", "name": "Bucket: Bud Magnum/Carlsberg", "price": 999, "veg": true, "desc": "3 Bottles", "image": "https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=400&auto=format&fit=crop"},
-        {"id": "bb7", "name": "Bucket: Bud Light/Corona", "price": 889, "veg": true, "desc": "3 Bottles", "image": "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?q=80&w=400&auto=format&fit=crop"}
+        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "Strong Beer", "image": "https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=400&auto=format&fit=crop"},
+        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "Premium Beer", "image": "https://images.unsplash.com/photo-1597075095309-880945df3701?q=80&w=400&auto=format&fit=crop"},
+        {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "Light Beer", "image": "https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=400&auto=format&fit=crop"},
+        {"id": "bb4", "name": "Corona", "price": 319, "veg": true, "desc": "Premium Beer", "image": "https://images.unsplash.com/photo-1625633863236-7f1830dd5df6?q=80&w=400&auto=format&fit=crop"},
+        {"id": "bb5", "name": "Breezer", "price": 249, "veg": true, "desc": "Flavored Drink", "image": "https://images.unsplash.com/photo-1544145945-f904253d0c71?q=80&w=400&auto=format&fit=crop"},
+        {"id": "bb6", "name": "Bucket: Bud Magnum/Carlsberg", "price": 999, "veg": true, "desc": "3 Bottles", "image": "https://images.unsplash.com/photo-1597075095309-880945df3701?q=80&w=400&auto=format&fit=crop"},
+        {"id": "bb7", "name": "Bucket: Bud Light/Corona", "price": 889, "veg": true, "desc": "3 Bottles", "image": "https://images.unsplash.com/photo-1625633863236-7f1830dd5df6?q=80&w=400&auto=format&fit=crop"}
     ]
   },
   {
@@ -49,13 +49,13 @@
     "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop",
     "description": "Signature Mixes",
     "items": [
-        {"id": "cc1", "name": "LIIT", "price": 799, "veg": true, "desc": "Long Island Iced Tea", "image": "https://images.unsplash.com/photo-1536935338788-843bb5288c72?q=80&w=400&auto=format&fit=crop"},
+        {"id": "cc1", "name": "LIIT", "price": 799, "veg": true, "desc": "Long Island Iced Tea", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
         {"id": "cc2", "name": "Bull Frog", "price": 699, "veg": true, "desc": "Vodka, Rum, Gin, Tequila, Blue Curacao, Red Bull", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
-        {"id": "cc3", "name": "Zombie", "price": 699, "veg": true, "desc": "Rum Blend", "image": "https://images.unsplash.com/photo-1536935338788-843bb5288c72?q=80&w=400&auto=format&fit=crop"},
+        {"id": "cc3", "name": "Zombie", "price": 699, "veg": true, "desc": "Rum Blend", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
         {"id": "cc4", "name": "Mai Tai", "price": 599, "veg": true, "desc": "Rum Cocktail", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
-        {"id": "cc5", "name": "Cosmopolitan", "price": 699, "veg": true, "desc": "Vodka Cranberry", "image": "https://images.unsplash.com/photo-1536935338788-843bb5288c72?q=80&w=400&auto=format&fit=crop"},
+        {"id": "cc5", "name": "Cosmopolitan", "price": 699, "veg": true, "desc": "Vodka Cranberry", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
         {"id": "cc6", "name": "Pina Colada", "price": 699, "veg": true, "desc": "Rum Coconut Pineapple", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
-        {"id": "cc7", "name": "Sex on the Beach", "price": 599, "veg": true, "desc": "Vodka Peach Orange", "image": "https://images.unsplash.com/photo-1536935338788-843bb5288c72?q=80&w=400&auto=format&fit=crop"},
+        {"id": "cc7", "name": "Sex on the Beach", "price": 599, "veg": true, "desc": "Vodka Peach Orange", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
         {"id": "cc8", "name": "Whiskey Sour", "price": 599, "veg": true, "desc": "Whiskey Lemon", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"},
         {"id": "cc9", "name": "Salty Dog", "price": 599, "veg": true, "desc": "Gin/Vodka Grapefruit", "image": "https://images.unsplash.com/photo-1536935338788-843bb5288c72?q=80&w=400&auto=format&fit=crop"},
         {"id": "cc10", "name": "Jäger Bomb", "price": 899, "veg": true, "desc": "Jägermeister & Red Bull", "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop"}
@@ -142,19 +142,19 @@
     "id": "main-course",
     "name": "Main Course",
     "hindiName": "From All Over India",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=800&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
     "description": "Hearty Meals",
     "items": [
-        {"id": "mc1", "name": "Dal Makhani", "price": 379, "veg": true, "desc": "Creamy Lentils", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc2", "name": "Mix Veggies", "price": 379, "veg": true, "desc": "Seasonal Veg", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc3", "name": "Shahi Paneer", "price": 499, "veg": true, "desc": "Royal Paneer", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc4", "name": "Paneer Butter Masala", "price": 499, "veg": true, "desc": "Butter Gravy", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc5", "name": "Kadai Paneer", "price": 499, "veg": true, "desc": "Spiced Paneer", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc6", "name": "Murga Makhan Wala", "price": 569, "veg": false, "desc": "Butter Chicken", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc7", "name": "Chicken Do Pyaza", "price": 569, "veg": false, "desc": "Onion Chicken", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc8", "name": "Mutton Rogan Josh", "price": 689, "veg": false, "desc": "Kashmiri Mutton", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc9", "name": "Lal Maas", "price": 689, "veg": false, "desc": "Spicy Mutton", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"},
-        {"id": "mc10", "name": "Egg Curry", "price": 289, "veg": false, "desc": "Egg Gravy", "image": "https://images.unsplash.com/photo-1585937421612-70a008356f36?q=80&w=400&auto=format&fit=crop"}
+        {"id": "mc1", "name": "Dal Makhani", "price": 379, "veg": true, "desc": "Creamy Lentils", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc2", "name": "Mix Veggies", "price": 379, "veg": true, "desc": "Seasonal Veg", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc3", "name": "Shahi Paneer", "price": 499, "veg": true, "desc": "Royal Paneer", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc4", "name": "Paneer Butter Masala", "price": 499, "veg": true, "desc": "Butter Gravy", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc5", "name": "Kadai Paneer", "price": 499, "veg": true, "desc": "Spiced Paneer", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc6", "name": "Murga Makhan Wala", "price": 569, "veg": false, "desc": "Butter Chicken", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc7", "name": "Chicken Do Pyaza", "price": 569, "veg": false, "desc": "Onion Chicken", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc8", "name": "Mutton Rogan Josh", "price": 689, "veg": false, "desc": "Kashmiri Mutton", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc9", "name": "Lal Maas", "price": 689, "veg": false, "desc": "Spicy Mutton", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"},
+        {"id": "mc10", "name": "Egg Curry", "price": 289, "veg": false, "desc": "Egg Gravy", "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"}
     ]
   },
   {

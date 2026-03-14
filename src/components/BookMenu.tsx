@@ -52,9 +52,9 @@ const Page = forwardRef<HTMLDivElement, PageProps>(({ children, number, classNam
 Page.displayName = "Page";
 
 // Cover Page Component
-const CoverPage = forwardRef<HTMLDivElement, any>((props, ref) => {
+const CoverPage = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
   return (
-    <div className="demoPage bg-[#8D6E63] text-[#3E2723] h-full flex flex-col items-center justify-center p-6 border-2 border-deep-brown relative shadow-2xl rounded-r-md overflow-hidden group" ref={ref}>
+    <div {...props} className="demoPage bg-[#8D6E63] text-[#3E2723] h-full flex flex-col items-center justify-center p-6 border-2 border-deep-brown relative shadow-2xl rounded-r-md overflow-hidden group" ref={ref}>
       {/* Rich Texture */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/leather.png')] opacity-80 mix-blend-multiply" />
       <div className="absolute inset-0 bg-linear-to-br from-[#A1887F]/30 to-black/40 mix-blend-overlay" />
@@ -99,7 +99,7 @@ const CoverPage = forwardRef<HTMLDivElement, any>((props, ref) => {
         </div>
         
         <div className="mt-8 border-t border-[#3E2723]/30 pt-4 w-3/4 mx-auto">
-             <p className="font-libre italic text-sm text-parchment opacity-90 tracking-wide">"Where Heritage Meets Taste"</p>
+             <p className="font-libre italic text-sm text-parchment opacity-90 tracking-wide">&ldquo;Where Heritage Meets Taste&rdquo;</p>
         </div>
       </div>
     </div>
@@ -119,7 +119,7 @@ const IndexPage = forwardRef<HTMLDivElement, { onNavigate: (id: string) => void 
           <h3 className="font-playfair text-3xl font-bold text-deep-brown mb-2">Table of Contents</h3>
           <p className="font-cinzel text-xs text-deep-brown/60 tracking-widest mb-8 uppercase">विषय - सूची</p>
           
-          <div className="w-full space-y-3 overflow-y-auto max-h-[400px] pr-2 scrollbar-thin scrollbar-thumb-deep-brown/20">
+          <div className="w-full space-y-3 overflow-y-auto max-h-100 pr-2 scrollbar-thin scrollbar-thumb-deep-brown/20">
              {menuData.map((category, idx) => (
                <button 
                  key={idx}
@@ -143,9 +143,9 @@ IndexPage.displayName = "IndexPage";
 
 
 // Inside Cover (Left) - Logo Page
-const InsideCoverLeft = forwardRef<HTMLDivElement, any>((props, ref) => {
+const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
   return (
-    <div className="demoPage bg-parchment relative shadow-inner overflow-hidden h-full border-r border-deep-brown/10 flex items-center justify-center" ref={ref}>
+    <div {...props} className="demoPage bg-parchment relative shadow-inner overflow-hidden h-full border-r border-deep-brown/10 flex items-center justify-center" ref={ref}>
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply pointer-events-none" />
       
       {/* Full width logo/image area */}
@@ -171,9 +171,9 @@ const InsideCoverLeft = forwardRef<HTMLDivElement, any>((props, ref) => {
 InsideCoverLeft.displayName = "InsideCoverLeft";
 
 // Back Cover Component
-const BackCover = forwardRef<HTMLDivElement, any>((props, ref) => {
+const BackCover = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
   return (
-    <div className="demoPage bg-[#8D6E63] h-full flex flex-col items-center justify-center p-8 relative shadow-2xl rounded-l-md border-2 border-deep-brown" ref={ref}>
+    <div {...props} className="demoPage bg-[#8D6E63] h-full flex flex-col items-center justify-center p-8 relative shadow-2xl rounded-l-md border-2 border-deep-brown" ref={ref}>
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/leather.png')] opacity-60 mix-blend-multiply" />
        
       {/* 3D Thickness Effect (Left Side) */}
@@ -199,12 +199,22 @@ BackCover.displayName = "BackCover";
 
 
 // Menu Item Component
-const MenuItem = ({ item }: { item: any }) => {
-  const { addItem } = useCartStore();
+const MenuItem = ({ item }: { item: { id: string; name: string; price: number; veg: boolean; desc: string; image?: string } }) => {
+  const addItem = useCartStore((state) => state.addItem);
   
-  const handleAdd = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Stop page flip
+  const handleAdd = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
+    e.stopPropagation();
+    if (e.nativeEvent) {
+      e.nativeEvent.stopImmediatePropagation();
+    }
     addItem({ id: item.id, name: item.name, price: item.price, veg: item.veg });
+  };
+  
+  const stopPropagation = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
+    e.stopPropagation();
+    if (e.nativeEvent) {
+      e.nativeEvent.stopImmediatePropagation();
+    }
   };
   
   return (
@@ -236,6 +246,9 @@ const MenuItem = ({ item }: { item: any }) => {
             )}
             <button 
               onClick={handleAdd}
+              onMouseDown={stopPropagation}
+              onTouchStart={stopPropagation}
+              onPointerDown={stopPropagation}
               className="md:opacity-0 group-hover:opacity-100 opacity-100 transition-all bg-deep-brown text-parchment p-1 rounded-full hover:bg-golden-highlight hover:text-deep-brown active:scale-90"
               title="Add to Cart"
             >
@@ -251,7 +264,6 @@ const MenuItem = ({ item }: { item: any }) => {
 export default function BookMenu() {
   const book = useRef<any>(null);
   const [currentPage, setCurrentPage] = useState(0);
-  // Page mapping for index navigation: Category ID -> Page Number
   const [pageMap, setPageMap] = useState<Record<string, number>>({});
   
   const targetCategory = useUIStore((state) => state.targetCategory);
@@ -320,7 +332,7 @@ export default function BookMenu() {
     }
   }, [targetCategory, pageMap, setTargetCategory]);
 
-  const renderCategoryPages = (category: any, startPageNum: number) => {
+  const renderCategoryPages = (category: { id: string; name: string; hindiName?: string; description: string; items: any[] }, startPageNum: number) => {
     const pages = [];
     const totalItems = category.items.length;
     const totalCategoryPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
@@ -375,7 +387,7 @@ export default function BookMenu() {
   };
 
   // Calculate pages dynamically for rendering
-  let pageCounter = 3; // Start after Intro/Index page
+  // (Removed local pageCounter to avoid reassignment during render)
 
   return (
     <section id="menu-book-section" className="relative min-h-screen bg-parchment flex flex-col items-center justify-center p-2 py-12 md:py-16 overflow-hidden">
@@ -428,11 +440,11 @@ export default function BookMenu() {
         </button>
 
         <div 
-           className={`relative z-10 w-full max-w-6xl aspect-[3/4] md:aspect-[1.8/1] flex items-center justify-center perspective-2000 transition-transform duration-700 ease-in-out ${!isMobile && currentPage === 0 ? 'md:-translate-x-[25%]' : 'translate-x-0'}`}
+           className={`relative z-10 w-full max-w-6xl aspect-3/4 md:aspect-[1.8/1] flex items-center justify-center perspective-2000 transition-transform duration-700 ease-in-out ${!isMobile && currentPage === 0 ? 'md:-translate-x-[25%]' : 'translate-x-0'}`}
         >
           {/* Center Spine Bump Effect - Only visible when open */}
           {!isMobile && currentPage > 0 && (
-             <div className="absolute left-1/2 top-[2%] bottom-[2%] w-16 -ml-8 bg-gradient-to-r from-black/20 via-transparent to-black/20 z-30 pointer-events-none rounded-sm blur-md opacity-40 transition-opacity duration-500" />
+             <div className="absolute left-1/2 top-[2%] bottom-[2%] w-16 -ml-8 bg-linear-to-r from-black/20 via-transparent to-black/20 z-30 pointer-events-none rounded-sm blur-md opacity-40 transition-opacity duration-500" />
           )}
   
           {/* 3D Page Stack Effect (Bottom/Side) when closed/open */}
@@ -468,7 +480,7 @@ export default function BookMenu() {
             useMouseEvents={true}
             swipeDistance={30}
             showPageCorners={true}
-            disableFlipByClick={false}
+            disableFlipByClick={true}
           >
             {/* Cover (Page 0) */}
             <CoverPage />
@@ -480,14 +492,19 @@ export default function BookMenu() {
             <IndexPage onNavigate={goToPage} />
   
             {/* Dynamic Menu Pages (Page 3+) */}
-            {menuData.flatMap((category) => {
-              const pages = renderCategoryPages(category, pageCounter);
-              pageCounter += pages.length;
-              return pages;
-            })}
+            {menuData.reduce<{ pages: React.ReactNode[], counter: number }>((acc, category) => {
+              const pages = renderCategoryPages(category, acc.counter);
+              return {
+                pages: [...acc.pages, ...pages],
+                counter: acc.counter + pages.length
+              };
+            }, { pages: [], counter: 3 }).pages}
   
             {/* Last Page */}
-            <Page number={pageCounter}>
+            <Page number={(() => {
+              const totalMenuPages = menuData.reduce((acc, cat) => acc + Math.ceil(cat.items.length / ITEMS_PER_PAGE), 0);
+              return 3 + totalMenuPages;
+            })()}>
               <div className="flex flex-col h-full justify-center items-center text-center space-y-6">
                 <h3 className="font-playfair text-xl font-bold text-deep-brown">Thank You</h3>
                 <p className="font-libre text-xs text-deep-brown/70 italic">
@@ -513,7 +530,7 @@ export default function BookMenu() {
         {/* Right Arrow */}
         <button 
           onClick={nextFlip} 
-          className="hidden md:flex p-4 text-[#5D4037]/60 hover:text-[#5D4037] transition-all hover:scale-110 active:scale-95 z-20"
+          className="hidden md:flex p-4 text-deep-brown/60 hover:text-deep-brown transition-all hover:scale-110 active:scale-95 z-20"
         >
           <ChevronRight size={48} strokeWidth={1} />
         </button>

@@ -8,7 +8,7 @@ import menuData from "@/data/menu.json";
 import { useRef } from "react";
 
 export default function FeaturedDishes() {
-  const { addItem } = useCartStore();
+  const addItem = useCartStore((state) => state.addItem);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Flatten all items from all categories for the carousel
@@ -57,7 +57,7 @@ export default function FeaturedDishes() {
       <div className="container-custom relative z-10">
         <div className="flex justify-between items-end mb-12 px-4 md:px-0">
           <div className="space-y-4">
-            <span className="font-cinzel text-[#FDF5E6] tracking-[0.3em] uppercase text-sm opacity-90">Chef's Specials</span>
+            <span className="font-cinzel text-[#FDF5E6] tracking-[0.3em] uppercase text-sm opacity-90">Chef&apos;s Specials</span>
             <h2 className="heading-primary text-[#FDF5E6]">
               Signature <span className="italic text-[#D4AF37]">Creations</span>
             </h2>

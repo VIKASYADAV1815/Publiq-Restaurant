@@ -7,7 +7,8 @@ import { useCartStore } from "@/store/cartStore";
 import { useState } from "react";
 
 export default function Navbar() {
-  const { items, toggleCart } = useCartStore();
+  const items = useCartStore((state) => state.items);
+  const toggleCart = useCartStore((state) => state.toggleCart);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
@@ -25,6 +26,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Menu", href: "/menu" },
     { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
