@@ -41,7 +41,7 @@ export default function Navbar() {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 left-0 w-full z-50 bg-deep-brown/95 backdrop-blur-md border-b border-parchment/10 transition-colors duration-300 text-parchment shadow-md"
+      className="fixed top-0 left-0 w-full z-50 bg-[#0F0F0F]/95 backdrop-blur-md border-b border-parchment/10 transition-colors duration-300 text-parchment shadow-md"
     >
       <div className="container-custom flex items-center justify-between h-16 md:h-20 transition-all duration-300">
         {/* Left: Mobile Menu Button (Only visible on mobile) */}

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-deep-brown text-parchment pt-12 md:pt-16 pb-12 relative overflow-hidden border-t border-parchment/10">
+    <footer className="bg-[#0F0F0F] text-parchment pt-12 md:pt-16 pb-12 relative overflow-hidden border-t border-parchment/10">
       {/* Texture */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-wood.png')] opacity-30 mix-blend-overlay" />
       <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent pointer-events-none" />
