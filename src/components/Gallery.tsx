@@ -24,7 +24,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="py-16 bg-[#FDF5E6] text-deep-brown relative overflow-hidden">
+    <section className="py-16 bg-parchment text-deep-brown relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Compact Header */}
@@ -35,11 +35,11 @@ export default function Gallery() {
               Doon <span className="italic text-golden-highlight">Captures</span>
             </h2>
           </div>
-          <div className="h-[1px] w-16 bg-golden-highlight/20 mb-2" />
+          <div className="h-px w-16 bg-golden-highlight/20 mb-2" />
         </div>
 
         {/* Cinematic Slim Accordion */}
-        <div className="flex flex-col md:flex-row h-[350px] md:h-[420px] gap-3 group/container">
+        <div className="flex flex-col md:flex-row h-87.5 md:h-105 gap-3 group/container">
           {images.map((img, idx) => (
             <motion.div
               key={img.title}
@@ -47,7 +47,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="relative flex-1 group overflow-hidden rounded-[2px] transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-[1.8] border border-deep-brown/5 shadow-sm"
+              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-[1.8] border border-deep-brown/5 shadow-sm"
             >
               {/* Vibrant Image Layer */}
               <div className="relative h-full w-full">
@@ -59,7 +59,7 @@ export default function Gallery() {
                 />
                 
                 {/* Minimal Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/80 via-transparent to-transparent opacity-40 group-hover:opacity-80 transition-opacity" />
+                <div className="absolute inset-0 bg-linear-to-t from-deep-brown/80 via-transparent to-transparent opacity-40 group-hover:opacity-80 transition-opacity" />
 
                 {/* Content Layer */}
                 <div className="absolute inset-0 p-5 flex flex-col justify-end">

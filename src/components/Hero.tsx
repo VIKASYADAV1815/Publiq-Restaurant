@@ -3,18 +3,25 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { ArrowRight, Utensils } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function Hero() {
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   
-  // High-End Parallax Logic
-  // Content moves up slowly, background scales, and accents fly faster
-  const yContent = useTransform(scrollY, [0, 1000], [0, -150]);
-  const yAccents = useTransform(scrollY, [0, 1000], [0, -300]);
-  const bgScale = useTransform(scrollY, [0, 1000], [1.1, 1.3]);
-  const opacityFade = useTransform(scrollY, [0, 400], [1, 0]);
+  // High-End Parallax Logic - Disabled on mobile for performance
+  const yContent = useTransform(scrollY, [0, 1000], [0, isMobile ? 0 : -150]);
+  const yAccents = useTransform(scrollY, [0, 1000], [0, isMobile ? 0 : -300]);
+  const bgScale = useTransform(scrollY, [0, 1000], [1.1, isMobile ? 1.1 : 1.3]);
+  const opacityFade = useTransform(scrollY, [0, 400], [1, isMobile ? 1 : 0]);
 
   // Smooth spring for the entrance
   const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
@@ -22,7 +29,7 @@ export default function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-[#D4AF37] selection:text-white"
+      className="relative h-dvh w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white"
     >
       {/* Layer 1: Parallax Background */}
       <motion.div 
@@ -31,13 +38,13 @@ export default function Hero() {
       />
       
       {/* Layer 2: Sophisticated Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f0a] via-transparent to-[#1a0f0a]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#1a0f0a] via-transparent to-[#1a0f0a]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_80%)]" />
 
       {/* Layer 3: Fast-Moving Parallax Accents */}
       <motion.div 
         style={{ y: yAccents, opacity: opacityFade }}
-        className="absolute top-1/4 right-[10%] text-[#D4AF37]/10 blur-[1px] hidden lg:block"
+        className="absolute top-1/4 right-[10%] text-golden-highlight/10 blur-[1px] hidden lg:block"
       >
         <Utensils size={300} strokeWidth={0.5} />
       </motion.div>
@@ -54,11 +61,11 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           <div className="flex items-center justify-center gap-4 mb-8">
-             <div className="h-[1px] w-8 bg-[#D4AF37]/50" />
-             <span className="font-cinzel text-[#D4AF37] text-[10px] tracking-[0.5em] uppercase">
+             <div className="h-px w-8 bg-golden-highlight/50" />
+             <span className="font-cinzel text-golden-highlight text-[10px] tracking-[0.5em] uppercase">
                Est. 2024
              </span>
-             <div className="h-[1px] w-8 bg-golden-highlight/50" />
+             <div className="h-px w-8 bg-golden-highlight/50" />
           </div>
 
           <h1 className="font-playfair text-6xl sm:text-7xl md:text-9xl text-parchment font-bold leading-none tracking-tighter drop-shadow-2xl">
@@ -88,10 +95,10 @@ export default function Hero() {
           </Link>
 
           {/* Secondary Button: Ghost to Solid Morph */}
-          <Link href="/contact" className="group relative flex-1 sm:flex-none px-8 md:px-14 py-4 md:py-5 border border-parchment/30 text-[#FDF5E6] font-cinzel text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all duration-500 overflow-hidden backdrop-blur-sm">
+          <Link href="/contact" className="group relative flex-1 sm:flex-none px-8 md:px-14 py-4 md:py-5 border border-parchment/30 text-parchment font-cinzel text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all duration-500 overflow-hidden backdrop-blur-sm">
             <span className="relative z-10 group-hover:text-[#2D1A12] transition-colors duration-500">Book</span>
             {/* Liquid Fill Reveal */}
-            <div className="absolute inset-0 bg-[#FDF5E6] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.19,1,0.22,1]" />
+            <div className="absolute inset-0 bg-parchment translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.19,1,0.22,1]" />
           </Link>
           
         </div>
@@ -101,7 +108,7 @@ export default function Hero() {
       <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-golden-highlight/10 blur-[120px] rounded-full" />
 
       {/* Infinite Scroll Line */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-24 bg-linear-to-b from-transparent via-golden-highlight/50 to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-24 bg-linear-to-b from-transparent via-golden-highlight/50 to-transparent opacity-50" />
     </section>
   );
 }

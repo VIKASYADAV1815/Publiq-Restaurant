@@ -61,11 +61,11 @@ export default function CartSidebar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-full max-w-md bg-parchment border-l border-deep-brown/20 shadow-2xl z-[70] flex flex-col"
+            className="fixed top-0 right-0 h-full w-full max-w-md bg-parchment border-l border-deep-brown/20 shadow-2xl z-70 flex flex-col"
           >
             {/* Receipt Top Pattern */}
             <div className="absolute top-0 left-0 right-0 h-4 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 z-0 pointer-events-none" />
-            <div className="w-full h-2 bg-[radial-gradient(circle,transparent_50%,#FDF5E6_50%)] bg-[length:16px_16px] rotate-180 absolute top-0 z-10"></div>
+            <div className="w-full h-2 bg-[radial-gradient(circle,transparent_50%,#FDF5E6_50%)] bg-size-[16px_16px] rotate-180 absolute top-0 z-10"></div>
 
             {/* Header */}
             <div className="p-6 pt-8 border-b-2 border-dashed border-deep-brown/20 flex items-center justify-between bg-white/40 backdrop-blur-md relative z-20">
@@ -158,7 +158,7 @@ export default function CartSidebar() {
             {items.length > 0 && (
               <div className="relative z-20">
                 {/* Receipt Zigzag Top */}
-                <div className="w-full h-2 bg-[linear-gradient(45deg,transparent_75%,#fff_75%),linear-gradient(-45deg,transparent_75%,#fff_75%)] bg-[length:16px_16px] bg-repeat-x absolute -top-2"></div>
+                <div className="w-full h-2 bg-[linear-gradient(45deg,transparent_75%,#fff_75%),linear-gradient(-45deg,transparent_75%,#fff_75%)] bg-size-[16px_16px] bg-repeat-x absolute -top-2"></div>
                 
                 <div className="p-8 bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] space-y-4">
                   <div className="space-y-2 border-b-2 border-dashed border-deep-brown/10 pb-4">
@@ -177,7 +177,7 @@ export default function CartSidebar() {
                     <span>₹{totalAmount + Math.round(totalAmount * 0.05)}</span>
                   </div>
                   
-                  <button className="w-full bg-deep-brown text-[#FDF5E6] font-cinzel tracking-widest uppercase py-4 text-sm font-bold shadow-lg hover:bg-[#3E2723] transition-colors flex items-center justify-center gap-2 mt-4">
+                  <button className="w-full bg-deep-brown text-parchment font-cinzel tracking-widest uppercase py-4 text-sm font-bold shadow-lg hover:bg-[#3E2723] transition-colors flex items-center justify-center gap-2 mt-4">
                     <span>Confirm Order</span>
                     <ShoppingBag size={18} />
                   </button>

@@ -34,7 +34,7 @@ export default function GalleryPage() {
       <div className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
         <header className="mb-16">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-[1px] bg-golden-highlight" />
+            <span className="w-8 h-px bg-golden-highlight" />
             <span className="font-cinzel text-golden-highlight tracking-[0.4em] text-[10px] font-bold">The Visual Experience</span>
           </motion.div>
           <motion.h1 
@@ -83,7 +83,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-parchment/95 backdrop-blur-2xl p-4"
+            className="fixed inset-0 z-100 flex items-center justify-center bg-parchment/95 backdrop-blur-2xl p-4"
           >
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
@@ -95,7 +95,7 @@ export default function GalleryPage() {
               {/* Close Button */}
               <button 
                 onClick={() => setSelectedIdx(null)}
-                className="absolute top-0 right-0 p-4 text-deep-brown/40 hover:text-deep-brown transition-colors z-[120]"
+                className="absolute top-0 right-0 p-4 text-deep-brown/40 hover:text-deep-brown transition-colors z-120"
               >
                 <X size={40} strokeWidth={1} />
               </button>

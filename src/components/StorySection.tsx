@@ -9,7 +9,7 @@ export default function StorySection() {
   return (
     <section className="py-24 md:py-40 bg-parchment relative overflow-hidden">
       {/* Texture & Ambient Blur */}
-      <div className="absolute inset-0 bg-[url('/vintage-pattern.png')] opacity-5 mix-blend-multiply pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-5 mix-blend-multiply pointer-events-none" />
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16 md:gap-8">
@@ -85,7 +85,7 @@ export default function StorySection() {
                 <div className="absolute inset-0 bg-deep-brown translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-[0.19,1,0.22,1]" />
                 
                 {/* Secondary Highlight Glow */}
-                <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-golden-highlight/20 to-transparent group-hover:left-full transition-all duration-1000 delay-100" />
+                <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-golden-highlight/20 to-transparent group-hover:left-full transition-all duration-1000 delay-100" />
               </Link>
               
               <div className="flex items-center gap-2 text-deep-brown/40 font-cinzel text-[9px] tracking-[0.2em] uppercase cursor-help hover:text-golden-highlight transition-colors">

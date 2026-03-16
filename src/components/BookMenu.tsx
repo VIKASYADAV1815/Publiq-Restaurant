@@ -2,9 +2,9 @@
 
 import React, { useState, forwardRef, useRef, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
-import { ChevronLeft, ChevronRight, Leaf, Flame, Plus, ShoppingBag, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Leaf, Flame, ArrowRight, ShoppingBag } from "lucide-react";
 import menuData from "@/data/menu.json";
-import { useCartStore } from "@/store/cartStore";
+// import { useCartStore } from "@/store/cartStore";
 import { useUIStore } from "@/store/uiStore";
 import Image from "next/image";
 
@@ -22,15 +22,15 @@ const Page = forwardRef<HTMLDivElement, PageProps>(({ children, number, classNam
     <div className={`demoPage bg-parchment relative overflow-hidden h-full border-r border-deep-brown/10 ${className}`} ref={ref}>
       {/* Paper Texture */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-transparent to-black/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/5 via-transparent to-black/5 pointer-events-none" />
       
       {/* 3D Stacked Page Effect */}
       {!isCover && (
         <>
-           <div className="absolute right-0 top-0 bottom-0 w-[3px] bg-linear-to-l from-black/20 to-transparent pointer-events-none" />
-           <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+           <div className="absolute right-0 top-0 bottom-0 w-0.75 bg-linear-to-l from-black/20 to-transparent pointer-events-none" />
+           <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-linear-to-t from-black/20 to-transparent pointer-events-none" />
            {/* Inner Shadow near spine */}
-           <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
+           <div className="absolute left-0 top-0 bottom-0 w-4 bg-linear-to-r from-black/10 to-transparent pointer-events-none" />
         </>
       )}
 
@@ -80,7 +80,7 @@ const CoverPage = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement
         <span className="font-cinzel text-[10px] tracking-[0.4em] uppercase mb-6 block text-parchment opacity-90 drop-shadow-md">Est. 2024</span>
         
         <div className="relative inline-block">
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-3 text-parchment drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] tracking-wide bg-clip-text text-transparent bg-linear-to-b from-[#FFF8E1] to-parchment select-none">
+          <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-3 text-parchment drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] tracking-wide bg-clip-text bg-linear-to-b from-[#FFF8E1] to-parchment select-none">
             PUBLIQ
           </h1>
           <h1 className="absolute top-0 left-0 font-playfair text-5xl md:text-7xl font-bold mb-3 text-black/20 drop-shadow-none tracking-wide -z-10 transform translate-x-0.5 translate-y-0.5 select-none blur-[1px]">
@@ -150,7 +150,7 @@ const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
       
       {/* Full width logo/image area */}
       <div className="relative w-full h-full p-8 flex items-center justify-center">
-        <div className="relative w-full aspect-[3/4] max-h-[80%] border-4 border-deep-brown/20 p-2 shadow-inner bg-white/50 transform -rotate-1">
+        <div className="relative w-full aspect-3/4 max-h-[80%] border-4 border-deep-brown/20 p-2 shadow-inner bg-white/50 transform -rotate-1">
            <div className="relative w-full h-full overflow-hidden transition-all duration-700">
              <Image 
                src="/logo.jpeg" 
@@ -200,15 +200,15 @@ BackCover.displayName = "BackCover";
 
 // Menu Item Component
 const MenuItem = ({ item }: { item: { id: string; name: string; price: number; veg: boolean; desc: string; image?: string } }) => {
-  const addItem = useCartStore((state) => state.addItem);
+  // const addItem = useCartStore((state) => state.addItem);
   
-  const handleAdd = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
-    e.stopPropagation();
-    if (e.nativeEvent) {
-      e.nativeEvent.stopImmediatePropagation();
-    }
-    addItem({ id: item.id, name: item.name, price: item.price, veg: item.veg });
-  };
+  // const handleAdd = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
+  //   e.stopPropagation();
+  //   if (e.nativeEvent) {
+  //     e.nativeEvent.stopImmediatePropagation();
+  //   }
+  //   addItem({ id: item.id, name: item.name, price: item.price, veg: item.veg });
+  // };
   
   const stopPropagation = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
     e.stopPropagation();
@@ -220,7 +220,7 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
   return (
     <div className="mb-4 border-b border-deep-brown/5 pb-3 last:border-0 group hover:bg-deep-brown/5 transition-colors p-2 rounded-sm -mx-2 flex gap-3 items-start">
       {/* Thumbnail Image */}
-      <div className="w-16 h-16 relative flex-shrink-0 rounded-sm overflow-hidden border border-deep-brown/10 shadow-sm">
+      <div className="w-16 h-16 relative shrink-0 rounded-sm overflow-hidden border border-deep-brown/10 shadow-sm">
         <Image 
           src={item.image || "https://images.unsplash.com/photo-1546833999-b9f5816029bd?q=80&w=200&auto=format&fit=crop"} 
           alt={item.name}
@@ -244,7 +244,7 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
             ) : (
               <Flame size={10} className="text-red-600" />
             )}
-            <button 
+            {/* <button 
               onClick={handleAdd}
               onMouseDown={stopPropagation}
               onTouchStart={stopPropagation}
@@ -253,7 +253,7 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
               title="Add to Cart"
             >
               <Plus size={12} />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -270,11 +270,15 @@ export default function BookMenu() {
   const setTargetCategory = useUIStore((state) => state.setTargetCategory);
 
   const nextFlip = () => {
-    book.current?.pageFlip()?.flipNext();
+    if (book.current) {
+      book.current.pageFlip().flipNext();
+    }
   };
 
   const prevFlip = () => {
-    book.current?.pageFlip()?.flipPrev();
+    if (book.current) {
+      book.current.pageFlip().flipPrev();
+    }
   };
 
   const onFlip = (e: any) => {
@@ -396,7 +400,7 @@ export default function BookMenu() {
       <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/5 pointer-events-none" />
       
       {/* Top Controls */}
-      <div className="absolute top-4 md:top-8 right-4 md:right-8 z-30 flex items-center gap-2 md:gap-4">
+      <div className="absolute top-4 md:top-8 left-4 right-4 md:left-auto md:right-8 z-30 flex items-center justify-between md:justify-end gap-2 md:gap-4">
         <button 
           onClick={goToIndex}
           className="flex items-center gap-2 text-deep-brown hover:text-[#3E2723] transition-colors group px-3 py-1.5 md:px-4 md:py-2 bg-parchment/80 backdrop-blur-sm rounded-full border border-deep-brown/20 shadow-sm"
@@ -404,18 +408,20 @@ export default function BookMenu() {
            <span className="font-cinzel text-[10px] md:text-xs tracking-widest uppercase font-bold">Index</span>
         </button>
         
-        <button 
-          onClick={() => {
-             const element = document.getElementById("menu-book-section");
-             if (element) {
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={() => {
+              const element = document.getElementById("menu-book-section");
+              if (element) {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-             }
-          }}
-          className="p-1.5 md:p-2 border border-deep-brown/20 rounded-full hover:bg-deep-brown/10 transition-colors text-deep-brown hover:text-[#3E2723]"
-          title="Back to Top"
-        >
-           <ArrowRight className="-rotate-90" size={16} />
-        </button>
+              }
+            }}
+            className="p-1.5 md:p-2 border border-deep-brown/20 rounded-full hover:bg-deep-brown/10 transition-colors text-deep-brown hover:text-[#3E2723]"
+            title="Back to Top"
+          >
+            <ArrowRight className="-rotate-90" size={16} />
+          </button>
+        </div>
       </div>
 
       <div className="relative z-20 mb-4 text-center mt-8 md:mt-0">
@@ -450,7 +456,7 @@ export default function BookMenu() {
           {/* 3D Page Stack Effect (Bottom/Side) when closed/open */}
           <div className={`absolute transition-all duration-700 pointer-events-none z-0 
                ${!isMobile && currentPage === 0 
-                  ? 'right-[25%] top-[5%] bottom-[5%] w-6 bg-[#FDF5E6] shadow-[20px_20px_40px_rgba(0,0,0,0.3)] transform skew-y-1 border-r border-[#D7CCC8]' 
+                  ? 'right-[25%] top-[5%] bottom-[5%] w-6 bg-parchment shadow-[20px_20px_40px_rgba(0,0,0,0.3)] transform skew-y-1 border-r border-[#D7CCC8]' 
                   : 'opacity-0'}`} 
           >
              {/* Realistic Page Lines on Stack */}
@@ -476,7 +482,7 @@ export default function BookMenu() {
             usePortrait={isMobile} // Force single page on mobile
             startZIndex={0}
             autoSize={true}
-            clickEventForward={true}
+            clickEventForward={false}
             useMouseEvents={true}
             swipeDistance={30}
             showPageCorners={true}
@@ -537,11 +543,11 @@ export default function BookMenu() {
       </div>
 
       {/* Mobile Controls */}
-      <div className="md:hidden flex gap-6 text-[#5D4037] z-20 bg-[#FDF5E6]/80 backdrop-blur-md px-6 py-2 rounded-full border border-[#5D4037]/10 mt-6 shadow-lg">
+      <div className="md:hidden flex gap-6 text-deep-brown z-20 bg-parchment/80 backdrop-blur-md px-6 py-2 rounded-full border border-deep-brown/10 mt-6 shadow-lg">
         <button 
           onClick={prevFlip} 
-          className="p-2 hover:text-[#3E2723] transition-colors active:scale-90"
-          disabled={currentPage === 0}
+          className="p-2 hover:text-[#3E2723] transition-colors active:scale-90 disabled:opacity-30"
+          disabled={currentPage <= 0}
         >
           <ChevronLeft size={20} />
         </button>
