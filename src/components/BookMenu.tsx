@@ -165,10 +165,10 @@ const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
         <div className="relative w-full aspect-3/4 max-h-[80%] border-4 border-deep-brown/20 p-2 shadow-inner bg-white/50 transform -rotate-1">
            <div className="relative w-full h-full overflow-hidden transition-all duration-700">
              <Image 
-               src="/restaurent/b12.webp" 
+               src="/restaurent/b6.webp" 
                alt="Restaurant Interior" 
                fill 
-               className="object-cover opacity-80"
+               className="object-cover opacity-100 shadow-deep-brown"
                priority
              />
            </div>

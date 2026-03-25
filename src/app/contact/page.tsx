@@ -8,12 +8,12 @@
      <main className="relative min-h-screen bg-parchment text-deep-brown font-libre selection:bg-golden-highlight selection:text-white">
        <Navbar />
        <PageHero
-         bgSrc="/restaurent/b10.webp"
+         bgSrc="/restaurent/b7.webp"
          eyebrow="Get In Touch"
          title="Contact Us"
          description="We would love to hear from you. Reach out for reservations, events, or just to say hello."
        />
-       <section className="py-24 bg-[#FDF5E6] relative overflow-hidden">
+       <section className="py-24 bg-parchment relative overflow-hidden">
          <div className="max-w-6xl mx-auto px-6 relative z-10">
            <div className="text-center mb-16">
              <span className="font-cinzel text-golden-highlight tracking-[0.4em] uppercase text-xs font-bold mb-4 block">Get In Touch</span>
@@ -87,7 +87,7 @@
                  </div>
                  <div className="space-y-2">
                    <label className="font-cinzel text-[10px] uppercase tracking-widest text-deep-brown/60 font-bold">Message</label>
-                   <textarea className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 font-libre text-sm focus:border-golden-highlight outline-none transition-colors min-h-[120px]" placeholder="Your Message"></textarea>
+                   <textarea className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 font-libre text-sm focus:border-golden-highlight outline-none transition-colors min-h-30" placeholder="Your Message"></textarea>
                  </div>
                  <button className="w-full bg-deep-brown text-parchment font-cinzel py-4 tracking-widest font-bold hover:bg-golden-highlight hover:text-deep-brown transition-all shadow-lg active:scale-95">
                    Send Message
@@ -97,7 +97,7 @@
            </div>
          </div>
        </section>
-       <section className="h-[400px] w-full bg-deep-brown/5 grayscale opacity-80 hover:grayscale-0 transition-all duration-1000">
+       <section className="h-100 w-full bg-deep-brown/5 grayscale opacity-80 hover:grayscale-0 transition-all duration-1000">
          <iframe
            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.872288126155!2d78.0664!3d30.3664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c351c88887%3A0x4d34e9e027668637!2sRajpur%20Rd%2C%20Dehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1710433227443!5m2!1sen!2sin"
            width="100%"

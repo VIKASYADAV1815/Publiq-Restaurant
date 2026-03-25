@@ -104,14 +104,14 @@ export default function PremiumVideoPlayer({ src, poster, title }: PremiumVideoP
 
       {/* Top Title Overlay */}
       {title && (
-        <div className={`absolute top-0 left-0 w-full p-6 bg-gradient-to-b from-black/80 to-transparent transition-opacity duration-500 ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`absolute top-0 left-0 w-full p-6 bg-linear-to-b from-black/80 to-transparent transition-opacity duration-500 ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`}>
           <h3 className="font-playfair text-xl md:text-3xl text-parchment drop-shadow-md">{title}</h3>
           <div className="w-12 h-px bg-golden-highlight mt-3 opacity-70" />
         </div>
       )}
 
       {/* Bottom Controls Bar */}
-      <div className={`absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col gap-4 transition-opacity duration-500 ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`absolute bottom-0 left-0 w-full p-4 md:p-6 bg-linear-to-t from-black/90 via-black/40 to-transparent flex flex-col gap-4 transition-opacity duration-500 ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`}>
         
         {/* Progress Bar */}
         <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">

@@ -55,14 +55,14 @@ export default function FeaturedDishes() {
         className="absolute inset-0 opacity-20 mix-blend-overlay" 
         style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/dark-wood.png')" }} 
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-black/30 pointer-events-none" />
       
       <div className="container-custom relative z-10">
         <div className="flex justify-between items-end mb-12 px-4 md:px-0">
           <div className="space-y-4">
-            <span className="font-cinzel text-[#FDF5E6] tracking-[0.3em] uppercase text-sm opacity-90">Chef&apos;s Specials</span>
-            <h2 className="heading-primary text-[#FDF5E6]">
-              Signature <span className="italic text-[#D4AF37]">Creations</span>
+            <span className="font-cinzel text-parchment tracking-[0.3em] uppercase text-sm opacity-90">Chef&apos;s Specials</span>
+            <h2 className="heading-primary text-parchment">
+              Signature <span className="italic text-golden-highlight">Creations</span>
             </h2>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function FeaturedDishes() {
           {/* Left Arrow - Positioned absolutely to the left */}
           <button 
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-20 p-3 rounded-full bg-[#FDF5E6] text-[#5D4037] shadow-lg hover:bg-[#D4AF37] hover:text-[#5D4037] transition-all duration-300 opacity-0 group-hover/section:opacity-100 focus:opacity-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-20 p-3 rounded-full bg-parchment text-deep-brown shadow-lg hover:bg-golden-highlight hover:text-deep-brown transition-all duration-300 opacity-0 group-hover/section:opacity-100 focus:opacity-100"
             aria-label="Scroll Left"
           >
             <ChevronLeft size={24} />
@@ -89,9 +89,9 @@ export default function FeaturedDishes() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
                 viewport={{ once: true }}
-                className="min-w-[300px] md:min-w-[340px] snap-center group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col mb-4"
+                className="min-w-75 md:min-w-85 snap-center group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col mb-4"
               >
-                <div className="relative h-64 overflow-hidden flex-shrink-0">
+                <div className="relative h-64 overflow-hidden shrink-0">
                   <Image
                     src={dish.categoryImage || "https://images.unsplash.com/photo-1546833999-b9f5816029bd?q=80&w=800&auto=format&fit=crop"}
                     alt={dish.name}
@@ -112,7 +112,7 @@ export default function FeaturedDishes() {
                     <h3 className="font-playfair text-xl font-bold text-deep-brown group-hover:text-golden-highlight transition-colors leading-tight line-clamp-2">
                       {dish.name}
                     </h3>
-                    <div className="flex items-center gap-1 text-golden-highlight bg-deep-brown/5 px-1.5 py-0.5 rounded-sm flex-shrink-0">
+                    <div className="flex items-center gap-1 text-golden-highlight bg-deep-brown/5 px-1.5 py-0.5 rounded-sm shrink-0">
                       <Star size={10} fill="currentColor" />
                       <span className="text-xs font-bold">{dish.rating}</span>
                     </div>
@@ -142,7 +142,7 @@ export default function FeaturedDishes() {
           {/* Right Arrow - Positioned absolutely to the right */}
           <button 
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-20 p-3 rounded-full bg-[#FDF5E6] text-[#5D4037] shadow-lg hover:bg-[#D4AF37] hover:text-[#5D4037] transition-all duration-300 opacity-0 group-hover/section:opacity-100 focus:opacity-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-20 p-3 rounded-full bg-parchment text-deep-brown shadow-lg hover:bg-golden-highlight hover:text-deep-brown transition-all duration-300 opacity-0 group-hover/section:opacity-100 focus:opacity-100"
             aria-label="Scroll Right"
           >
             <ChevronRight size={24} />

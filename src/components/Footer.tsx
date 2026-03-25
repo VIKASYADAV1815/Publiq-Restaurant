@@ -81,12 +81,12 @@ export default function Footer() {
 
       <div className="container-custom mt-16 pt-8 border-t border-parchment/10 text-center md:flex md:justify-between md:items-center text-xs font-libre text-parchment/40">
         <p>© 2024 PUBLIQ Dehradun. All rights reserved.</p>
-        <p className="mt-2 md:mt-0 font-cinzel text-[10px] tracking-widest flex items-center justify-center md:justify-end gap-1">
+        {/* <p className="mt-2 md:mt-0 font-cinzel text-[10px] tracking-widest flex items-center justify-center md:justify-end gap-1">
           Designed with <span className="text-red-500 animate-pulse">❤</span> by 
           <a href="https://rankmantra.in/" target="_blank" rel="noopener noreferrer" className="text-golden-highlight hover:text-white transition-all duration-300 font-bold border-b border-golden-highlight/20 hover:border-white pb-0.5 ml-1">
             RANKMANTRA
           </a>
-        </p>
+        </p> */}
       </div>
     </footer>
   );

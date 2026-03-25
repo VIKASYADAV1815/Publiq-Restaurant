@@ -58,7 +58,7 @@ export default function Navbar() {
         {/* Desktop Layout (Split into Logo, Links, Socials) */}
         <div className="hidden md:flex w-full items-center justify-between h-full">
           {/* Logo - Left aligned but with equal container space */}
-          <div className="w-[200px] flex justify-start items-center h-full">
+          <div className="w-50 flex justify-start items-center h-full">
             <Link href="/" className="group flex items-center py-1 transition-all duration-300 h-full">
               <div className="relative w-64 h-18 transition-all duration-300">
                 <Image 
@@ -89,7 +89,7 @@ export default function Navbar() {
           </div>
 
           {/* Social Icons - Right aligned but with equal container space */}
-          <div className="w-[200px] flex justify-end gap-2">
+          <div className="w-50 flex justify-end gap-2">
             <a
               href="tel:+919999999999"
               className="text-parchment hover:text-golden-highlight transition-colors p-2"

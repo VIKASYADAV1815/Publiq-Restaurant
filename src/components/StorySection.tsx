@@ -25,7 +25,7 @@ export default function StorySection({
   eyebrow = "Heritage Narrative"
 }: StorySectionProps) {
   return (
-    <section className="py-24 md:py-40 bg-parchment relative overflow-hidden">
+    <section className="pt-40 pb-24 md:pt-64 lg:pt-80 md:pb-40 bg-parchment relative overflow-hidden">
       {/* Texture & Ambient Blur */}
       <div 
         className="absolute inset-0 opacity-5 mix-blend-multiply pointer-events-none" 

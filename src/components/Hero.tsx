@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { ArrowRight, Utensils } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
@@ -20,7 +21,6 @@ export default function Hero() {
   // High-End Parallax Logic - Disabled on mobile for performance
   const yContent = useTransform(scrollY, [0, 1000], [0, isMobile ? 0 : -150]);
   const yAccents = useTransform(scrollY, [0, 1000], [0, isMobile ? 0 : -300]);
-  const bgScale = useTransform(scrollY, [0, 1000], [1.1, isMobile ? 1.1 : 1.3]);
   const opacityFade = useTransform(scrollY, [0, 400], [1, isMobile ? 1 : 0]);
 
   // Smooth spring for the entrance
@@ -31,10 +31,10 @@ export default function Hero() {
       ref={containerRef}
       className="relative h-dvh w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white"
     >
-      {/* Layer 1: Parallax Background */}
+      {/* Layer 1: Static Background (Parallax removed for performance) */}
       <motion.div 
-        style={{ scale: bgScale, backgroundImage: "url('/restaurent/ban2.jpg')" }}
-        className="absolute inset-0 bg-cover bg-center opacity-60 transition-opacity duration-1000"
+        style={{ backgroundImage: "url('/restaurent/ban2.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center opacity-60 scale-105"
       />
       
       {/* Layer 2: Sophisticated Overlays */}
@@ -52,7 +52,7 @@ export default function Hero() {
       {/* Main Content */}
       <motion.div 
         style={{ y: yContent, opacity: opacityFade }}
-        className="relative z-10 text-center px-6 w-full max-w-5xl mx-auto flex flex-col items-center"
+        className="relative z-10 text-center px-6 w-full max-w-5xl mx-auto flex flex-col items-center pb-24 md:pb-32"
       >
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export default function Hero() {
 
           {/* Secondary Button: Ghost to Solid Morph */}
           <Link href="/contact" className="group relative flex-1 sm:flex-none px-8 md:px-14 py-4 md:py-5 border border-parchment/30 text-parchment font-cinzel text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all duration-500 overflow-hidden backdrop-blur-sm">
-            <span className="relative z-10 group-hover:text-[#2D1A12] transition-colors duration-500">Book</span>
+            <span className="relative z-10 group-hover:text-[#2D1A12] transition-colors duration-500">Contact</span>
             {/* Liquid Fill Reveal */}
             <div className="absolute inset-0 bg-parchment translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.19,1,0.22,1]" />
           </Link>
@@ -107,8 +107,8 @@ export default function Hero() {
       {/* Floating Light Leak */}
       <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-golden-highlight/10 blur-[120px] rounded-full" />
 
-      {/* Infinite Scroll Line */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-24 bg-linear-to-b from-transparent via-golden-highlight/50 to-transparent opacity-50" />
+      {/* Infinite Scroll Line (Hidden behind image now, keeping for structure) */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-24 bg-linear-to-b from-transparent via-golden-highlight/50 to-transparent opacity-30 z-10" />
     </section>
   );
 }

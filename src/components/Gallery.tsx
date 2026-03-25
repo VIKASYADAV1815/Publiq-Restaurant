@@ -12,7 +12,7 @@ const images = [
     tag: "Mixology",
   },
   {
-    src: "/restaurent/b13.webp",
+    src: "/restaurent/banner2.webp",
     title: "Premium Ambience",
     tag: "Atmosphere",
   },
@@ -58,7 +58,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-[5] border border-deep-brown/5 shadow-sm"
+              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-5 border border-deep-brown/5 shadow-sm"
             >
               {/* Vibrant Image Layer */}
               <div className="relative h-full w-full">

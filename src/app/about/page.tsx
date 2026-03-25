@@ -15,10 +15,10 @@ export default function AboutPage() {
         description="Inspired by the colonial charm of Dehradun and the timeless elegance of Mussoorie, PUBLIQ is more than just a restaurant — it is a tribute to our roots."
       />
       
-      <section className="py-24 bg-[#FDF5E6] relative overflow-hidden">
+      <section className="py-24 bg-parchment relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-2xl border-4 border-white/50">
+            <div className="relative aspect-4/5 overflow-hidden rounded-sm shadow-2xl border-4 border-white/50">
               <Image 
                 src="/restaurent/b1.webp"
                 alt="Publiq Interior"
