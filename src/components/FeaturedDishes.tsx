@@ -51,7 +51,10 @@ export default function FeaturedDishes() {
 
   return (
     <section className="py-24 bg-[#FCF4E5] relative overflow-hidden group/section">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-wood.png')] opacity-20 mix-blend-overlay" />
+      <div 
+        className="absolute inset-0 opacity-20 mix-blend-overlay" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/dark-wood.png')" }} 
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30 pointer-events-none" />
       
       <div className="container-custom relative z-10">

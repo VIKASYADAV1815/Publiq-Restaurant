@@ -64,7 +64,10 @@ export default function CartSidebar() {
             className="fixed top-0 right-0 h-full w-full max-w-md bg-parchment border-l border-deep-brown/20 shadow-2xl z-70 flex flex-col"
           >
             {/* Receipt Top Pattern */}
-            <div className="absolute top-0 left-0 right-0 h-4 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 z-0 pointer-events-none" />
+            <div 
+              className="absolute top-0 left-0 right-0 h-4 opacity-50 z-0 pointer-events-none" 
+              style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
+            />
             <div className="w-full h-2 bg-[radial-gradient(circle,transparent_50%,#FDF5E6_50%)] bg-size-[16px_16px] rotate-180 absolute top-0 z-10"></div>
 
             {/* Header */}
@@ -87,7 +90,10 @@ export default function CartSidebar() {
             </div>
 
             {/* Cart Items */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] bg-blend-multiply">
+            <div 
+              className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar bg-blend-multiply" 
+              style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }}
+            >
               {items.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center space-y-4 opacity-40">
                   <div className="w-24 h-24 border-4 border-dashed border-deep-brown/30 rounded-full flex items-center justify-center">

@@ -1,0 +1,70 @@
+"use client";
+
+import { motion } from "framer-motion";
+import PremiumVideoPlayer from "./ui/PremiumVideoPlayer";
+
+const highlightVideos = [
+  {
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4", // Placeholder - replace with actual restaurant video
+    poster: "/restaurent/b14.webp",
+    title: "The Art of Mixology"
+  },
+  {
+    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4", // Placeholder - replace with actual restaurant video
+    poster: "/restaurent/b11.webp",
+    title: "Culinary Excellence"
+  }
+];
+
+export default function VideoHighlight() {
+  return (
+    <section className="py-24 bg-[#1a0f0a] relative overflow-hidden">
+      {/* Background Texture */}
+      <div 
+        className="absolute inset-0 opacity-10 mix-blend-multiply pointer-events-none" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/dark-leather.png')" }} 
+      />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05)_0%,transparent_70%)]" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <span className="font-cinzel text-golden-highlight tracking-[0.4em] uppercase text-xs font-bold mb-4 block">
+              Live Experience
+            </span>
+            <h2 className="font-playfair text-4xl md:text-6xl text-parchment tracking-tight mb-6">
+              Moments at <span className="italic text-golden-highlight">Publiq</span>
+            </h2>
+            <div className="h-px w-24 bg-golden-highlight/30 mx-auto" />
+          </motion.div>
+        </div>
+
+        {/* Videos Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          {highlightVideos.map((video, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: idx * 0.2 }}
+              viewport={{ once: true }}
+              className="w-full"
+            >
+              <PremiumVideoPlayer 
+                src={video.src} 
+                poster={video.poster}
+                title={video.title}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

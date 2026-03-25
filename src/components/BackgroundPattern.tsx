@@ -7,14 +7,14 @@ export default function BackgroundPattern({ opacity = 0.05, className = "" }: { 
     <div className={`absolute inset-0 pointer-events-none z-0 ${className}`}>
       {/* Vintage Paper Texture */}
       <div 
-        className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply" 
-        style={{ opacity: 0.4 }}
+        className="absolute inset-0 mix-blend-multiply" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')", opacity: 0.4 }}
       />
       
       {/* Ornamental Border Pattern */}
       <div 
-        className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/connected.png')] mix-blend-overlay"
-        style={{ opacity }}
+        className="absolute inset-0 mix-blend-overlay"
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/connected.png')", opacity }}
       />
       
       {/* Radial Vignette */}

@@ -3,22 +3,33 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
+import PremiumVideoPlayer from "./ui/PremiumVideoPlayer";
 
 const images = [
   {
-    src: "https://dehraduntourism.co.in/images/tourist-places/forest-research-institute-dehradun/forest-research-institute-dehradun-india-tourism-history.jpg",
-    title: "FRI Estate",
-    tag: "Arch",
+    src: "/restaurent/b14.webp",
+    title: "Crafted Cocktails",
+    tag: "Mixology",
   },
   {
-    src: "https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/11/08145031/landour.jpeg",
-    title: "Landour",
-    tag: "Heritage",
+    src: "/restaurent/b13.webp",
+    title: "Premium Ambience",
+    tag: "Atmosphere",
   },
   {
-    src: "https://mohitbangari.com/wp-content/uploads/2025/03/pexels-photo-2070307-2070307-1536x1024.jpg",
-    title: "Mussoorie",
-    tag: "Nature",
+    src: "/restaurent/b15.webp",
+    title: "Culinary Art",
+    tag: "Gastronomy",
+  },
+  {
+    src: "/restaurent/b11.webp",
+    title: "Heritage Dining",
+    tag: "Experience",
+  },
+  {
+    src: "/restaurent/b10.webp",
+    title: "Evening Vibes",
+    tag: "Lifestyle",
   }
 ];
 
@@ -30,9 +41,9 @@ export default function Gallery() {
         {/* Compact Header */}
         <div className="flex justify-between items-end mb-8">
           <div className="space-y-1">
-            <span className="font-cinzel text-golden-highlight tracking-[0.3em] uppercase text-[8px] font-bold">Heritage Archive</span>
+            <span className="font-cinzel text-golden-highlight tracking-[0.3em] uppercase text-[8px] font-bold">Publiq Experience</span>
             <h2 className="font-playfair text-4xl md:text-5xl text-deep-brown tracking-tighter leading-none">
-              Doon <span className="italic text-golden-highlight">Captures</span>
+              Visual <span className="italic text-golden-highlight">Journey</span>
             </h2>
           </div>
           <div className="h-px w-16 bg-golden-highlight/20 mb-2" />
@@ -47,7 +58,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-[1.8] border border-deep-brown/5 shadow-sm"
+              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-[5] border border-deep-brown/5 shadow-sm"
             >
               {/* Vibrant Image Layer */}
               <div className="relative h-full w-full">
@@ -88,6 +99,46 @@ export default function Gallery() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Video Highlights */}
+        <div className="mt-16 md:mt-24">
+          <div className="flex justify-between items-end mb-8">
+            <div className="space-y-1">
+              <span className="font-cinzel text-golden-highlight tracking-[0.3em] uppercase text-[8px] font-bold">Motion</span>
+              <h3 className="font-playfair text-3xl md:text-4xl text-deep-brown tracking-tight leading-none">
+                Live <span className="italic text-golden-highlight">Moments</span>
+              </h3>
+            </div>
+            <div className="h-px w-12 bg-golden-highlight/20 mb-2" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <PremiumVideoPlayer 
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" 
+                poster="/restaurent/b14.webp"
+                title="The Art of Mixology"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <PremiumVideoPlayer 
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" 
+                poster="/restaurent/b11.webp"
+                title="Culinary Excellence"
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

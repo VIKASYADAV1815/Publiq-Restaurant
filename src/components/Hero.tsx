@@ -33,8 +33,8 @@ export default function Hero() {
     >
       {/* Layer 1: Parallax Background */}
       <motion.div 
-        style={{ scale: bgScale }}
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-60 transition-opacity duration-1000"
+        style={{ scale: bgScale, backgroundImage: "url('/restaurent/ban2.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center opacity-60 transition-opacity duration-1000"
       />
       
       {/* Layer 2: Sophisticated Overlays */}

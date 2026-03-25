@@ -9,7 +9,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F0F0F] text-parchment pt-12 md:pt-16 pb-12 relative overflow-hidden border-t border-parchment/10">
       {/* Texture */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-wood.png')] opacity-30 mix-blend-overlay" />
+      <div 
+        className="absolute inset-0 opacity-30 mix-blend-overlay" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/dark-wood.png')" }} 
+      />
       <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent pointer-events-none" />
       
       <div className="container-custom relative z-10 grid md:grid-cols-3 gap-12 text-center md:text-left">

@@ -21,7 +21,10 @@ const Page = forwardRef<HTMLDivElement, PageProps>(({ children, number, classNam
   return (
     <div className={`demoPage bg-parchment relative overflow-hidden h-full border-r border-deep-brown/10 ${className}`} ref={ref}>
       {/* Paper Texture */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply pointer-events-none" />
+      <div 
+        className="absolute inset-0 opacity-50 mix-blend-multiply pointer-events-none" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
+      />
       <div className="absolute inset-0 bg-linear-to-r from-black/5 via-transparent to-black/5 pointer-events-none" />
       
       {/* 3D Stacked Page Effect */}
@@ -56,7 +59,10 @@ const CoverPage = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement
   return (
     <div {...props} className="demoPage bg-[#8D6E63] text-[#3E2723] h-full flex flex-col items-center justify-center p-6 border-2 border-deep-brown relative shadow-2xl rounded-r-md overflow-hidden group" ref={ref}>
       {/* Rich Texture */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/leather.png')] opacity-80 mix-blend-multiply" />
+      <div 
+        className="absolute inset-0 opacity-80 mix-blend-multiply" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/leather.png')" }} 
+      />
       <div className="absolute inset-0 bg-linear-to-br from-[#A1887F]/30 to-black/40 mix-blend-overlay" />
       
       {/* Embossed Border */}
@@ -114,7 +120,10 @@ const IndexPage = forwardRef<HTMLDivElement, { onNavigate: (id: string) => void 
   // Simplified for now: just rendering list
   return (
     <div className="demoPage bg-parchment relative shadow-inner overflow-hidden h-full border-r border-deep-brown/10 p-8" ref={ref}>
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply pointer-events-none" />
+       <div 
+         className="absolute inset-0 opacity-50 mix-blend-multiply pointer-events-none" 
+         style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
+       />
        <div className="h-full flex flex-col items-center justify-center border-4 double border-deep-brown/10 p-6">
           <h3 className="font-playfair text-3xl font-bold text-deep-brown mb-2">Table of Contents</h3>
           <p className="font-cinzel text-xs text-deep-brown/60 tracking-widest mb-8 uppercase">विषय - सूची</p>
@@ -146,17 +155,20 @@ IndexPage.displayName = "IndexPage";
 const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
   return (
     <div {...props} className="demoPage bg-parchment relative shadow-inner overflow-hidden h-full border-r border-deep-brown/10 flex items-center justify-center" ref={ref}>
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply pointer-events-none" />
+      <div 
+        className="absolute inset-0 opacity-50 mix-blend-multiply pointer-events-none" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
+      />
       
       {/* Full width logo/image area */}
       <div className="relative w-full h-full p-8 flex items-center justify-center">
         <div className="relative w-full aspect-3/4 max-h-[80%] border-4 border-deep-brown/20 p-2 shadow-inner bg-white/50 transform -rotate-1">
            <div className="relative w-full h-full overflow-hidden transition-all duration-700">
              <Image 
-               src="/logo.jpeg" 
-               alt="Publiq Dehradun" 
+               src="/restaurent/b12.webp" 
+               alt="Restaurant Interior" 
                fill 
-               className="object-cover"
+               className="object-cover opacity-80"
                priority
              />
            </div>
@@ -174,7 +186,10 @@ InsideCoverLeft.displayName = "InsideCoverLeft";
 const BackCover = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
   return (
     <div {...props} className="demoPage bg-[#8D6E63] h-full flex flex-col items-center justify-center p-8 relative shadow-2xl rounded-l-md border-2 border-deep-brown" ref={ref}>
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/leather.png')] opacity-60 mix-blend-multiply" />
+      <div 
+        className="absolute inset-0 opacity-60 mix-blend-multiply" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/leather.png')" }} 
+      />
        
       {/* 3D Thickness Effect (Left Side) */}
       <div className="absolute left-0 top-1 bottom-1 w-1.5 bg-deep-brown shadow-lg transform -translate-x-px" />
@@ -396,7 +411,10 @@ export default function BookMenu() {
   return (
     <section id="menu-book-section" className="relative min-h-screen bg-parchment flex flex-col items-center justify-center p-2 py-12 md:py-16 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 mix-blend-multiply" />
+      <div 
+        className="absolute inset-0 opacity-60 mix-blend-multiply" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
+      />
       <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/5 pointer-events-none" />
       
       {/* Top Controls */}
@@ -523,7 +541,7 @@ export default function BookMenu() {
                 </div>
                 
                 <div className="mt-auto opacity-40">
-                   <Image src="/logo.jpeg" width={80} height={80} alt="Logo" className="grayscale" />
+                   <Image src="/logo1.png" width={80} height={80} alt="Logo" className="grayscale" />
                 </div>
               </div>
             </Page>

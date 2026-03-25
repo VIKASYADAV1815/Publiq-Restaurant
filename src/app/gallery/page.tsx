@@ -6,23 +6,33 @@ import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
+import PremiumVideoPlayer from "@/components/ui/PremiumVideoPlayer";
 
 const galleryImages = [
-  { src: "https://dehraduntourism.co.in/images/tourist-places/forest-research-institute-dehradun/forest-research-institute-dehradun-india-tourism-history.jpg", span: "md:col-span-4 md:row-span-4" },
-  { src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000", span: "md:col-span-2 md:row-span-2" },
-  { src: "https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/11/08145031/landour.jpeg", span: "md:col-span-2 md:row-span-2" },
-  { src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000", span: "md:col-span-2 md:row-span-3" },
-  { src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000", span: "md:col-span-2 md:row-span-3" },
-  { src: "https://mohitbangari.com/wp-content/uploads/2025/03/pexels-photo-2070307-2070307-1536x1024.jpg", span: "md:col-span-2 md:row-span-3" },
-  { src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000", span: "md:col-span-3 md:row-span-3" },
-  { src: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1000", span: "md:col-span-3 md:row-span-3" },
-  { src: "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=1000", span: "md:col-span-2 md:row-span-2" },
-  { src: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1000", span: "md:col-span-2 md:row-span-2" },
-  { src: "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=1000", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/ban2.jpg", span: "md:col-span-4 md:row-span-4" },
+  { src: "/restaurent/ban1.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/banner2.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/momo.webp", span: "md:col-span-2 md:row-span-3" },
+  { src: "/restaurent/b1.webp", span: "md:col-span-2 md:row-span-3" },
+  { src: "/restaurent/b2.webp", span: "md:col-span-2 md:row-span-3" },
+  { src: "/restaurent/b3.webp", span: "md:col-span-3 md:row-span-3" },
+  { src: "/restaurent/b4.webp", span: "md:col-span-3 md:row-span-3" },
+  { src: "/restaurent/b6.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b7.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b8.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b9.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b10.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b11.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b12.webp", span: "md:col-span-2 md:row-span-3" },
+  { src: "/restaurent/b13.webp", span: "md:col-span-3 md:row-span-3" },
+  { src: "/restaurent/b14.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/restaurent/b15.webp", span: "md:col-span-2 md:row-span-2" },
 ];
 
 export default function GalleryPage() {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<'stills' | 'motion'>('stills');
 
   const nextImage = () => setSelectedIdx((prev) => (prev !== null && prev < galleryImages.length - 1 ? prev + 1 : 0));
   const prevImage = () => setSelectedIdx((prev) => (prev !== null && prev > 0 ? prev - 1 : galleryImages.length - 1));
@@ -30,28 +40,98 @@ export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-parchment text-deep-brown selection:bg-golden-highlight">
       <Navbar />
+      <PageHero
+        bgSrc="/restaurent/b11.webp"
+        eyebrow="The Visual Experience"
+        title="Publiq Archive"
+        description="A curated narrative of craft mixology and culinary heritage."
+      />
       
-      <div className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
-        <header className="mb-16">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-golden-highlight" />
-            <span className="font-cinzel text-golden-highlight tracking-[0.4em] text-[10px] font-bold">The Visual Experience</span>
-          </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            className="font-playfair text-6xl md:text-8xl text-deep-brown mb-4"
-          >
-            Publiq <span className="italic text-golden-highlight">Archive</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
-            className="font-libre text-deep-brown/60 text-lg italic max-w-2xl"
-          >
-            A curated narrative of craft mixology and culinary heritage.
-          </motion.p>
-        </header>
+      <div className="py-16 md:py-24 px-6 max-w-7xl mx-auto min-h-[80vh]">
+        {/* Premium Toggle */}
+        <div className="flex justify-center mb-16">
+          <div className="relative flex items-center p-1.5 bg-deep-brown/5 rounded-full border border-deep-brown/10 shadow-inner">
+            {/* Sliding Indicator */}
+            <motion.div
+              className="absolute h-[calc(100%-12px)] top-1.5 bg-deep-brown rounded-full shadow-md"
+              initial={false}
+              animate={{
+                left: activeTab === 'stills' ? '6px' : '50%',
+                width: 'calc(50% - 6px)',
+              }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            />
 
-        {/* Tight-Gap Bento Grid */}
+            <button
+              onClick={() => setActiveTab('stills')}
+              className={`relative z-10 w-32 md:w-40 py-3 text-xs font-cinzel font-bold tracking-widest uppercase transition-colors duration-500 ${
+                activeTab === 'stills' ? 'text-parchment' : 'text-deep-brown/60 hover:text-deep-brown'
+              }`}
+            >
+              Stills
+            </button>
+            <button
+              onClick={() => setActiveTab('motion')}
+              className={`relative z-10 w-32 md:w-40 py-3 text-xs font-cinzel font-bold tracking-widest uppercase transition-colors duration-500 ${
+                activeTab === 'motion' ? 'text-parchment' : 'text-deep-brown/60 hover:text-deep-brown'
+              }`}
+            >
+              Motion
+            </button>
+          </div>
+        </div>
+
+        <AnimatePresence mode="wait">
+          {activeTab === 'motion' && (
+            <motion.div
+              key="motion"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full"
+            >
+              <div className="text-center mb-12">
+                <span className="font-cinzel text-deep-brown/60 tracking-[0.4em] uppercase text-xs font-bold mb-4 block">Motion</span>
+                <h2 className="font-playfair text-4xl md:text-5xl text-deep-brown tracking-tight">
+                  Cinematic <span className="italic text-golden-highlight">Moments</span>
+                </h2>
+                <div className="h-px w-24 bg-golden-highlight/30 mx-auto mt-6" />
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <PremiumVideoPlayer 
+                  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" 
+                  poster="/restaurent/b14.webp"
+                  title="The Art of Mixology"
+                />
+                <PremiumVideoPlayer 
+                  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" 
+                  poster="/restaurent/b11.webp"
+                  title="Culinary Excellence"
+                />
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'stills' && (
+            <motion.div
+              key="stills"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full"
+            >
+              <div className="text-center mb-12">
+                <span className="font-cinzel text-deep-brown/60 tracking-[0.4em] uppercase text-xs font-bold mb-4 block">Stills</span>
+                <h2 className="font-playfair text-4xl md:text-5xl text-deep-brown tracking-tight">
+                  Curated <span className="italic text-golden-highlight">Captures</span>
+                </h2>
+                <div className="h-px w-24 bg-golden-highlight/30 mx-auto mt-6" />
+              </div>
+
+              {/* Tight-Gap Bento Grid */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 auto-rows-[90px] md:auto-rows-[110px]">
           {galleryImages.map((image, idx) => (
             <motion.div
@@ -74,6 +154,9 @@ export default function GalleryPage() {
             </motion.div>
           ))}
         </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* High-End Animated Lightbox */}

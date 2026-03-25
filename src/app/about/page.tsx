@@ -2,29 +2,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StorySection from "@/components/StorySection";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen bg-parchment text-deep-brown font-libre selection:bg-golden-highlight selection:text-white pt-20">
+    <main className="relative min-h-screen bg-parchment text-deep-brown font-libre selection:bg-golden-highlight selection:text-white">
       <Navbar />
+      <PageHero
+        bgSrc="/restaurent/ban2.jpg"
+        eyebrow="Our Heritage"
+        title="About PUBLIQ"
+        description="Inspired by the colonial charm of Dehradun and the timeless elegance of Mussoorie, PUBLIQ is more than just a restaurant — it is a tribute to our roots."
+      />
       
-      {/* Hero Section */}
       <section className="py-24 bg-[#FDF5E6] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <span className="font-cinzel text-golden-highlight tracking-[0.4em] uppercase text-xs font-bold mb-4 block">Our Heritage</span>
-            <h1 className="font-playfair text-5xl md:text-7xl text-deep-brown mb-8">About PUBLIQ</h1>
-            <p className="font-libre text-lg md:text-xl text-deep-brown/70 italic max-w-3xl mx-auto leading-relaxed">
-              Inspired by the colonial charm of Dehradun and the timeless elegance of Mussoorie, 
-              PUBLIQ is more than just a restaurant &ndash; it&apos;s a tribute to our roots.
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-2xl border-4 border-white/50">
               <Image 
-                src="https://dehraduntourism.co.in/images/tourist-places/forest-research-institute-dehradun/forest-research-institute-dehradun-india-tourism-history.jpg"
-                alt="Heritage Architecture"
+                src="/restaurent/b1.webp"
+                alt="Publiq Interior"
                 fill
                 className="object-cover"
               />
@@ -59,7 +56,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <StorySection />
+      <StorySection 
+        title="Our Culinary"
+        subtitle="Philosophy"
+        description="We believe that dining is an art form. Our chefs meticulously blend locally sourced ingredients with global techniques to create a menu that is both familiar and surprising."
+        quote={'"Great food is not just about taste; it is about the stories it tells and the people it brings together."'}
+        quoteAuthor="The Publiq Kitchen"
+        imageSrc="/restaurent/b22.webp"
+        eyebrow="Gastronomy"
+      />
       
       {/* Values Section */}
       <section className="py-20 bg-parchment">
