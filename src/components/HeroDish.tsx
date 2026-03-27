@@ -1,22 +1,13 @@
 "use client";
 
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 export default function HeroDish() {
   const { scrollY } = useScroll();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
   
-  // Parallax effect for the dish - disabled on mobile
-  const yDish = useTransform(scrollY, [0, 800], [0, isMobile ? 0 : -100]);
+  // Parallax effect for the dish
+  const yDish = useTransform(scrollY, [0, 800], [0, -100]);
 
   return (
     <div className="relative w-full h-0 z-40 pointer-events-none">

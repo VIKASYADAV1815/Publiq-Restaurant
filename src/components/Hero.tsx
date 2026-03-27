@@ -29,10 +29,10 @@ export default function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative h-dvh w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white"
     >
       {/* Layer 1: Static Background (Parallax removed for performance) */}
-      <div 
+      <motion.div 
         style={{ backgroundImage: "url('/restaurent/ban2.jpg')" }}
         className="absolute inset-0 bg-cover bg-center opacity-60"
       />
