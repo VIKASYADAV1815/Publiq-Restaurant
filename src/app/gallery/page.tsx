@@ -30,6 +30,19 @@ const galleryImages = [
   { src: "/restaurent/b15.webp", span: "md:col-span-2 md:row-span-2" },
 ];
 
+const galleryVideos = [
+  { src: "/videos/MVI_0013.mp4", title: "The Art of Mixology", poster: "/restaurent/b14.webp" },
+  { src: "/videos/0326 (2).mp4", title: "Culinary Excellence", poster: "/restaurent/b11.webp" },
+  { src: "/videos/0326 (2)(2).mp4", title: "Evening Vibes", poster: "/restaurent/b10.webp" },
+  { src: "/videos/MVI_0013_1.mp4", title: "Signature Cocktails", poster: "/restaurent/b12.webp" },
+  { src: "/videos/MVI_0013_2.mp4", title: "Craft Spirits", poster: "/restaurent/b13.webp" },
+  { src: "/videos/MVI_0013_3.mp4", title: "The Atmosphere", poster: "/restaurent/b15.webp" },
+  { src: "/videos/MVI_0013_4.mp4", title: "Gourmet Flavors", poster: "/restaurent/b1.webp" },
+  { src: "/videos/MVI_0013_5.mp4", title: "Mixology Session", poster: "/restaurent/b2.webp" },
+  { src: "/videos/MVI_0013_6.mp4", title: "Dining Experience", poster: "/restaurent/b3.webp" },
+  { src: "/videos/MVI_0013_7.mp4", title: "Publiq Moments", poster: "/restaurent/b4.webp" },
+];
+
 export default function GalleryPage() {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<'stills' | 'motion'>('stills');
@@ -99,17 +112,17 @@ export default function GalleryPage() {
                 <div className="h-px w-24 bg-golden-highlight/30 mx-auto mt-6" />
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <PremiumVideoPlayer 
-                  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" 
-                  poster="/restaurent/b14.webp"
-                  title="The Art of Mixology"
-                />
-                <PremiumVideoPlayer 
-                  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" 
-                  poster="/restaurent/b11.webp"
-                  title="Culinary Excellence"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {galleryVideos.map((video, idx) => (
+                  <PremiumVideoPlayer 
+                    key={idx}
+                    src={video.src} 
+                    poster={video.poster}
+                    title={video.title}
+                    aspectRatio="video"
+                    objectFit="contain"
+                  />
+                ))}
               </div>
             </motion.div>
           )}

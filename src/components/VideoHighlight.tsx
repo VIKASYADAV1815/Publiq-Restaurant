@@ -5,14 +5,14 @@ import PremiumVideoPlayer from "./ui/PremiumVideoPlayer";
 
 const highlightVideos = [
   {
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4", // Placeholder - replace with actual restaurant video
-    poster: "/restaurent/b14.webp",
-    title: "The Art of Mixology"
+    src: "/videos/MVI_0013_1.mp4",
+    poster: "/restaurent/b12.webp",
+    title: "Signature Cocktails"
   },
   {
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4", // Placeholder - replace with actual restaurant video
-    poster: "/restaurent/b11.webp",
-    title: "Culinary Excellence"
+    src: "/videos/MVI_0013_2.mp4",
+    poster: "/restaurent/b13.webp",
+    title: "Craft Spirits"
   }
 ];
 

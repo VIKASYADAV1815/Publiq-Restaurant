@@ -18,7 +18,6 @@ export default function Home() {
       <MenuCategories />
           {/* <FeaturedDishes /> */}
       <BookMenu />
-  
       <Gallery />
       <Footer />
     </main>

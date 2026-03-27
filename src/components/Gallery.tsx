@@ -121,9 +121,11 @@ export default function Gallery() {
               viewport={{ once: true }}
             >
               <PremiumVideoPlayer 
-                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" 
+                src="/videos/MVI_0013.mp4" 
                 poster="/restaurent/b14.webp"
                 title="The Art of Mixology"
+                aspectRatio="video"
+                objectFit="contain"
               />
             </motion.div>
             <motion.div
@@ -133,9 +135,11 @@ export default function Gallery() {
               viewport={{ once: true }}
             >
               <PremiumVideoPlayer 
-                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" 
+                src="/videos/0326 (2).mp4" 
                 poster="/restaurent/b11.webp"
                 title="Culinary Excellence"
+                aspectRatio="video"
+                objectFit="contain"
               />
             </motion.div>
           </div>

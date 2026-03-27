@@ -115,7 +115,7 @@ const CoverPage = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement
 CoverPage.displayName = "CoverPage";
 
 // Index Page Component
-const IndexPage = forwardRef<HTMLDivElement, { onNavigate: (id: string) => void }>((props, ref) => {
+const IndexPage = forwardRef<HTMLDivElement, { onNavigate: (id: string) => void; categories: any[] }>((props, ref) => {
   // We need to calculate page numbers manually or pass map
   // Simplified for now: just rendering list
   return (
@@ -129,7 +129,7 @@ const IndexPage = forwardRef<HTMLDivElement, { onNavigate: (id: string) => void 
           <p className="font-cinzel text-xs text-deep-brown/60 tracking-widest mb-8 uppercase">विषय - सूची</p>
           
           <div className="w-full space-y-3 overflow-y-auto max-h-100 pr-2 scrollbar-thin scrollbar-thumb-deep-brown/20">
-             {menuData.map((category, idx) => (
+             {props.categories.map((category, idx) => (
                <button 
                  key={idx}
                  onClick={() => props.onNavigate(category.id)}
@@ -225,6 +225,27 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
   //   addItem({ id: item.id, name: item.name, price: item.price, veg: item.veg });
   // };
   
+  const getFallbackImage = (name: string) => {
+    const n = name.toLowerCase();
+    if (n.includes("carlsberg")) return "/restaurent/b8.webp";
+    if (n.includes("bud")) return "/restaurent/b7.webp";
+    if (n.includes("corona")) return "/restaurent/b10.webp";
+    if (n.includes("breezer")) return "/restaurent/b14.webp";
+    if (n.includes("cream of tomato") || n.includes("tomato")) return "/restaurent/b22.webp";
+    if (n.includes("lemon") || n.includes("coriander")) return "/restaurent/b13.webp";
+    if (n.includes("soup")) return "/restaurent/b15.webp";
+    if (n.includes("salad")) return "/restaurent/b6.webp";
+    if (n.includes("burger")) return "/restaurent/b1.webp";
+    if (n.includes("pizza")) return "/restaurent/b2.webp";
+    if (n.includes("pasta")) return "/restaurent/b3.webp";
+    if (n.includes("paneer")) return "/restaurent/b4.webp";
+    if (n.includes("chicken")) return "/restaurent/b5.webp";
+    if (n.includes("mutton")) return "/restaurent/b13.webp";
+    return "/restaurent/b9.webp";
+  };
+  
+  const [imageSrc, setImageSrc] = React.useState<string | null>(item.image ?? null);
+  
   const stopPropagation = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
     e.stopPropagation();
     if (e.nativeEvent) {
@@ -235,14 +256,17 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
   return (
     <div className="mb-4 border-b border-deep-brown/5 pb-3 last:border-0 group hover:bg-deep-brown/5 transition-colors p-2 rounded-sm -mx-2 flex gap-3 items-start">
       {/* Thumbnail Image */}
-      <div className="w-16 h-16 relative shrink-0 rounded-sm overflow-hidden border border-deep-brown/10 shadow-sm">
-        <Image 
-          src={item.image || "https://images.unsplash.com/photo-1546833999-b9f5816029bd?q=80&w=200&auto=format&fit=crop"} 
-          alt={item.name}
-          fill
-          className="object-cover"
-        />
-      </div>
+      {imageSrc && (
+        <div className="w-16 h-16 relative shrink-0 rounded-sm overflow-hidden border border-deep-brown/10 shadow-sm">
+          <Image 
+            src={imageSrc} 
+            alt={item.name}
+            fill
+            className="object-cover"
+            onError={() => setImageSrc(getFallbackImage(item.name))}
+          />
+        </div>
+      )}
 
       <div className="flex-1 min-w-0">
         <div className="flex justify-between items-baseline mb-0.5">
@@ -280,6 +304,13 @@ export default function BookMenu() {
   const book = useRef<any>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [pageMap, setPageMap] = useState<Record<string, number>>({});
+  const menuNoImages = React.useMemo(() => {
+    return menuData.map((cat: any) => ({
+      ...cat,
+      image: undefined,
+      items: cat.items.map((item: any) => ({ ...item, image: undefined })),
+    }));
+  }, []);
   
   const targetCategory = useUIStore((state) => state.targetCategory);
   const setTargetCategory = useUIStore((state) => state.setTargetCategory);
@@ -332,14 +363,14 @@ export default function BookMenu() {
     let counter = 3; // Cover(0), InsideLeft(1), Index(2) -> Start at 3
     const map: Record<string, number> = {};
     
-    menuData.forEach((category, idx) => {
+    menuNoImages.forEach((category: any) => {
       map[category.id] = counter;
       const totalItems = category.items.length;
       const totalCategoryPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
       counter += totalCategoryPages;
     });
     setPageMap(map);
-  }, []);
+  }, [menuNoImages]);
 
   // Effect to handle navigation from store
   useEffect(() => {
@@ -513,10 +544,10 @@ export default function BookMenu() {
             <InsideCoverLeft />
   
             {/* Index Page (Page 2) */}
-            <IndexPage onNavigate={goToPage} />
+            <IndexPage onNavigate={goToPage} categories={menuNoImages} />
   
             {/* Dynamic Menu Pages (Page 3+) */}
-            {menuData.reduce<{ pages: React.ReactNode[], counter: number }>((acc, category) => {
+            {menuNoImages.reduce<{ pages: React.ReactNode[], counter: number }>((acc, category) => {
               const pages = renderCategoryPages(category, acc.counter);
               return {
                 pages: [...acc.pages, ...pages],
@@ -526,7 +557,7 @@ export default function BookMenu() {
   
             {/* Last Page */}
             <Page number={(() => {
-              const totalMenuPages = menuData.reduce((acc, cat) => acc + Math.ceil(cat.items.length / ITEMS_PER_PAGE), 0);
+              const totalMenuPages = menuNoImages.reduce((acc: number, cat: any) => acc + Math.ceil(cat.items.length / ITEMS_PER_PAGE), 0);
               return 3 + totalMenuPages;
             })()}>
               <div className="flex flex-col h-full justify-center items-center text-center space-y-6">

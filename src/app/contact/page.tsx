@@ -14,14 +14,14 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log(formData);
     alert("Message sent 🚀");
@@ -39,7 +39,7 @@ export default function ContactPage() {
       />
 
       {/* CONTACT SECTION */}
-      <section className="py-24 bg-[#FDF5E6] relative overflow-hidden">
+      <section className="py-24 bg-parchment relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
             
@@ -167,7 +167,7 @@ export default function ContactPage() {
                   placeholder="Your Message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 text-sm min-h-[120px] focus:border-golden-highlight outline-none transition-all focus:scale-[1.02]"
+                  className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 text-sm min-h-30 focus:border-golden-highlight outline-none transition-all focus:scale-[1.02]"
                 />
 
                 <button className="w-full bg-deep-brown text-parchment font-cinzel py-4 tracking-widest font-bold hover:bg-golden-highlight hover:text-deep-brown transition-all duration-300 shadow-lg hover:shadow-2xl active:scale-95 relative overflow-hidden group">
@@ -181,7 +181,7 @@ export default function ContactPage() {
       </section>
 
       {/* MAP */}
-      <section className="relative h-[400px] w-full grayscale hover:grayscale-0 transition-all duration-1000">
+      <section className="relative h-100 w-full grayscale hover:grayscale-0 transition-all duration-1000">
         <iframe
           src="https://www.google.com/maps?q=Rajpur+Road+Dehradun&output=embed"
           width="100%"
