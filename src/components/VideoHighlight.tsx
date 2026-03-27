@@ -46,7 +46,7 @@ export default function VideoHighlight() {
         </div>
 
         {/* Videos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {highlightVideos.map((video, idx) => (
             <motion.div
               key={idx}
@@ -60,6 +60,8 @@ export default function VideoHighlight() {
                 src={video.src} 
                 poster={video.poster}
                 title={video.title}
+                aspectRatio="portrait"
+                objectFit="cover"
               />
             </motion.div>
           ))}

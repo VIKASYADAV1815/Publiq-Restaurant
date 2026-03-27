@@ -112,15 +112,15 @@ export default function GalleryPage() {
                 <div className="h-px w-24 bg-golden-highlight/30 mx-auto mt-6" />
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
                 {galleryVideos.map((video, idx) => (
                   <PremiumVideoPlayer 
                     key={idx}
                     src={video.src} 
                     poster={video.poster}
                     title={video.title}
-                    aspectRatio="video"
-                    objectFit="contain"
+                    aspectRatio="portrait"
+                    objectFit="cover"
                   />
                 ))}
               </div>
