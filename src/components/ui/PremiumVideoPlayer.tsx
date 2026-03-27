@@ -29,6 +29,12 @@ export default function PremiumVideoPlayer({
   const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = isMuted;
+    }
+  }, []);
+
+  useEffect(() => {
     if (autoPlay && videoRef.current) {
       videoRef.current.play().catch(error => {
         console.log("Autoplay blocked:", error);
@@ -38,15 +44,16 @@ export default function PremiumVideoPlayer({
   }, [autoPlay]);
 
   // Handle play/pause
-  const togglePlay = (e?: React.MouseEvent) => {
+  const togglePlay = (e?: React.MouseEvent | React.TouchEvent) => {
     if (e) e.stopPropagation();
     if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
+      if (videoRef.current.paused) {
         videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
       }
-      setIsPlaying(!isPlaying);
       setHasInteracted(true);
     }
   };
@@ -92,7 +99,11 @@ export default function PremiumVideoPlayer({
       className={`relative w-full ${aspectRatioClasses[aspectRatio]} rounded-sm overflow-hidden group bg-deep-brown shadow-2xl cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => togglePlay()}
+      onClick={togglePlay}
+      onTouchEnd={(e) => {
+        // Only trigger if no scroll happened (simple check)
+        togglePlay(e);
+      }}
     >
       {/* Video Element with blurred background for portrait videos in landscape mode */}
       {objectFit === 'contain' && (
@@ -112,6 +123,7 @@ export default function PremiumVideoPlayer({
         muted={isMuted}
         loop
         autoPlay={autoPlay}
+        preload="metadata"
       />
 
       {/* Overlays */}

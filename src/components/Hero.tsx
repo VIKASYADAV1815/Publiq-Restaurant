@@ -32,9 +32,9 @@ export default function Hero() {
       className="relative h-dvh w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white"
     >
       {/* Layer 1: Static Background (Parallax removed for performance) */}
-      <motion.div 
+      <div 
         style={{ backgroundImage: "url('/restaurent/ban2.jpg')" }}
-        className="absolute inset-0 bg-cover bg-center opacity-60 scale-105"
+        className="absolute inset-0 bg-cover bg-center opacity-60"
       />
       
       {/* Layer 2: Sophisticated Overlays */}

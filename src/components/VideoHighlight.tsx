@@ -50,9 +50,9 @@ export default function VideoHighlight() {
           {highlightVideos.map((video, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: idx * 0.2 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="w-full"
             >
