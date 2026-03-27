@@ -85,6 +85,9 @@ export default function PremiumVideoPlayer({
     wide: "aspect-[21/9]"
   };
 
+  const encodedSrc = src.split('/').map(part => encodeURIComponent(part)).join('/').replace(/%3A/g, ':');
+  const videoSrc = encodedSrc.includes("#t=") ? encodedSrc : `${encodedSrc}#t=0.001`;
+
   return (
     <div 
       className={`relative w-full ${aspectRatioClasses[aspectRatio]} rounded-sm overflow-hidden group bg-deep-brown shadow-2xl cursor-pointer`}
@@ -96,30 +99,25 @@ export default function PremiumVideoPlayer({
         togglePlay(e);
       }}
     >
-      {/* Video Element with blurred background for portrait videos in landscape mode */}
-      {objectFit === 'contain' && (
-        <div 
-          className="absolute inset-0 bg-cover bg-center blur-xl scale-110 opacity-50"
-          style={{ backgroundImage: `url(${poster})` }}
-        />
-      )}
       <video
         ref={videoRef}
-        src={src}
+        poster={poster}
         className={`relative z-10 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
         onEnded={() => setIsPlaying(false)}
         playsInline
         muted={isMuted}
         loop
         autoPlay={autoPlay}
-        preload="metadata"
+        preload="auto"
         controls={isMobile}
-      />
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
 
       {!isMobile && (
         <>
           {/* Overlays */}
-          <div className={`absolute inset-0 z-20 bg-black/40 transition-opacity duration-500 pointer-events-none ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`} />
+          <div className={`absolute inset-0 z-20 bg-black/20 transition-opacity duration-500 pointer-events-none ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`} />
           
           {/* Center Play Button (Large) */}
           <AnimatePresence>
