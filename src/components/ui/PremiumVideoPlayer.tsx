@@ -24,9 +24,8 @@ export default function PremiumVideoPlayer({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [isMuted, setIsMuted] = useState(true);
-  const [progress, setProgress] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
+
 
   useEffect(() => {
     if (videoRef.current) {
@@ -54,16 +53,6 @@ export default function PremiumVideoPlayer({
         videoRef.current.pause();
         setIsPlaying(false);
       }
-      setHasInteracted(true);
-    }
-  };
-
-  // Handle mute/unmute
-  const toggleMute = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
     }
   };
 
@@ -79,13 +68,7 @@ export default function PremiumVideoPlayer({
     }
   };
 
-  // Update progress bar
-  const handleTimeUpdate = () => {
-    if (videoRef.current) {
-      const currentProgress = (videoRef.current.currentTime / videoRef.current.duration) * 100;
-      setProgress(currentProgress);
-    }
-  };
+
 
   const aspectRatioClasses = {
     video: "aspect-video",
@@ -117,7 +100,6 @@ export default function PremiumVideoPlayer({
         src={src}
         poster={poster}
         className={`relative z-10 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-1000 group-hover:scale-105`}
-        onTimeUpdate={handleTimeUpdate}
         onEnded={() => setIsPlaying(false)}
         playsInline
         muted={isMuted}
@@ -150,50 +132,27 @@ export default function PremiumVideoPlayer({
         )}
       </AnimatePresence>
 
-      {/* Top Title Overlay */}
-      {title && (
-        <div className={`absolute top-0 left-0 w-full p-6 z-30 pointer-events-none bg-linear-to-b from-black/80 to-transparent transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}>
-          <h3 className="font-playfair text-xl md:text-3xl text-parchment drop-shadow-md">{title}</h3>
-          <div className="w-12 h-px bg-golden-highlight mt-3 opacity-70" />
-        </div>
-      )}
-
-      {/* Bottom Controls Bar */}
-      <div className={`absolute bottom-0 left-0 w-full p-4 md:p-6 z-30 bg-linear-to-t from-black/90 via-black/40 to-transparent flex flex-col gap-4 transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}>
-        
-        {/* Progress Bar */}
-        <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-golden-highlight transition-all duration-100 ease-linear"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-
-        {/* Controls */}
-        <div className="flex items-center justify-between text-parchment">
-          <div className="flex items-center gap-6">
-            <button 
-              onClick={(e) => { e.stopPropagation(); togglePlay(e); }}
-              className="hover:text-golden-highlight transition-colors"
-            >
-              {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-            </button>
-            <button 
-              onClick={toggleMute}
-              className="hover:text-golden-highlight transition-colors"
-            >
-              {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-            </button>
-          </div>
-          
-          <button 
-            onClick={toggleFullScreen}
-            className="hover:text-golden-highlight transition-colors"
+      {/* Fullscreen Button */}
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-4 right-4 z-30"
           >
-            <Maximize size={20} />
-          </button>
-        </div>
-      </div>
+            <button 
+              onClick={toggleFullScreen}
+              className="p-2 rounded-full bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 transition-colors"
+            >
+              <Maximize size={20} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+
     </div>
   );
 }
