@@ -25,6 +25,14 @@ export default function PremiumVideoPlayer({
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [isMuted, setIsMuted] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
 
   useEffect(() => {
@@ -98,59 +106,63 @@ export default function PremiumVideoPlayer({
       <video
         ref={videoRef}
         src={src}
-        poster={poster}
-        className={`relative z-10 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-1000 group-hover:scale-105`}
+        className={`relative z-10 w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
         onEnded={() => setIsPlaying(false)}
         playsInline
         muted={isMuted}
         loop
         autoPlay={autoPlay}
         preload="metadata"
+        controls={isMobile}
       />
 
-      {/* Overlays */}
-      <div className={`absolute inset-0 z-20 bg-black/40 transition-opacity duration-500 pointer-events-none ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`} />
-      
-      {/* Center Play Button (Large) */}
-      <AnimatePresence>
-        {!isPlaying && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
-          >
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-golden-highlight/30 bg-black/40 backdrop-blur-sm flex items-center justify-center text-golden-highlight transition-transform duration-300 hover:scale-110 pointer-events-auto">
-              {isPlaying ? (
-                <Pause size={24} strokeWidth={1.5} className="ml-0.5" />
-              ) : (
-                <Play size={24} strokeWidth={1.5} className="ml-1" />
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {!isMobile && (
+        <>
+          {/* Overlays */}
+          <div className={`absolute inset-0 z-20 bg-black/40 transition-opacity duration-500 pointer-events-none ${isPlaying && !isHovered ? 'opacity-0' : 'opacity-100'}`} />
+          
+          {/* Center Play Button (Large) */}
+          <AnimatePresence>
+            {!isPlaying && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
+              >
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-golden-highlight/30 bg-black/40 backdrop-blur-sm flex items-center justify-center text-golden-highlight transition-transform duration-300 hover:scale-110 pointer-events-auto">
+                  {isPlaying ? (
+                    <Pause size={24} strokeWidth={1.5} className="ml-0.5" />
+                  ) : (
+                    <Play size={24} strokeWidth={1.5} className="ml-1" />
+                  )}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-      {/* Fullscreen Button */}
-      <AnimatePresence>
-        {isHovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-4 right-4 z-30"
-          >
-            <button 
-              onClick={toggleFullScreen}
-              className="p-2 rounded-full bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 transition-colors"
-            >
-              <Maximize size={20} />
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          {/* Fullscreen Button */}
+          <AnimatePresence>
+            {isHovered && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="absolute top-4 right-4 z-30"
+              >
+                <button 
+                  onClick={toggleFullScreen}
+                  className="p-2 rounded-full bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 transition-colors"
+                >
+                  <Maximize size={20} />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>
+      )}
 
 
     </div>
