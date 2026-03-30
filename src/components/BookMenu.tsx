@@ -304,13 +304,7 @@ export default function BookMenu() {
   const book = useRef<any>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [pageMap, setPageMap] = useState<Record<string, number>>({});
-  const menuNoImages = React.useMemo(() => {
-    return menuData.map((cat: any) => ({
-      ...cat,
-      image: undefined,
-      items: cat.items.map((item: any) => ({ ...item, image: undefined })),
-    }));
-  }, []);
+  const menu = React.useMemo(() => menuData, []);
   
   const targetCategory = useUIStore((state) => state.targetCategory);
   const setTargetCategory = useUIStore((state) => state.setTargetCategory);
@@ -363,14 +357,14 @@ export default function BookMenu() {
     let counter = 3; // Cover(0), InsideLeft(1), Index(2) -> Start at 3
     const map: Record<string, number> = {};
     
-    menuNoImages.forEach((category: any) => {
+    menu.forEach((category: any) => {
       map[category.id] = counter;
       const totalItems = category.items.length;
       const totalCategoryPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
       counter += totalCategoryPages;
     });
     setPageMap(map);
-  }, [menuNoImages]);
+  }, [menu]);
 
   // Effect to handle navigation from store
   useEffect(() => {
@@ -544,10 +538,10 @@ export default function BookMenu() {
             <InsideCoverLeft />
   
             {/* Index Page (Page 2) */}
-            <IndexPage onNavigate={goToPage} categories={menuNoImages} />
+            <IndexPage onNavigate={goToPage} categories={menu} />
   
             {/* Dynamic Menu Pages (Page 3+) */}
-            {menuNoImages.reduce<{ pages: React.ReactNode[], counter: number }>((acc, category) => {
+            {menu.reduce<{ pages: React.ReactNode[], counter: number }>((acc, category) => {
               const pages = renderCategoryPages(category, acc.counter);
               return {
                 pages: [...acc.pages, ...pages],
@@ -557,7 +551,7 @@ export default function BookMenu() {
   
             {/* Last Page */}
             <Page number={(() => {
-              const totalMenuPages = menuNoImages.reduce((acc: number, cat: any) => acc + Math.ceil(cat.items.length / ITEMS_PER_PAGE), 0);
+              const totalMenuPages = menu.reduce((acc: number, cat: any) => acc + Math.ceil(cat.items.length / ITEMS_PER_PAGE), 0);
               return 3 + totalMenuPages;
             })()}>
               <div className="flex flex-col h-full justify-center items-center text-center space-y-6">
