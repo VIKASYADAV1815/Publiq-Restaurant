@@ -10,37 +10,33 @@ import PageHero from "@/components/PageHero";
 import PremiumVideoPlayer from "@/components/ui/PremiumVideoPlayer";
 
 const galleryImages = [
-  { src: "/restaurent/ban2.jpg", span: "md:col-span-4 md:row-span-4" },
-  { src: "/restaurent/ban1.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/banner2.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/momo.webp", span: "md:col-span-2 md:row-span-3" },
-  { src: "/restaurent/b1.webp", span: "md:col-span-2 md:row-span-3" },
-  { src: "/restaurent/b2.webp", span: "md:col-span-2 md:row-span-3" },
-  { src: "/restaurent/b3.webp", span: "md:col-span-3 md:row-span-3" },
-  { src: "/restaurent/b4.webp", span: "md:col-span-3 md:row-span-3" },
-  { src: "/restaurent/b6.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b7.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b8.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b9.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b10.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b11.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b12.webp", span: "md:col-span-2 md:row-span-3" },
-  { src: "/restaurent/b13.webp", span: "md:col-span-3 md:row-span-3" },
-  { src: "/restaurent/b14.webp", span: "md:col-span-2 md:row-span-2" },
-  { src: "/restaurent/b15.webp", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148486.jpg.jpeg", span: "md:col-span-4 md:row-span-4" },
+  { src: "/images/1000148489.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148490.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148491.jpg.jpeg", span: "md:col-span-2 md:row-span-3" },
+  { src: "/images/1000148492.jpg.jpeg", span: "md:col-span-2 md:row-span-3" },
+  { src: "/images/1000148493.jpg.jpeg", span: "md:col-span-2 md:row-span-3" },
+  { src: "/images/1000148494.jpg.jpeg", span: "md:col-span-3 md:row-span-3" },
+  { src: "/images/1000148495.jpg.jpeg", span: "md:col-span-3 md:row-span-3" },
+  { src: "/images/1000148496.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148497.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148500.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148501.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148502.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148503.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148504.jpg.jpeg", span: "md:col-span-2 md:row-span-3" },
+  { src: "/images/1000148506.jpg.jpeg", span: "md:col-span-3 md:row-span-3" },
+  { src: "/images/1000148525.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/1000148526.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
 ];
 
 const galleryVideos = [
-  { src: "/videos/MVI_0013.mp4", title: "The Art of Mixology", poster: "/restaurent/b14.webp" },
-  { src: "/videos/0326 (2).mp4", title: "Culinary Excellence", poster: "/restaurent/b11.webp" },
-  { src: "/videos/0326 (2)(2).mp4", title: "Evening Vibes", poster: "/restaurent/b10.webp" },
-  { src: "/videos/MVI_0013_1.mp4", title: "Signature Cocktails", poster: "/restaurent/b12.webp" },
-  { src: "/videos/MVI_0013_2.mp4", title: "Craft Spirits", poster: "/restaurent/b13.webp" },
-  { src: "/videos/MVI_0013_3.mp4", title: "The Atmosphere", poster: "/restaurent/b15.webp" },
-  { src: "/videos/MVI_0013_4.mp4", title: "Gourmet Flavors", poster: "/restaurent/b1.webp" },
-  { src: "/videos/MVI_0013_5.mp4", title: "Mixology Session", poster: "/restaurent/b2.webp" },
-  { src: "/videos/MVI_0013_6.mp4", title: "Dining Experience", poster: "/restaurent/b3.webp" },
-  { src: "/videos/MVI_0013_7.mp4", title: "Publiq Moments", poster: "/restaurent/b4.webp" },
+  { src: "/videos/0326 (2)(2).mp4", title: "Evening Vibes", poster: "/images/1000148532.jpg.jpeg" },
+  { src: "/videos/MVI_0013_1.mp4", title: "Signature Cocktails", poster: "/images/1000148527.jpg.jpeg" },
+  { src: "/videos/MVI_0013_2.mp4", title: "Craft Spirits", poster: "/images/1000148528.jpg.jpeg" },
+  { src: "/videos/MVI_0013_3.mp4", title: "The Atmosphere", poster: "/images/1000148529.jpg.jpeg" },
+  { src: "/videos/MVI_0013_6.mp4", title: "Dining Experience", poster: "/images/1000148530.jpg.jpeg" },
+  { src: "/videos/MVI_0013_7.mp4", title: "Publiq Moments", poster: "/images/1000148531.jpg.jpeg" },
 ];
 
 export default function GalleryPage() {
@@ -54,7 +50,7 @@ export default function GalleryPage() {
     <main className="min-h-screen bg-parchment text-deep-brown selection:bg-golden-highlight">
       <Navbar />
       <PageHero
-        bgSrc="/restaurent/b11.webp"
+        bgSrc="/images/1000148497.jpg.jpeg"
         eyebrow="The Visual Experience"
         title="Publiq Archive"
         description="A curated narrative of craft mixology and culinary heritage."

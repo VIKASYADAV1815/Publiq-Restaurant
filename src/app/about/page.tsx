@@ -9,7 +9,7 @@ export default function AboutPage() {
     <main className="relative min-h-screen bg-parchment text-deep-brown font-libre selection:bg-golden-highlight selection:text-white">
       <Navbar />
       <PageHero
-        bgSrc="/restaurent/ban2.jpg"
+        bgSrc="/images/1000148533.jpg.jpeg"
         eyebrow="Our Heritage"
         title="About PUBLIQ"
         description="Inspired by the colonial charm of Dehradun and the timeless elegance of Mussoorie, PUBLIQ is more than just a restaurant — it is a tribute to our roots."
@@ -18,12 +18,14 @@ export default function AboutPage() {
       <section className="py-24 bg-parchment relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-4/5 overflow-hidden rounded-sm shadow-2xl border-4 border-white/50">
-              <Image 
-                src="/restaurent/b1.webp"
+            <div className="relative overflow-hidden rounded-sm shadow-2xl border-4 border-white/50">
+              <Image
+                src="/images/1000148526.jpg.jpeg"
                 alt="Publiq Interior"
-                fill
-                className="object-cover"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain bg-parchment"
+                priority
               />
             </div>
             <div className="space-y-8">
@@ -56,13 +58,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <StorySection 
+      {/* <StorySection 
         title="Our Culinary"
         subtitle="Philosophy"
         description="We believe that dining is an art form. Our chefs meticulously blend locally sourced ingredients with global techniques to create a menu that is both familiar and surprising."
         quote={'"Great food is not just about taste; it is about the stories it tells and the people it brings together."'}
         quoteAuthor="The Publiq Kitchen"
         imageSrc="/restaurent/b22.webp"
+        eyebrow="Gastronomy"
+      /> */}
+      <StorySection 
+        title="Our Culinary"
+        subtitle="Philosophy"
+        description="We believe that dining is an art form. Our chefs meticulously blend locally sourced ingredients with global techniques to create a menu that is both familiar and surprising."
+        quote={'"Great food is not just about taste; it is about the stories it tells and the people it brings together."'}
+        quoteAuthor="The Publiq Kitchen"
+        imageSrc="/restaurent/b9.webp"
         eyebrow="Gastronomy"
       />
       

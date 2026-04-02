@@ -231,12 +231,16 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
     if (n.includes("bud")) return "/restaurent/b7.webp";
     if (n.includes("corona")) return "/restaurent/b10.webp";
     if (n.includes("breezer")) return "/restaurent/b14.webp";
-    if (n.includes("cream of tomato") || n.includes("tomato")) return "/restaurent/b22.webp";
+    // if (n.includes("cream of tomato") || n.includes("tomato")) return "/restaurent/b22.webp";
+    if (n.includes("cream of tomato") || n.includes("tomato")) return "/restaurent/b9.webp"; // Replaced b22.webp
     if (n.includes("lemon") || n.includes("coriander")) return "/restaurent/b13.webp";
-    if (n.includes("soup")) return "/restaurent/b15.webp";
+    // if (n.includes("soup")) return "/restaurent/b15.webp";
+    if (n.includes("soup")) return "/restaurent/b13.webp"; // Replaced b15.webp
     if (n.includes("salad")) return "/restaurent/b6.webp";
-    if (n.includes("burger")) return "/restaurent/b1.webp";
-    if (n.includes("pizza")) return "/restaurent/b2.webp";
+    // if (n.includes("burger")) return "/restaurent/b1.webp";
+    if (n.includes("burger")) return "/restaurent/b9.webp"; // Replaced b1.webp
+    // if (n.includes("pizza")) return "/restaurent/b2.webp";
+    if (n.includes("pizza")) return "/restaurent/b9.webp"; // Replaced b2.webp
     if (n.includes("pasta")) return "/restaurent/b3.webp";
     if (n.includes("paneer")) return "/restaurent/b4.webp";
     if (n.includes("chicken")) return "/restaurent/b5.webp";

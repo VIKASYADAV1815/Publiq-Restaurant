@@ -84,7 +84,7 @@ export default function MenuCategories() {
                 SECTION.0{idx + 1}
               </div>
 
-              <div className="w-70 md:w-[360px] aspect-[4/5] relative overflow-hidden rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group-hover:border-golden-highlight/40 transition-all duration-700">
+              <div className="w-70 md:w-90 aspect-4/5 relative overflow-hidden rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group-hover:border-golden-highlight/40 transition-all duration-700">
                 {/* Image with Color Pop */}
                 <Image
                   src={category.image}

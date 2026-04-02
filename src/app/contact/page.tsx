@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ export default function ContactPage() {
       <Navbar />
 
       <PageHero
-        bgSrc="/restaurent/b10.webp"
+        bgSrc="/images/1000148491.jpg.jpeg"
         eyebrow="Get In Touch"
         title="Contact Us"
         description="We would love to hear from you. Reach out for reservations, events, or just to say hello."
@@ -175,6 +176,14 @@ export default function ContactPage() {
                   <span className="absolute inset-0 bg-golden-highlight opacity-0 group-hover:opacity-20 transition-all duration-500"></span>
                 </button>
               </form>
+              <div className="mt-8 relative aspect-video overflow-hidden rounded-sm border border-deep-brown/10">
+                <Image
+                  src="/images/1000148497.jpg.jpeg"
+                  alt="Contact visual"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -16,11 +16,11 @@ const images = [
     title: "Premium Ambience",
     tag: "Atmosphere",
   },
-  {
-    src: "/restaurent/b15.webp",
-    title: "Culinary Art",
-    tag: "Gastronomy",
-  },
+  // {
+  //   src: "/restaurent/b15.webp",
+  //   title: "Culinary Art",
+  //   tag: "Gastronomy",
+  // },
   {
     src: "/restaurent/b11.webp",
     title: "Heritage Dining",
@@ -120,13 +120,20 @@ export default function Gallery() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <PremiumVideoPlayer 
-                src="/videos/MVI_0013.mp4" 
-                poster="/restaurent/b14.webp"
-                title="The Art of Mixology"
-                aspectRatio="video"
-                objectFit="contain"
-              />
+              {/* <PremiumVideoPlayer 
+            src="/videos/MVI_0013.mp4" 
+            poster="/restaurent/b14.webp"
+            title="The Art of Mixology"
+            aspectRatio="video"
+            objectFit="contain"
+          /> */}
+          <PremiumVideoPlayer 
+            src="/videos/MVI_0013_1.mp4" 
+            poster="/restaurent/b12.webp"
+            title="Signature Cocktails"
+            aspectRatio="video"
+            objectFit="contain"
+          />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -134,13 +141,20 @@ export default function Gallery() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <PremiumVideoPlayer 
-                src="/videos/0326 (2).mp4" 
-                poster="/restaurent/b11.webp"
-                title="Culinary Excellence"
-                aspectRatio="video"
-                objectFit="contain"
-              />
+              {/* <PremiumVideoPlayer 
+            src="/videos/0326 (2).mp4" 
+            poster="/restaurent/b11.webp"
+            title="Culinary Excellence"
+            aspectRatio="video"
+            objectFit="contain"
+          /> */}
+          <PremiumVideoPlayer 
+            src="/videos/MVI_0013_2.mp4" 
+            poster="/restaurent/b13.webp"
+            title="Craft Spirits"
+            aspectRatio="video"
+            objectFit="contain"
+          />
             </motion.div>
           </div>
         </div>
