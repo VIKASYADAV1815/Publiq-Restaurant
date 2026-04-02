@@ -7,27 +7,22 @@ import PremiumVideoPlayer from "./ui/PremiumVideoPlayer";
 
 const images = [
   {
-    src: "/restaurent/b14.webp",
+    src: "/images/1000148534.jpg.jpeg",
     title: "Crafted Cocktails",
     tag: "Mixology",
   },
   {
-    src: "/restaurent/banner2.webp",
+    src: "/images/1000148533.jpg.jpeg",
     title: "Premium Ambience",
     tag: "Atmosphere",
   },
-  // {
-  //   src: "/restaurent/b15.webp",
-  //   title: "Culinary Art",
-  //   tag: "Gastronomy",
-  // },
   {
-    src: "/restaurent/b11.webp",
+    src: "/images/1000148491.jpg.jpeg",
     title: "Heritage Dining",
     tag: "Experience",
   },
   {
-    src: "/restaurent/b10.webp",
+    src: "/images/1000148490.jpg.jpeg",
     title: "Evening Vibes",
     tag: "Lifestyle",
   }
@@ -129,7 +124,7 @@ export default function Gallery() {
           /> */}
           <PremiumVideoPlayer 
             src="/videos/MVI_0013_1.mp4" 
-            poster="/restaurent/b12.webp"
+            poster="/images/1000148527.jpg.jpeg"
             title="Signature Cocktails"
             aspectRatio="video"
             objectFit="contain"
@@ -150,7 +145,7 @@ export default function Gallery() {
           /> */}
           <PremiumVideoPlayer 
             src="/videos/MVI_0013_2.mp4" 
-            poster="/restaurent/b13.webp"
+            poster="/images/1000148528.jpg.jpeg"
             title="Craft Spirits"
             aspectRatio="video"
             objectFit="contain"

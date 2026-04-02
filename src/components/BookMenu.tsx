@@ -165,7 +165,7 @@ const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
         <div className="relative w-full aspect-3/4 max-h-[80%] border-4 border-deep-brown/20 p-2 shadow-inner bg-white/50 transform -rotate-1">
            <div className="relative w-full h-full overflow-hidden transition-all duration-700">
              <Image 
-               src="/restaurent/b6.webp" 
+               src="/images/1000148496.jpg.jpeg" 
                alt="Restaurant Interior" 
                fill 
                className="object-cover opacity-100 shadow-deep-brown"
@@ -227,25 +227,25 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
   
   const getFallbackImage = (name: string) => {
     const n = name.toLowerCase();
-    if (n.includes("carlsberg")) return "/restaurent/b8.webp";
-    if (n.includes("bud")) return "/restaurent/b7.webp";
-    if (n.includes("corona")) return "/restaurent/b10.webp";
-    if (n.includes("breezer")) return "/restaurent/b14.webp";
+    if (n.includes("carlsberg")) return "/images/1000148534.jpg.jpeg";
+    if (n.includes("bud")) return "/images/1000148533.jpg.jpeg";
+    if (n.includes("corona")) return "/images/1000148491.jpg.jpeg";
+    if (n.includes("breezer")) return "/images/1000148500.jpg.jpeg";
     // if (n.includes("cream of tomato") || n.includes("tomato")) return "/restaurent/b22.webp";
-    if (n.includes("cream of tomato") || n.includes("tomato")) return "/restaurent/b9.webp"; // Replaced b22.webp
-    if (n.includes("lemon") || n.includes("coriander")) return "/restaurent/b13.webp";
+    if (n.includes("cream of tomato") || n.includes("tomato")) return "/images/1000148497.jpg.jpeg";
+    if (n.includes("lemon") || n.includes("coriander")) return "/images/1000148528.jpg.jpeg";
     // if (n.includes("soup")) return "/restaurent/b15.webp";
-    if (n.includes("soup")) return "/restaurent/b13.webp"; // Replaced b15.webp
-    if (n.includes("salad")) return "/restaurent/b6.webp";
+    if (n.includes("soup")) return "/images/1000148527.jpg.jpeg";
+    if (n.includes("salad")) return "/images/1000148496.jpg.jpeg";
     // if (n.includes("burger")) return "/restaurent/b1.webp";
-    if (n.includes("burger")) return "/restaurent/b9.webp"; // Replaced b1.webp
+    if (n.includes("burger")) return "/images/1000148490.jpg.jpeg";
     // if (n.includes("pizza")) return "/restaurent/b2.webp";
-    if (n.includes("pizza")) return "/restaurent/b9.webp"; // Replaced b2.webp
-    if (n.includes("pasta")) return "/restaurent/b3.webp";
-    if (n.includes("paneer")) return "/restaurent/b4.webp";
-    if (n.includes("chicken")) return "/restaurent/b5.webp";
-    if (n.includes("mutton")) return "/restaurent/b13.webp";
-    return "/restaurent/b9.webp";
+    if (n.includes("pizza")) return "/images/1000148489.jpg.jpeg";
+    if (n.includes("pasta")) return "/images/1000148526.jpg.jpeg";
+    if (n.includes("paneer")) return "/images/1000148504.jpg.jpeg";
+    if (n.includes("chicken")) return "/images/1000148531.jpg.jpeg";
+    if (n.includes("mutton")) return "/images/1000148530.jpg.jpeg";
+    return "/images/1000148486.jpg.jpeg";
   };
   
   const [imageSrc, setImageSrc] = React.useState<string | null>(item.image ?? null);

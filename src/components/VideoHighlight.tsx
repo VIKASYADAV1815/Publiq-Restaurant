@@ -6,12 +6,12 @@ import PremiumVideoPlayer from "./ui/PremiumVideoPlayer";
 const highlightVideos = [
   {
     src: "/videos/MVI_0013_1.mp4",
-    poster: "/restaurent/b12.webp",
+    poster: "/images/1000148527.jpg.jpeg",
     title: "Signature Cocktails"
   },
   {
     src: "/videos/MVI_0013_2.mp4",
-    poster: "/restaurent/b13.webp",
+    poster: "/images/1000148528.jpg.jpeg",
     title: "Craft Spirits"
   }
 ];

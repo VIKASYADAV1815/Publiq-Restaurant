@@ -73,7 +73,7 @@ export default function AboutPage() {
         description="We believe that dining is an art form. Our chefs meticulously blend locally sourced ingredients with global techniques to create a menu that is both familiar and surprising."
         quote={'"Great food is not just about taste; it is about the stories it tells and the people it brings together."'}
         quoteAuthor="The Publiq Kitchen"
-        imageSrc="/restaurent/b9.webp"
+        imageSrc="/images/1000148497.jpg.jpeg"
         eyebrow="Gastronomy"
       />
       
