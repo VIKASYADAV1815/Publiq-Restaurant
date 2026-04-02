@@ -21,7 +21,7 @@ export default function StorySection({
   description = "Nestled in the heart of the valley, PUBLIQ brings you the nostalgic charm of old Mussoorie evenings and the vibrant spirit of Dehradun.",
   quote = "\"To know a place, one must taste its memories. In every corner of these hills, there is a story waiting to be told over a warm meal.\"",
   quoteAuthor = "Ruskin Bond Inspiration",
-  imageSrc = "/images/1000148491.jpg.jpeg",
+  imageSrc = "/images/1000148489.jpg.jpeg",
   eyebrow = "Heritage Narrative"
 }: StorySectionProps) {
   return (
@@ -29,7 +29,7 @@ export default function StorySection({
       {/* Texture & Ambient Blur */}
       <div 
         className="absolute inset-0 opacity-5 mix-blend-multiply pointer-events-none" 
-        style={{ backgroundImage: "url('/images/1000148496.jpg.jpeg')" }} 
+        style={{ backgroundImage: "url('/images/1000148489.jpg.jpeg')" }} 
       />
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">

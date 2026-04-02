@@ -236,7 +236,7 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
     if (n.includes("lemon") || n.includes("coriander")) return "/images/1000148528.jpg.jpeg";
     // if (n.includes("soup")) return "/restaurent/b15.webp";
     if (n.includes("soup")) return "/images/1000148527.jpg.jpeg";
-    if (n.includes("salad")) return "/images/1000148496.jpg.jpeg";
+    if (n.includes("salad")) return "/images/1000148530.jpg.jpeg";
     // if (n.includes("burger")) return "/restaurent/b1.webp";
     if (n.includes("burger")) return "/images/1000148490.jpg.jpeg";
     // if (n.includes("pizza")) return "/restaurent/b2.webp";
