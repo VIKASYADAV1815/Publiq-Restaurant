@@ -105,7 +105,7 @@ const CoverPage = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement
         </div>
         
         <div className="mt-8 border-t border-[#3E2723]/30 pt-4 w-3/4 mx-auto">
-             <p className="font-libre italic text-sm text-parchment opacity-90 tracking-wide">&ldquo;Where Heritage Meets Taste&rdquo;</p>
+             <p className="font-libre italic text-sm text-parchment opacity-90 tracking-wide">&ldquo;the people’s place&rdquo;</p>
         </div>
       </div>
     </div>

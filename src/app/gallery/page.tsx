@@ -27,7 +27,7 @@ const galleryImages = [
   { src: "/images/1000148504.jpg.jpeg", span: "md:col-span-2 md:row-span-3" },
   { src: "/images/1000148506.jpg.jpeg", span: "md:col-span-3 md:row-span-3" },
   { src: "/images/1000148525.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
-  { src: "/images/1000148526.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
+  // { src: "/images/1000148526.jpg.jpeg", span: "md:col-span-2 md:row-span-2" },
 ];
 
 const galleryVideos = [

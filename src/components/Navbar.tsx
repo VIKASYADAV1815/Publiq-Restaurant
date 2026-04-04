@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Phone, Menu as MenuIcon, X, ShoppingBag } from "lucide-react";
+import { Instagram, Phone, Menu as MenuIcon, X, ShoppingBag, MessageCircle, Star } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 // import { useCartStore } from "@/store/cartStore";
 import { useState } from "react";
@@ -91,7 +91,7 @@ export default function Navbar() {
           {/* Social Icons - Right aligned but with equal container space */}
           <div className="w-50 flex justify-end gap-2">
             <a
-              href="tel:+919999999999"
+              href="tel:+917251991199"
               className="text-parchment hover:text-golden-highlight transition-colors p-2"
               aria-label="Call Us"
             >
@@ -105,6 +105,24 @@ export default function Navbar() {
               aria-label="Instagram"
             >
               <Instagram size={20} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://wa.me/917251991199"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-parchment hover:text-golden-highlight transition-colors p-2"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={20} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://g.co/kgs/YourBusinessID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-parchment hover:text-golden-highlight transition-colors p-2"
+              aria-label="Google Reviews"
+            >
+              <Star size={20} strokeWidth={1.5} />
             </a>
           </div>
         </div>
@@ -126,7 +144,7 @@ export default function Navbar() {
 
         <div className="flex md:hidden flex-1 items-center justify-end gap-2">
           <a
-            href="tel:+919999999999"
+            href="tel:+917251991199"
             className="text-parchment hover:text-golden-highlight transition-colors p-2"
             aria-label="Call Us"
           >
@@ -140,6 +158,24 @@ export default function Navbar() {
             aria-label="Instagram"
           >
             <Instagram size={18} strokeWidth={1.5} />
+          </a>
+          <a
+            href="https://wa.me/917251991199"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-parchment hover:text-golden-highlight transition-colors p-2"
+            aria-label="WhatsApp"
+          >
+            <MessageCircle size={18} strokeWidth={1.5} />
+          </a>
+          <a
+            href="https://g.co/kgs/YourBusinessID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-parchment hover:text-golden-highlight transition-colors p-2"
+            aria-label="Google Reviews"
+          >
+            <Star size={18} strokeWidth={1.5} />
           </a>
         </div>
       </div>
@@ -165,11 +201,17 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex justify-center gap-6 pt-4 border-t border-deep-brown/10">
-                <a href="tel:+919999999999" className="text-deep-brown">
+                <a href="tel:+917251991199" className="text-deep-brown">
                   <Phone size={20} />
                 </a>
                 <a href="https://instagram.com" className="text-deep-brown">
                   <Instagram size={20} />
+                </a>
+                <a href="https://wa.me/917251991199" target="_blank" rel="noopener noreferrer" className="text-deep-brown">
+                  <MessageCircle size={20} />
+                </a>
+                <a href="https://g.co/kgs/YourBusinessID" target="_blank" rel="noopener noreferrer" className="text-deep-brown">
+                  <Star size={20} />
                 </a>
               </div>
             </div>

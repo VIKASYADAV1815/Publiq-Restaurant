@@ -109,9 +109,9 @@ export default function StorySection({
                 <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-golden-highlight/20 to-transparent group-hover:left-full transition-all duration-1000 delay-100" />
               </Link>
               
-              <div className="flex items-center gap-2 text-deep-brown/40 font-cinzel text-[9px] tracking-[0.2em] uppercase cursor-help hover:text-golden-highlight transition-colors">
+              <div className="flex items-center gap-2 text-deep-brown/40 font-cinzel text-[12px] tracking-[0.2em] uppercase cursor-help hover:text-golden-highlight transition-colors">
                 <MapPin size={12} />
-                <span>Rajpur Road</span>
+                <span>Kaulaghar road</span>
               </div>
             </div>
           </motion.div>

@@ -11,6 +11,7 @@ export default function CartSidebar() {
   const toggleCart = useCartStore((state) => state.toggleCart);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
   const removeItem = useCartStore((state) => state.removeItem);
+  const clearCart = useCartStore((state) => state.clearCart);
   const cartRef = useRef<HTMLDivElement>(null);
 
   // Close on click outside
@@ -41,6 +42,36 @@ export default function CartSidebar() {
   }, [isOpen]);
 
   const totalAmount = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  const handleConfirmOrder = () => {
+    if (items.length === 0) return;
+
+    // Create order summary
+    const orderSummary = items.map(item => 
+      `${item.name} x${item.quantity} - ₹${item.price * item.quantity}`
+    ).join('\n');
+    
+    const serviceCharge = Math.round(totalAmount * 0.05);
+    const total = totalAmount + serviceCharge;
+    
+    const message = `🔔 New Order from PUBLIQ Dehradun!\n\n📋 Order Details:\n${orderSummary}\n\n💰 Subtotal: ₹${totalAmount}\n🛎️ Service Charge: ₹${serviceCharge}\n💵 Total: ₹${total}\n\n📍 Table: 01\n⏰ Time: ${new Date().toLocaleString()}`;
+
+    // WhatsApp numbers to notify
+    const whatsappNumbers = ['917251991199', '919997740501', '919119779191'];
+
+    // Open WhatsApp for each number
+    whatsappNumbers.forEach(number => {
+      const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Clear cart and close sidebar
+    clearCart();
+    toggleCart();
+
+    // Show success message
+    alert('Order confirmed! WhatsApp notifications sent to staff.');
+  };
 
   return (
     <AnimatePresence>
@@ -183,7 +214,10 @@ export default function CartSidebar() {
                     <span>₹{totalAmount + Math.round(totalAmount * 0.05)}</span>
                   </div>
                   
-                  <button className="w-full bg-deep-brown text-parchment font-cinzel tracking-widest uppercase py-4 text-sm font-bold shadow-lg hover:bg-[#3E2723] transition-colors flex items-center justify-center gap-2 mt-4">
+                  <button 
+                    onClick={handleConfirmOrder}
+                    className="w-full bg-deep-brown text-parchment font-cinzel tracking-widest uppercase py-4 text-sm font-bold shadow-lg hover:bg-[#3E2723] transition-colors flex items-center justify-center gap-2 mt-4"
+                  >
                     <span>Confirm Order</span>
                     <ShoppingBag size={18} />
                   </button>

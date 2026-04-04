@@ -65,15 +65,15 @@ export default function Footer() {
           <div className="space-y-4 font-libre text-sm text-parchment/80 flex flex-col items-center md:items-start">
             <div className="flex gap-3 items-start max-w-xs text-left">
               <MapPin className="text-golden-highlight mt-1 shrink-0" size={18} />
-              <p>123, Rajpur Road, Near Clock Tower, Dehradun, Uttarakhand 248001</p>
+              <p>Bansal Plaza, 5, Kaulagarh Rd, Rajender Nagar, Dehradun, Uttarakhand 248001, India</p>
             </div>
             <div className="flex gap-3 items-center">
               <Phone className="text-golden-highlight shrink-0" size={18} />
-              <a href="tel:+919876543210" className="hover:text-golden-highlight transition-colors">+91 987 654 3210</a>
+              <a href="tel:+917251991199" className="hover:text-golden-highlight transition-colors">+91 72519 91199</a>
             </div>
             <div className="flex gap-3 items-center">
               <Mail className="text-golden-highlight shrink-0" size={18} />
-              <a href="mailto:hello@publiq.in" className="hover:text-golden-highlight transition-colors">hello@publiq.in</a>
+              <a href="mailto:ssdhospitality@gmail.com" className="hover:text-golden-highlight transition-colors">ssdhospitality@gmail.com</a>
             </div>
           </div>
         </div>

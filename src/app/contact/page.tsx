@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
 
@@ -60,8 +60,8 @@ export default function ContactPage() {
                     Our Location
                   </h4>
                   <p className="text-sm text-deep-brown/70 leading-relaxed">
-                    Publiq Dehradun, Rajpur Road,<br />
-                    Dehradun, Uttarakhand 248001
+                    Bansal Plaza, 5, Kaulagarh Rd, Rajender Nagar,<br />
+                    Dehradun, Uttarakhand 248001, India
                   </p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                     Call Us
                   </h4>
                   <p className="text-sm text-deep-brown/70">
-                    +91 999 999 9999
+                    +91 72519 91199
                   </p>
                 </div>
               </div>
@@ -91,8 +91,46 @@ export default function ContactPage() {
                     Email Us
                   </h4>
                   <p className="text-sm text-deep-brown/70">
-                    hello@publiqdehradun.com
+                    ssdhospitality@gmail.com
                   </p>
+                </div>
+              </div>
+
+              {/* WHATSAPP BOOKING */}
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                  <MessageCircle size={20} />
+                </div>
+                <div>
+                  <h4 className="font-cinzel text-sm font-bold mb-2">
+                    Book a Table via WhatsApp
+                  </h4>
+                  <div className="space-y-2">
+                    <a
+                      href="https://wa.me/917251991199?text=Hi%20PUBLIQ%20Dehradun,%20I%20would%20like%20to%20book%20a%20table"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-deep-brown/70 hover:text-green-600 transition-colors"
+                    >
+                      📱 +91 72519 91199
+                    </a>
+                    <a
+                      href="https://wa.me/919997740501?text=Hi%20PUBLIQ%20Dehradun,%20I%20would%20like%20to%20book%20a%20table"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-deep-brown/70 hover:text-green-600 transition-colors"
+                    >
+                      📱 +91 99977 40501
+                    </a>
+                    <a
+                      href="https://wa.me/919119779191?text=Hi%20PUBLIQ%20Dehradun,%20I%20would%20like%20to%20book%20a%20table"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-deep-brown/70 hover:text-green-600 transition-colors"
+                    >
+                      📱 +91 91197 79191
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -192,7 +230,7 @@ export default function ContactPage() {
       {/* MAP */}
       <section className="relative h-100 w-full grayscale hover:grayscale-0 transition-all duration-1000">
         <iframe
-          src="https://www.google.com/maps?q=Rajpur+Road+Dehradun&output=embed"
+          src="https://www.google.com/maps?q=Bansal+Plaza+Kaulagarh+Road+Dehradun&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
