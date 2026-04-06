@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative overflow-hidden rounded-sm shadow-2xl border-4 border-white/50">
               <Image
-                src="/images/1000148526.jpg.jpeg"
+                src="/images/1000148501.jpg.jpeg"
                 alt="Publiq Interior"
                 width={1200}
                 height={800}

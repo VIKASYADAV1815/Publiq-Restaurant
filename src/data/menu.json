@@ -12,18 +12,18 @@
         {"id": "ba4", "name": "Black & White", "price": 509, "veg": true, "desc": "Scotch", "image": "https://thumbs.dreamstime.com/b/black-white-scotch-whisky-bottle-closeup-black-blended-label-was-originally-produced-london-james-buchanan-co-ltd-89972506.jpg"},
         {"id": "ba5", "name": "Ballantine's", "price": 599, "veg": true, "desc": "Scotch", "image": "https://i.pinimg.com/736x/0c/f9/4d/0cf94daea50727fcabcc9d653eaa1da6.jpg"},
         {"id": "ba6", "name": "Jameson", "price": 649, "veg": true, "desc": "Irish Whiskey", "image": "https://i.pinimg.com/1200x/62/4f/25/624f25086d7c8bd7fbce8f4ec82ae0ba.jpg"},
-        {"id": "ba7", "name": "Camino Tequila", "price": 649, "veg": true, "desc": "Tequila", "image": "https://i.pinimg.com/1200x/a5/1d/05/a51d05169d6c71be4bf1d9437b4ba261.jpg"},
-        {"id": "ba8", "name": "Bombay Sapphire", "price": 599, "veg": true, "desc": "Gin", "image": "https://i.pinimg.com/1200x/18/a9/8a/18a98ae2c3ffced59102827addcc266c.jpg"},
-        {"id": "ba9", "name": "Jack Daniel's", "price": 999, "veg": true, "desc": "Tennessee Whiskey", "image": "https://i.pinimg.com/736x/ac/34/69/ac3469396baa5caa4b8a5c8f1cd0718f.jpg"},
-        {"id": "ba10", "name": "Jim Beam", "price": 549, "veg": true, "desc": "Bourbon", "image": "https://i.pinimg.com/1200x/ec/d3/f0/ecd3f096e77ec2a3c21b070a3ed65d52.jpg"},
-        {"id": "ba11", "name": "Red Label", "price": 699, "veg": true, "desc": "Scotch", "image": "https://i.pinimg.com/1200x/7f/13/72/7f13724fc01578c2a009a8fabeebdae8.jpg"},
-        {"id": "ba12", "name": "Black Label", "price": 999, "veg": true, "desc": "Scotch", "image": "https://i.pinimg.com/736x/ac/34/69/ac3469396baa5caa4b8a5c8f1cd0718f.jpg"},
-        {"id": "ba13", "name": "Bacardi White", "price": 399, "veg": true, "desc": "Rum", "image": "https://i.pinimg.com/1200x/5a/20/21/5a202109854e62ba802e4f1342a865d6.jpg"},
-        {"id": "ba14", "name": "Jägermeister", "price": 799, "veg": true, "desc": "Liqueur", "image": "https://i.pinimg.com/1200x/b2/52/22/b252225be142762aa82d06a8be2bdd4f.jpg"},
-        {"id": "ba15", "name": "100 Pipers 8 Years", "price": 499, "veg": true, "desc": "Scotch", "image": "https://i.pinimg.com/1200x/1b/da/4e/1bda4e7ae26dc7155a8837360e9c38d4.jpg"},
-        {"id": "ba16", "name": "Old Monk", "price": 349, "veg": true, "desc": "Rum", "image": "https://i.pinimg.com/1200x/49/36/ab/4936abed3cc62af00a2a04efffd5df06.jpg"},
-        {"id": "ba17", "name": "Absolut", "price": 549, "veg": true, "desc": "Vodka", "image": "https://i.pinimg.com/736x/34/bf/ea/34bfeaa5ad1dc3aaf102f3fe001c121d.jpg"},
-        {"id": "ba18", "name": "Smirnoff", "price": 399, "veg": true, "desc": "Vodka", "image": "https://i.pinimg.com/1200x/b3/ab/42/b3ab42589626f2e8f3bc9df7bafc18d6.jpg"}
+        {"id": "ba7", "name": "Camino Tequila", "price": 649, "veg": true, "desc": "Premium silver tequila with notes of agave and a smooth, peppery finish.", "image": "https://i.pinimg.com/1200x/a5/1d/05/a51d05169d6c71be4bf1d9437b4ba261.jpg"},
+        {"id": "ba8", "name": "Bombay Sapphire", "price": 599, "veg": true, "desc": "Vibrant London Dry Gin with ten hand-selected botanicals for a complex, aromatic profile.", "image": "https://i.pinimg.com/1200x/18/a9/8a/18a98ae2c3ffced59102827addcc266c.jpg"},
+        {"id": "ba9", "name": "Jack Daniel's", "price": 999, "veg": true, "desc": "Charcoal-mellowed Tennessee Whiskey with rich notes of caramel, vanilla, and toasted oak.", "image": "https://i.pinimg.com/736x/ac/34/69/ac3469396baa5caa4b8a5c8f1cd0718f.jpg"},
+        {"id": "ba10", "name": "Jim Beam", "price": 549, "veg": true, "desc": "The world's finest bourbon, aged for four years in newly charred oak barrels for a smooth, mellow taste.", "image": "https://i.pinimg.com/1200x/ec/d3/f0/ecd3f096e77ec2a3c21b070a3ed65d52.jpg"},
+        {"id": "ba11", "name": "Red Label", "price": 699, "veg": true, "desc": "A bold, smoky scotch whisky with a vibrant finish, perfect for mixing or enjoying on the rocks.", "image": "https://i.pinimg.com/1200x/7f/13/72/7f13724fc01578c2a009a8fabeebdae8.jpg"},
+        {"id": "ba12", "name": "Black Label", "price": 999, "veg": true, "desc": "A deep and complex 12-year-old scotch blend with layers of fruit, vanilla, and smoky intensity.", "image": "https://i.pinimg.com/736x/ac/34/69/ac3469396baa5caa4b8a5c8f1cd0718f.jpg"},
+        {"id": "ba13", "name": "Bacardi White", "price": 399, "veg": true, "desc": "A classic white rum with subtle notes of almond and vanilla, aged in white oak for a clean finish.", "image": "https://i.pinimg.com/1200x/5a/20/21/5a202109854e62ba802e4f1342a865d6.jpg"},
+        {"id": "ba14", "name": "Jägermeister", "price": 799, "veg": true, "desc": "A complex herbal liqueur crafted from 56 botanicals, offering a unique, bittersweet flavor.", "image": "https://i.pinimg.com/1200x/b2/52/22/b252225be142762aa82d06a8be2bdd4f.jpg"},
+        {"id": "ba15", "name": "100 Pipers 8 Years", "price": 499, "veg": true, "desc": "A smooth, smoky scotch whisky aged for eight years to achieve a perfectly balanced character.", "image": "https://i.pinimg.com/1200x/1b/da/4e/1bda4e7ae26dc7155a8837360e9c38d4.jpg"},
+        {"id": "ba16", "name": "Old Monk", "price": 349, "veg": true, "desc": "India's legendary dark rum, known for its rich vanilla aroma and smooth, molasses-based taste.", "image": "https://i.pinimg.com/1200x/49/36/ab/4936abed3cc62af00a2a04efffd5df06.jpg"},
+        {"id": "ba17", "name": "Absolut", "price": 549, "veg": true, "desc": "A pure Swedish vodka crafted with local winter wheat, offering a clean and crisp character.", "image": "https://i.pinimg.com/736x/34/bf/ea/34bfeaa5ad1dc3aaf102f3fe001c121d.jpg"},
+        {"id": "ba18", "name": "Smirnoff", "price": 399, "veg": true, "desc": "Triple-distilled and ten-times filtered for an exceptionally smooth and versatile vodka experience.", "image": "https://i.pinimg.com/1200x/b3/ab/42/b3ab42589626f2e8f3bc9df7bafc18d6.jpg"}
     ]
   },
   {
@@ -33,11 +33,11 @@
     "image": "https://images.unsplash.com/photo-1618885472179-5e474019f2a9?q=80&w=800&auto=format&fit=crop",
     "description": "Chilled Perfection",
     "items": [
-        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "Strong Beer", "image": "https://i.pinimg.com/736x/ad/2b/29/ad2b29b5852ae25f8f26c407da33ce54.jpg"},
-        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "Premium Beer", "image": "https://i.pinimg.com/736x/12/1a/f1/121af1f3db64ec31635826c345ebc16c.jpg"},
-        {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "Light Beer", "image": "https://i.pinimg.com/1200x/b3/7a/05/b37a055e246e378c6c0baa316a1ff8bc.jpg"},
-        {"id": "bb4", "name": "Corona", "price": 319, "veg": true, "desc": "Premium Beer", "image": "https://i.pinimg.com/736x/3b/0a/e5/3b0ae56494b99e542a80e44f60b45960.jpg"},
-        {"id": "bb5", "name": "Breezer", "price": 249, "veg": true, "desc": "Flavored Drink", "image": "https://i.pinimg.com/736x/c8/9f/8e/c89f8ef5ae256e08aebeeab8cf69faf3.jpg"},
+        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "A strong, full-bodied beer with a rich, malty flavor and a smooth, crisp finish.", "image": "https://i.pinimg.com/736x/ad/2b/29/ad2b29b5852ae25f8f26c407da33ce54.jpg"},
+        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "A premium Danish pilsner with a perfectly balanced taste and a light, refreshing aroma.", "image": "https://i.pinimg.com/736x/12/1a/f1/121af1f3db64ec31635826c345ebc16c.jpg"},
+        {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "A light, clean lager brewed for a smooth and easy-drinking experience with lower calories.", "image": "https://i.pinimg.com/1200x/b3/7a/05/b37a055e246e378c6c0baa316a1ff8bc.jpg"},
+        {"id": "bb4", "name": "Breezer", "price": 289, "veg": true, "desc": "A refreshing, fruit-flavored alcoholic beverage made with premium rum and natural fruit juices.", "image": "https://i.pinimg.com/1200x/5a/20/21/5a202109854e62ba802e4f1342a865d6.jpg"},
+        {"id": "bb5", "name": "Corona", "price": 499, "veg": true, "desc": "An iconic Mexican lager known for its light, refreshing taste—best served with a wedge of lime.", "image": "https://i.pinimg.com/1200x/f8/f3/0a/f8f30a911797e59c26211604a372146e.jpg"},
         {"id": "bb6", "name": "Bucket: Bud Magnum/Carlsberg", "price": 999, "veg": true, "desc": "3 Bottles", "image": "https://i.pinimg.com/736x/4a/99/e5/4a99e5011be4dc2085052f9fdccc4803.jpg"},
         {"id": "bb7", "name": "Bucket: Bud Light/Corona", "price": 889, "veg": true, "desc": "3 Bottles", "image": "https://i.pinimg.com/1200x/3f/d6/85/3fd685ba15b6d1479628883b8cfe490f.jpg"}
     ]
@@ -68,14 +68,14 @@
     "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
     "description": "Fresh & Hot",
     "items": [
-        {"id": "ss1", "name": "Cream of Tomato / Mushroom", "price": 229, "veg": true, "desc": "Classic Soup", "image": "https://i.pinimg.com/1200x/44/48/ea/4448ea3c5a3beb7063fceab191475720.jpg"},
-        {"id": "ss2", "name": "Lung Fung", "price": 229, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://i.pinimg.com/736x/ea/f0/04/eaf00488a17566884e7f2463e2c630a9.jpg"},
-        {"id": "ss3", "name": "Lemon & Coriander", "price": 229, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://i.pinimg.com/736x/4e/bf/31/4ebf315620e88f1a704221a15f0bc4b8.jpg"},
-        {"id": "ss4", "name": "Munchow / Hot & Sour", "price": 229, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://i.pinimg.com/736x/d6/a0/2f/d6a02f137cb3721015f23d13f4ba6eea.jpg"},
-        {"id": "ss5", "name": "Cream of Chicken", "price": 289, "veg": false, "desc": "Rich Chicken Soup", "image": "https://i.pinimg.com/1200x/84/2d/93/842d930a618c03bcae72e36a9b0ee69e.jpg"},
-        {"id": "ss6", "name": "Green Salad", "price": 169, "veg": true, "desc": "Fresh Greens", "image": "https://i.pinimg.com/736x/56/f8/56/56f85668ca50748a1f863f07e8c8b0b0.jpg"},
-        {"id": "ss7", "name": "Spicy Cucumber", "price": 169, "veg": true, "desc": "Spicy Salad", "image": "https://i.pinimg.com/1200x/8f/0a/ca/8f0aca054d09192231ea8a077e6974b4.jpg"},
-        {"id": "ss8", "name": "Tomato Salad", "price": 169, "veg": true, "desc": "Fresh Tomatoes", "image": "https://i.pinimg.com/736x/a2/67/89/a267897dcb605878976958bb3170d525.jpg"}
+        {"id": "ss1", "name": "Cream of Tomato", "price": 189, "veg": true, "desc": "A velvety blend of sun-ripened tomatoes and fresh cream, garnished with buttery croutons.", "image": "https://i.pinimg.com/736x/8d/62/8d/8d628d0879626f2e8f3bc9df7bafc18d6.jpg"},
+        {"id": "ss2", "name": "Lemon Coriander", "price": 189, "veg": true, "desc": "A light and zesty broth infused with fresh lemon juice and aromatic coriander leaves.", "image": "https://i.pinimg.com/1200x/e1/64/8e/e1648e8e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"},
+        {"id": "ss3", "name": "Hot & Sour", "price": 189, "veg": true, "desc": "A spicy and tangy Indo-Chinese soup packed with finely chopped vegetables and a hint of soy.", "image": "https://i.pinimg.com/1200x/84/2d/93/842d930a618c03bcae72e36a9b0ee69e.jpg"},
+        {"id": "ss4", "name": "Manchow Soup", "price": 189, "veg": true, "desc": "A robust and flavorful soup with a touch of garlic and ginger, served with crispy noodles.", "image": "https://i.pinimg.com/1200x/84/2d/93/842d930a618c03bcae72e36a9b0ee69e.jpg"},
+        {"id": "ss5", "name": "Cream of Chicken", "price": 289, "veg": false, "desc": "A rich and comforting chicken soup simmered to perfection with tender chicken bits and cream.", "image": "https://i.pinimg.com/1200x/84/2d/93/842d930a618c03bcae72e36a9b0ee69e.jpg"},
+        {"id": "ss6", "name": "Green Salad", "price": 169, "veg": true, "desc": "A crisp and refreshing medley of seasonal garden greens served with a light vinaigrette.", "image": "https://i.pinimg.com/736x/56/f8/56/56f85668ca50748a1f863f07e8c8b0b0.jpg"},
+        {"id": "ss7", "name": "Spicy Cucumber", "price": 169, "veg": true, "desc": "Chilled cucumber slices tossed in a zesty blend of lime, chili, and roasted cumin.", "image": "https://i.pinimg.com/1200x/8f/0a/ca/8f0aca054d09192231ea8a077e6974b4.jpg"},
+        {"id": "ss8", "name": "Tomato Salad", "price": 169, "veg": true, "desc": "Slices of vine-ripened tomatoes seasoned with sea salt, cracked pepper, and fresh herbs.", "image": "https://i.pinimg.com/736x/a2/67/89/a267897dcb605878976958bb3170d525.jpg"}
     ]
   },
   {
@@ -85,9 +85,9 @@
     "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800&auto=format&fit=crop",
     "description": "Small Bites",
     "items": [
-        {"id": "ap1", "name": "Peanuts Ka Chakna", "price": 169, "veg": true, "desc": "Spiced Peanuts", "image": "https://i.pinimg.com/1200x/fd/f0/27/fdf0270ad329f26e6817fdee10db169e.jpg"},
-        {"id": "ap2", "name": "Dilli Ki Aloo Chaat", "price": 169, "veg": true, "desc": "Spicy Potato", "image": "https://i.pinimg.com/736x/d7/84/0e/d7840ee6dc17b5f4fffb5d794c5bc28c.jpg"},
-        {"id": "ap3", "name": "Chatpata Papad", "price": 149, "veg": true, "desc": "Masala Papad", "image": "https://i.pinimg.com/736x/51/25/31/51253187c3e83c98daba937066f89f00.jpg"},
+        {"id": "ap1", "name": "Peanuts Ka Chakna", "price": 169, "veg": true, "desc": "Crunchy roasted peanuts tossed with finely chopped onions, tomatoes, green chilies, and tangy chaat masala.", "image": "https://i.pinimg.com/1200x/fd/f0/27/fdf0270ad329f26e6817fdee10db169e.jpg"},
+        {"id": "ap2", "name": "Dilli Ki Aloo Chaat", "price": 169, "veg": true, "desc": "Crispy fried potato cubes tossed in a spicy, tangy tamarind chutney and topped with fresh pomegranate.", "image": "https://i.pinimg.com/736x/d7/84/0e/d7840ee6dc17b5f4fffb5d794c5bc28c.jpg"},
+        {"id": "ap3", "name": "Chatpata Papad", "price": 149, "veg": true, "desc": "Crispy roasted papads topped with a vibrant mixture of onions, tomatoes, and a squeeze of fresh lime.", "image": "https://i.pinimg.com/736x/51/25/31/51253187c3e83c98daba937066f89f00.jpg"},
         {"id": "ap4", "name": "Desi Nachos", "price": 229, "veg": true, "desc": "Indian Style", "image": "https://i.pinimg.com/1200x/97/e1/5e/97e15e9372707a0284d9b7a621a8aca2.jpg"},
         {"id": "ap5", "name": "Mexican Tortilla", "price": 265, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://i.pinimg.com/1200x/9f/06/d1/9f06d1df9e7a2ea7e4d8ac06a49d4696.jpg"},
         {"id": "ap6", "name": "Cheesy Jalapeño Rolls", "price": 289, "veg": true, "desc": "Cheese Filled", "image": "https://i.pinimg.com/1200x/e3/a9/d3/e3a9d35be13688277359a43cd8574f70.jpg"},
@@ -145,9 +145,9 @@
     "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
     "description": "Hearty Meals",
     "items": [
-        {"id": "mc1", "name": "Dal Makhani", "price": 379, "veg": true, "desc": "Creamy Lentils", "image": "https://i.pinimg.com/736x/16/a8/8e/16a88e5b5d35140f254c25a87f3d3994.jpg"},
-        {"id": "mc2", "name": "Mix Veggies", "price": 379, "veg": true, "desc": "Seasonal Veg", "image": "https://i.pinimg.com/736x/71/01/b3/7101b327c920a89de62c5b7f86c12882.jpg"},
-        {"id": "mc3", "name": "Shahi Paneer", "price": 499, "veg": true, "desc": "Royal Paneer", "image": "https://i.pinimg.com/736x/8b/9f/70/8b9f702f1a32a666ce52e57b68e14fac.jpg"},
+        {"id": "mc1", "name": "Dal Makhani", "price": 379, "veg": true, "desc": "Whole black lentils slow-cooked overnight with cream and butter for a rich, velvety texture.", "image": "https://i.pinimg.com/736x/16/a8/8e/16a88e5b5d35140f254c25a87f3d3994.jpg"},
+        {"id": "mc2", "name": "Mix Veggies", "price": 379, "veg": true, "desc": "A vibrant assortment of seasonal vegetables tossed in a light, aromatic blend of Indian spices.", "image": "https://i.pinimg.com/736x/71/01/b3/7101b327c920a89de62c5b7f86c12882.jpg"},
+        {"id": "mc3", "name": "Shahi Paneer", "price": 499, "veg": true, "desc": "Soft cottage cheese cubes simmered in a royal, creamy tomato and cashew nut gravy.", "image": "https://i.pinimg.com/736x/8b/9f/70/8b9f702f1a32a666ce52e57b68e14fac.jpg"},
         {"id": "mc4", "name": "Paneer Butter Masala", "price": 499, "veg": true, "desc": "Butter Gravy", "image": "https://i.pinimg.com/1200x/10/21/5f/10215f3e50a42ab56806c96a62c805fe.jpg"},
         {"id": "mc5", "name": "Kadai Paneer", "price": 499, "veg": true, "desc": "Spiced Paneer", "image": "https://i.pinimg.com/736x/a9/1b/7b/a91b7b0a50f7d507723988541ed18d9d.jpg"},
         {"id": "mc6", "name": "Murga Makhan Wala", "price": 569, "veg": false, "desc": "Butter Chicken", "image": "https://i.pinimg.com/736x/2a/86/40/2a864028c6cf41e9d037bdf6e74e07be.jpg"},
