@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white pt-20 md:pt-40 pb-20"
+      className="relative min-h-svh w-full flex items-center justify-center overflow-hidden bg-[#1a0f0a] selection:bg-golden-highlight selection:text-white pt-20 md:pt-40 pb-20"
     >
       {/* Layer 1: Static Background (Parallax removed for performance) */}
       <motion.div 

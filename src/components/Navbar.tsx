@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Phone, Menu as MenuIcon, X } from "lucide-react";
+import { Instagram, Phone, Menu as MenuIcon, X, MessageCircle, Star } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 // import { useCartStore } from "@/store/cartStore";
 import { useState } from "react";
@@ -199,9 +199,9 @@ export default function Navbar() {
                 <a href="https://wa.me/917251991199" target="_blank" rel="noopener noreferrer" className="text-deep-brown">
                   <MessageCircle size={20} />
                 </a>
-                <a href="https://g.co/kgs/YourBusinessID" target="_blank" rel="noopener noreferrer" className="text-deep-brown">
+                {/* <a href="https://g.co/kgs/YourBusinessID" target="_blank" rel="noopener noreferrer" className="text-deep-brown">
                   <Star size={20} />
-                </a>
+                </a> */}
               </div>
             </div>
           </motion.div>
