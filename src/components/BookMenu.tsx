@@ -386,43 +386,106 @@ export default function BookMenu() {
   const targetCategory = useUIStore((state) => state.targetCategory);
   const setTargetCategory = useUIStore((state) => state.setTargetCategory);
 
+  const getCorner = (direction: "next" | "prev" | "toTarget", targetPage?: number) => {
+    // These corners match the library's typical expectations for flip direction.
+    if (direction === "next") return "bottom" as const;
+    // On iOS portrait, "bottom" generally matches the fold gesture for prev as well.
+    if (direction === "prev") return "bottom" as const;
+
+    const current = book.current?.pageFlip()?.getCurrentPageIndex?.();
+    const next = typeof current === "number" ? (targetPage ?? current) > current : true;
+    return next ? ("bottom" as const) : ("top" as const);
+  };
+
+  const flipRequestIdRef = React.useRef(0);
+  const didFlipRef = React.useRef(false);
+  const isFlippingRef = React.useRef(false);
+
+  const flipWithFallback = (pf: any, animated: () => void, snap: () => void) => {
+    const before = pf?.getCurrentPageIndex?.();
+    const requestId = ++flipRequestIdRef.current;
+    didFlipRef.current = false;
+
+    animated();
+
+    // On some iOS/Safari combinations the animated flip can be swallowed;
+    // only fall back if we never received an onFlip update.
+    if (!isMobile) return;
+    // Slightly above flippingTime to avoid mid-animation snapping, but reduce perceived delay.
+    const fallbackDelayMs = 1150;
+
+    window.setTimeout(() => {
+      if (flipRequestIdRef.current !== requestId) return; // newer navigation started
+      if (didFlipRef.current) return; // onFlip fired, no fallback needed
+
+      const after = pf?.getCurrentPageIndex?.();
+      if (typeof before === "number" && typeof after === "number" && after === before) {
+        snap();
+        const idx = pf?.getCurrentPageIndex?.();
+        if (typeof idx === "number") setCurrentPage(idx);
+      }
+    }, fallbackDelayMs);
+  };
+
   const nextFlip = () => {
-    if (book.current) {
-      book.current.pageFlip().flipNext();
-    }
+    const pf = book.current?.pageFlip();
+    if (!pf) return;
+    if (isFlippingRef.current) return;
+    flipWithFallback(pf, () => pf.flipNext?.(getCorner("next")), () => pf.turnToNextPage?.());
   };
 
   const prevFlip = () => {
-    if (book.current) {
-      book.current.pageFlip().flipPrev();
-    }
+    const pf = book.current?.pageFlip();
+    if (!pf) return;
+    if (isFlippingRef.current) return;
+    flipWithFallback(pf, () => pf.flipPrev?.(getCorner("prev")), () => pf.turnToPrevPage?.());
   };
 
   const onFlip = (e: any) => {
-    setCurrentPage(e.data);
+    const next = typeof e?.data === "number" ? e.data : Number.parseInt(String(e?.data), 10);
+    setCurrentPage(Number.isFinite(next) ? next : 0);
+    didFlipRef.current = true;
   };
 
   const goToPage = (categoryId: string) => {
      if (pageMap[categoryId] !== undefined) {
-        book.current?.pageFlip()?.flip(pageMap[categoryId]);
+        const pf = book.current?.pageFlip();
+        const pageNum = pageMap[categoryId];
+        if (!pf) return;
+        if (isFlippingRef.current) return;
+        const corner = getCorner("toTarget", pageNum);
+        flipWithFallback(
+          pf,
+          () => pf?.flip?.(pageNum, corner),
+          () => pf?.turnToPage?.(pageNum)
+        );
      }
   };
 
   const goToIndex = () => {
     // Index page is at index 2 (0: Cover, 1: InsideLeft, 2: Index)
-    if (book.current) {
-      book.current.pageFlip().flip(2);
-    }
+    const pf = book.current?.pageFlip();
+    if (!pf) return;
+    if (isFlippingRef.current) return;
+    const corner = getCorner("toTarget", 2);
+    flipWithFallback(
+      pf,
+      () => pf?.flip?.(2, corner),
+      () => pf?.turnToPage?.(2)
+    );
   };
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.innerWidth < 768;
+  });
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    checkMobile();
     window.addEventListener('resize', checkMobile);
+    checkMobile();
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -447,7 +510,16 @@ export default function BookMenu() {
   useEffect(() => {
     if (targetCategory && pageMap[targetCategory] !== undefined && book.current) {
         setTimeout(() => {
-            book.current.pageFlip()?.flip(pageMap[targetCategory]);
+            const pf = book.current?.pageFlip();
+            if (!pf) return;
+            const pageNum = pageMap[targetCategory];
+            const corner = getCorner("toTarget", pageNum);
+            if (isFlippingRef.current) return;
+            flipWithFallback(
+              pf,
+              () => pf?.flip?.(pageNum, corner),
+              () => pf?.turnToPage?.(pageNum)
+            );
             setTargetCategory(null); // Reset target
         }, 500);
     }
@@ -597,13 +669,32 @@ export default function BookMenu() {
             mobileScrollSupport={true}
             className="shadow-2xl"
             ref={book}
+            onInit={(e: any) => {
+              const next = typeof e?.page === "number" ? e.page : undefined;
+              if (typeof next === "number") {
+                setCurrentPage(next);
+                return;
+              }
+              // Fallback: read from the underlying PageFlip instance.
+              try {
+                const idx = book.current?.pageFlip()?.getCurrentPageIndex?.();
+                if (typeof idx === "number") setCurrentPage(idx);
+              } catch {
+                // Ignore; currentPage will be updated on the first flip.
+              }
+            }}
             onFlip={onFlip}
+            onChangeState={(e: any) => {
+              // e.data is one of: 'user_fold' | 'fold_corner' | 'flipping' | 'read'
+              const state = e?.data;
+              isFlippingRef.current = state === "user_fold" || state === "fold_corner" || state === "flipping";
+            }}
             flippingTime={1000}
             usePortrait={isMobile} // Force single page on mobile
             startZIndex={0}
             autoSize={true}
             clickEventForward={false}
-            useMouseEvents={true}
+            useMouseEvents={!isMobile}
             swipeDistance={30}
             showPageCorners={true}
             disableFlipByClick={true}

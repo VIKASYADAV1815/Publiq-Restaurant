@@ -157,7 +157,7 @@ export default function ContactPage() {
                 </h2>
                 <div className="flex gap-4">
                   <a
-                    href="https://instagram.com/publiqdehradun"
+                    href="https://www.instagram.com/publiq_doon/"
                     target="_blank"
                     className="w-12 h-12 bg-white/50 border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110"
                   >
