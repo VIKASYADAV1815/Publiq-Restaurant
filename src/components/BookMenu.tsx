@@ -441,16 +441,16 @@ export default function BookMenu() {
     <section id="menu-book-section" className="relative min-h-screen bg-parchment flex flex-col items-center justify-center p-2 py-12 md:py-16 overflow-hidden">
       {/* Background Pattern */}
       <div 
-        className="absolute inset-0 opacity-60 mix-blend-multiply" 
+        className="absolute inset-0 opacity-60 mix-blend-multiply pointer-events-none" 
         style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
       />
       <div className="absolute inset-0 bg-linear-to-b from-black/5 via-transparent to-black/5 pointer-events-none" />
       
       {/* Top Controls */}
-      <div className="absolute top-4 md:top-8 left-4 right-4 md:left-auto md:right-8 z-30 flex items-center justify-between md:justify-end gap-2 md:gap-4">
+      <div className="absolute top-4 md:top-8 left-4 right-4 md:left-auto md:right-8 z-30 flex items-center justify-between md:justify-end gap-2 md:gap-4 pointer-events-none">
         <button 
           onClick={goToIndex}
-          className="flex items-center gap-2 text-deep-brown hover:text-[#3E2723] transition-colors group px-3 py-1.5 md:px-4 md:py-2 bg-parchment/80 backdrop-blur-sm rounded-full border border-deep-brown/20 shadow-sm"
+          className="flex items-center gap-2 text-deep-brown hover:text-[#3E2723] transition-colors group px-3 py-1.5 md:px-4 md:py-2 bg-parchment/80 backdrop-blur-sm rounded-full border border-deep-brown/20 shadow-sm pointer-events-auto"
         >
            <span className="font-cinzel text-[10px] md:text-xs tracking-widest uppercase font-bold">Index</span>
         </button>
@@ -463,7 +463,7 @@ export default function BookMenu() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
-            className="p-1.5 md:p-2 border border-deep-brown/20 rounded-full hover:bg-deep-brown/10 transition-colors text-deep-brown hover:text-[#3E2723]"
+            className="p-1.5 md:p-2 border border-deep-brown/20 rounded-full hover:bg-deep-brown/10 transition-colors text-deep-brown hover:text-[#3E2723] pointer-events-auto"
             title="Back to Top"
           >
             <ArrowRight className="-rotate-90" size={16} />
