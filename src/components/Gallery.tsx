@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import PremiumVideoPlayer from "./ui/PremiumVideoPlayer";
+import { useEffect, useState } from "react";
 
 const images = [
   {
@@ -29,6 +30,16 @@ const images = [
 ];
 
 export default function Gallery() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <section className="py-16 bg-parchment text-deep-brown relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -53,7 +64,12 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-5 border border-deep-brown/5 shadow-sm"
+              className="relative flex-1 group overflow-hidden rounded-xs transition-all duration-700 ease-[cubic-bezier(0.2,1,0.3,1)] hover:flex-5 border border-deep-brown/5 shadow-sm cursor-pointer"
+              onClick={() => {
+                if (!isMobile) return;
+                setActiveIndex((prev) => (prev === idx ? null : idx));
+              }}
+              style={isMobile ? { flex: activeIndex === idx ? 5 : 1 } : undefined}
             >
               {/* Vibrant Image Layer */}
               <div className="relative h-full w-full">
@@ -61,6 +77,7 @@ export default function Gallery() {
                   src={img.src}
                   alt={img.title}
                   fill
+                  sizes="100vw"
                   className="object-cover saturate-[1.15] contrast-[1.05] transition-transform duration-1000 group-hover:scale-105"
                 />
                 

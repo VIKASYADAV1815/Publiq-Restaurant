@@ -105,7 +105,7 @@ export default function Navbar() {
             <Phone size={20} strokeWidth={1.5} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/publiq_doon/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-parchment hover:text-golden-highlight transition-colors p-2"
@@ -149,7 +149,7 @@ export default function Navbar() {
             <Phone size={18} strokeWidth={1.5} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/publiq_doon/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-parchment hover:text-golden-highlight transition-colors p-2"
@@ -193,7 +193,7 @@ export default function Navbar() {
                 <a href="tel:+917251991199" className="text-deep-brown">
                   <Phone size={20} />
                 </a>
-                <a href="https://instagram.com" className="text-deep-brown">
+                <a href="https://www.instagram.com/publiq_doon/" className="text-deep-brown" target="_blank" rel="noopener noreferrer">
                   <Instagram size={20} />
                 </a>
                 <a href="https://wa.me/917251991199" target="_blank" rel="noopener noreferrer" className="text-deep-brown">

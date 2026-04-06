@@ -32,11 +32,29 @@ export default function Footer() {
             A tribute to the timeless charm of Dehradun. Where heritage meets modern culinary art.
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
-            {[Instagram, Facebook, Twitter].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full border border-parchment/20 flex items-center justify-center hover:bg-golden-highlight hover:text-deep-brown hover:border-golden-highlight transition-all duration-300">
-                <Icon size={18} />
-              </a>
-            ))}
+            <a 
+              href="https://www.instagram.com/publiq_doon/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-10 h-10 rounded-full border border-parchment/20 flex items-center justify-center hover:bg-golden-highlight hover:text-deep-brown hover:border-golden-highlight transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full border border-parchment/20 flex items-center justify-center hover:bg-golden-highlight hover:text-deep-brown hover:border-golden-highlight transition-all duration-300"
+              aria-label="Facebook"
+            >
+              <Facebook size={18} />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full border border-parchment/20 flex items-center justify-center hover:bg-golden-highlight hover:text-deep-brown hover:border-golden-highlight transition-all duration-300"
+              aria-label="Twitter"
+            >
+              <Twitter size={18} />
+            </a>
           </div>
         </div>
 
