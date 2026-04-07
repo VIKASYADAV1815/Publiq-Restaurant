@@ -116,37 +116,34 @@ CoverPage.displayName = "CoverPage";
 
 CoverPage.displayName = "CoverPage";
 
-// Index Page Component
+// Index Page Component (paginated, no internal scrolling)
 const IndexPage = forwardRef<HTMLDivElement, { onNavigate: (id: string) => void; categories: any[] }>((props, ref) => {
-  // We need to calculate page numbers manually or pass map
-  // Simplified for now: just rendering list
   return (
     <div className="demoPage bg-parchment relative shadow-inner overflow-hidden h-full border-r border-deep-brown/10 p-8" ref={ref}>
-       <div 
-         className="absolute inset-0 opacity-50 mix-blend-multiply pointer-events-none" 
-         style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
-       />
-       <div className="h-full flex flex-col items-center justify-center border-4 double border-deep-brown/10 p-6">
-          <h3 className="font-playfair text-3xl font-bold text-deep-brown mb-2">Table of Contents</h3>
-          <p className="font-cinzel text-xs text-deep-brown/60 tracking-widest mb-8 uppercase">विषय - सूची</p>
-          
-          <div className="w-full space-y-3 overflow-y-auto max-h-100 pr-2 scrollbar-thin scrollbar-thumb-deep-brown/20">
-             {props.categories.map((category, idx) => (
-               <button 
-                 key={idx}
-                 onClick={() => props.onNavigate(category.id)}
-                 className="w-full flex justify-between items-baseline border-b border-deep-brown/10 pb-1 hover:text-golden-highlight transition-colors group text-left"
-               >
-                 <span className="font-cinzel text-sm font-bold text-deep-brown group-hover:text-golden-highlight truncate pr-2">
-                   {category.name}
-                 </span>
-                 <span className="font-libre text-[10px] text-deep-brown/50 italic shrink-0">
-                   {category.hindiName}
-                 </span>
-               </button>
-             ))}
-          </div>
-       </div>
+      <div 
+        className="absolute inset-0 opacity-50 mix-blend-multiply pointer-events-none" 
+        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }} 
+      />
+      <div className="h-full flex flex-col justify-center border-4 double border-deep-brown/10 p-5 overflow-hidden">
+        <h3 className="font-playfair text-2xl md:text-3xl font-bold text-deep-brown mb-1.5 text-center leading-tight">Table of Contents</h3>
+        <p className="font-cinzel text-[10px] md:text-xs text-deep-brown/60 tracking-widest mb-4 uppercase text-center leading-tight">विषय - सूची</p>
+        <div className="w-full space-y-2">
+          {props.categories.map((category, idx) => (
+            <button 
+              key={idx}
+              onClick={() => props.onNavigate(category.id)}
+              className="w-full flex justify-between items-baseline border-b border-deep-brown/10 pb-1 hover:text-golden-highlight transition-colors group text-left leading-tight"
+            >
+              <span className="font-cinzel text-xs md:text-sm font-bold text-deep-brown group-hover:text-golden-highlight truncate pr-2">
+                {category.name}
+              </span>
+              <span className="font-libre text-[9px] md:text-[10px] text-deep-brown/50 italic shrink-0">
+                {category.hindiName}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 });
@@ -337,8 +334,8 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
 
       <div className="flex-1 min-w-0">
         <div className="flex justify-between items-baseline mb-0.5">
-          <h4 className="font-playfair text-sm font-bold text-deep-brown group-hover:text-golden-highlight transition-colors truncate pr-2">{item.name}</h4>
-          <span className="font-cinzel text-xs text-deep-brown font-semibold whitespace-nowrap">
+          <h4 className="font-playfair text-[13px] md:text-sm font-bold text-deep-brown group-hover:text-golden-highlight transition-colors truncate pr-2 leading-tight">{item.name}</h4>
+          <span className="font-cinzel text-[11px] md:text-xs text-deep-brown font-semibold whitespace-nowrap">
             {item.price > 0 ? `₹${item.price}` : "MRP"}
           </span>
         </div>
@@ -357,9 +354,15 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
             </button>
             <div className="flex items-center gap-2 shrink-0 ml-auto">
               {item.veg ? (
-                <Leaf size={10} className="text-green-600" />
+                <>
+                  <Leaf size={10} className="text-green-600" />
+                  <span className="text-[10px] font-bold text-green-700">VEG</span>
+                </>
               ) : (
-                <Flame size={10} className="text-red-600" />
+                <>
+                  <Flame size={10} className="text-red-600" />
+                  <span className="text-[10px] font-bold text-red-700">NON VEG</span>
+                </>
               )}
             </div>
           </div>
@@ -380,7 +383,6 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
 export default function BookMenu() {
   const book = useRef<any>(null);
   const [currentPage, setCurrentPage] = useState(0);
-  const [pageMap, setPageMap] = useState<Record<string, number>>({});
   const menu = React.useMemo(() => menuData, []);
   
   const targetCategory = useUIStore((state) => state.targetCategory);
@@ -475,10 +477,7 @@ export default function BookMenu() {
     );
   };
 
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth < 768;
-  });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -491,20 +490,21 @@ export default function BookMenu() {
 
   // Helper to split items into pages of max 5 items (reduced for space with images)
   const ITEMS_PER_PAGE = isMobile ? 4 : 5;
+  const CATEGORIES_PER_INDEX_PAGE = menu.length;
+  const INDEX_PAGES = 1;
   
   // Calculate page structure to build map
-  useEffect(() => {
-    let counter = 3; // Cover(0), InsideLeft(1), Index(2) -> Start at 3
+  const pageMap = React.useMemo(() => {
+    let counter = 2 + INDEX_PAGES;
     const map: Record<string, number> = {};
-    
     menu.forEach((category: any) => {
       map[category.id] = counter;
       const totalItems = category.items.length;
       const totalCategoryPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
       counter += totalCategoryPages;
     });
-    setPageMap(map);
-  }, [menu, ITEMS_PER_PAGE]);
+    return map;
+  }, [menu, ITEMS_PER_PAGE, INDEX_PAGES]);
 
   // Effect to handle navigation from store
   useEffect(() => {
@@ -706,7 +706,7 @@ export default function BookMenu() {
             <InsideCoverLeft />
   
             {/* Index Page (Page 2) */}
-            <IndexPage onNavigate={goToPage} categories={menu} />
+            <IndexPage onNavigate={goToPage} categories={menu.slice(0, CATEGORIES_PER_INDEX_PAGE)} />
   
             {/* Dynamic Menu Pages (Page 3+) */}
             {menu.reduce<{ pages: React.ReactNode[], counter: number }>((acc, category) => {
@@ -715,12 +715,12 @@ export default function BookMenu() {
                 pages: [...acc.pages, ...pages],
                 counter: acc.counter + pages.length
               };
-            }, { pages: [], counter: 3 }).pages}
+            }, { pages: [], counter: 2 + INDEX_PAGES }).pages}
   
             {/* Last Page */}
             <Page number={(() => {
               const totalMenuPages = menu.reduce((acc: number, cat: any) => acc + Math.ceil(cat.items.length / ITEMS_PER_PAGE), 0);
-              return 3 + totalMenuPages;
+              return (2 + INDEX_PAGES) + totalMenuPages;
             })()}>
               <div className="flex flex-col h-full justify-center items-center text-center space-y-6">
                 <h3 className="font-playfair text-xl font-bold text-deep-brown">Thank You</h3>

@@ -237,7 +237,7 @@ export default function GalleryPage() {
                   initial={{ y: 20 }} animate={{ y: 0 }}
                   className="font-cinzel text-[10px] tracking-[0.6em] text-deep-brown/40 uppercase"
                 >
-                  Gallery Item {selectedIdx + 1} // {galleryImages.length}
+                  Gallery Item {selectedIdx + 1} / {galleryImages.length}
                 </motion.div>
               </div>
             </motion.div>
