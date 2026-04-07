@@ -354,7 +354,7 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
               )}
             </div>
           </div>
-          <p className="font-libre text-[10px] text-deep-brown/60 italic flex-1 leading-tight line-clamp-1">{item.desc}</p>
+          <p className="font-libre text-[10px] text-deep-brown/60 italic flex-1 leading-tight line-clamp-1">{story}</p>
         </div>
         
         {showInfo && (
