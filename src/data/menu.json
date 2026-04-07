@@ -256,7 +256,7 @@
         {"id": "ms10", "name": "Virgin Mary", "price": 265, "veg": true, "desc": "Spiced tomato mocktail.", "image": "https://tse4.mm.bing.net/th/id/OIP.o8ULGAUU98mvPwKXi-DPtQHaHa?pid=Api&P=0&h=220"},
         {"id": "ms11", "name": "Apple Chilli", "price": 265, "veg": true, "desc": "Apple with chilli‑lime.", "image": "https://tse2.mm.bing.net/th/id/OIP.AHRh4KI0jnXtIRuMtus-kgHaHa?pid=Api&P=0&h=220"},
         {"id": "ms12", "name": "Orange Fizz", "price": 265, "veg": true, "desc": "Sparkling orange.", "image": "https://images.cocktailwave.com/orange-fizz.png"},
-        {"id": "ms13", "name": "Dark Invader", "price": 265, "veg": true, "desc": "Dark, zingy cooler.", "image": "https://images.unsplash.com/photo-1565272964772-c08ecf610f22?q=80&w=800&auto=format&fit=crop"},
+        {"id": "ms13", "name": "Dark Invader", "price": 265, "veg": true, "desc": "Dark, zingy cooler.", "image": "https://tse3.mm.bing.net/th/id/OIP.3a-PFy_K_eD-eq0nMprqlQAAAA?pid=Api&P=0&h=220"},
         {"id": "ms14", "name": "Virgin Strawberry", "price": 265, "veg": true, "desc": "Strawberry mocktail.", "image": "https://tse1.mm.bing.net/th/id/OIP.0DYbc5QJwxo_U2A11Wr_kQHaLH?pid=Api&P=0&h=220"},
         {"id": "ms15", "name": "Virgin Martini", "price": 265, "veg": true, "desc": "Zero‑alcohol martini twist.", "image": "https://tse2.mm.bing.net/th/id/OIP.Y9sGCmaH85_iYX7ecI1GzgHaD4?pid=Api&P=0&h=220"},
         {"id": "ms16", "name": "Iced Tea (Peach/Lemon)", "price": 265, "veg": true, "desc": "Chilled peach or lemon tea.", "image": "https://www.vegetarianventures.com/wp-content/uploads/2019/07/PeachLemonadeBlog-16-of-18-683x1024.jpg"},
@@ -302,7 +302,7 @@
         {"id": "bs3", "name": "Ginger Ale", "price": 89, "veg": true, "desc": "Sparkling", "image": "https://i.pinimg.com/1200x/85/60/c3/8560c3bac79267de30f23760698a2296.jpg"},
         {"id": "bs4", "name": "Tea", "price": 79, "veg": true, "desc": "Hot Tea", "image": "https://i.pinimg.com/736x/7c/a6/54/7ca65499d4a7d6ee290c2edd656a46f2.jpg"},
         {"id": "bs5", "name": "Red Bull", "price": 229, "veg": true, "desc": "Energy Drink", "image": "https://i.pinimg.com/736x/e7/b6/ab/e7b6ab528a44270c773cc53e18e4d9f6.jpg"},
-        {"id": "bs6", "name": "Tonic Water", "price": 0, "veg": true, "desc": "Served chilled at printed MRP.", "image": "https://images.unsplash.com/photo-1519451241324-20b4ea2c08b0?q=80&w=800&auto=format&fit=crop"},
+        {"id": "bs6", "name": "Tonic Water", "price": 0, "veg": true, "desc": "Served chilled at printed MRP.", "image": "https://tse1.mm.bing.net/th/id/OIP.wjOxtXx60FEev5nFuYpnzQHaHa?pid=Api&P=0&h=220"},
         {"id": "bs7", "name": "Mineral Water", "price": 0, "veg": true, "desc": "Packaged drinking water, billed at MRP.", "image": "https://i.pinimg.com/1200x/d9/cf/b3/d9cfb329b9b48737bf12c2f20c3cd3eb.jpg"}
     ]
   }

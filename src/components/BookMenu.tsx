@@ -249,66 +249,54 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
   
   const [imageSrc, setImageSrc] = React.useState<string | null>(item.image ?? null);
   const [showInfo, setShowInfo] = React.useState(false);
-  const getItemStory = (name: string) => {
-    const n = name.toLowerCase();
-    if (n.includes("blender")) return "An Indian blended whisky known for a mellow, rounded profile. Best enjoyed neat or with a splash of water.";
-    if (n.includes("100 pipers")) return "A Scotch blend associated with Highland character and gentle smoke, aged for depth and smoothness.";
-    if (n.includes("black dog")) return "Aged Scotch blend with a creamy palate and subtle oak, often sipped over ice.";
-    if (n.includes("black & white") || n.includes("black and white")) return "Historic Scotch blend recognized for its light body and clean grain-malt balance.";
-    if (n.includes("ballantine")) return "Classic Scotch blend focusing on balance: honeyed grain, soft vanilla and gentle spice.";
-    if (n.includes("jameson")) return "Irish whiskey triple‑distilled for smoothness, with notes of cereal, vanilla and orchard fruit.";
-    if (n.includes("camino") || n.includes("tequila")) return "Blue agave spirit from Mexico; traditionally slow‑roasted and double‑distilled for bright, peppery notes.";
-    if (n.includes("bombay") || n.includes("sapphire")) return "London dry gin infused with botanicals for a citrus‑floral profile; great in a G&T.";
-    if (n.includes("jack daniel")) return "Tennessee whiskey charcoal‑mellowed for a rounded, slightly sweet, oaky finish.";
-    if (n.includes("jim beam")) return "Kentucky straight bourbon with corn sweetness, vanilla and oak; ideal for classic cocktails.";
-    if (n.includes("red label")) return "Vigorous Scotch blend with lively grain and smoky accents, popular for highballs.";
-    if (n.includes("black label")) return "Iconic 12‑year Scotch blend offering layered smoke, dried fruit and vanilla oak.";
-    if (n.includes("bacardi")) return "Light rum distilled for a clean, crisp profile—versatile for refreshing cocktails.";
-    if (n.includes("jäger") || n.includes("jager")) return "German herbal liqueur steeped with botanicals; rich, bittersweet and aromatic.";
-    if (n.includes("old monk")) return "Indian dark rum with warm molasses and vanilla notes; a nostalgic, bold sipper.";
-    if (n.includes("absolut")) return "Swedish vodka distilled to a clean, neutral finish—excellent base for fruit‑forward mixes.";
-    if (n.includes("smirnoff")) return "Classic vodka known for a smooth, neutral character suited to many cocktails.";
-    if (n.includes("bud") || n.includes("carlsberg") || n.includes("corona")) return "International lager with a crisp, light body and gentle hop bitterness—served well‑chilled.";
-    if (n.includes("breezer")) return "Rum‑based cooler with fruit flavors—light, sparkling and easy to sip.";
-    if (n.includes("liit") || n.includes("long island")) return "A high‑spirited mix of white spirits topped with cola and citrus—bold yet balanced.";
-    if (n.includes("bull frog")) return "Vibrant long drink of mixed spirits and citrus with an energy twist—zesty and punchy.";
-    if (n.includes("zombie")) return "Tiki classic blending rums with tropical juices and spice—fruity with a warming finish.";
-    if (n.includes("mai tai")) return "Rum, lime and orgeat with a hint of orange—a bright, nutty tiki staple.";
-    if (n.includes("cosmo")) return "Vodka, cranberry, lime and orange liqueur—crisp, tart and ruby‑hued.";
-    if (n.includes("pina") || n.includes("colada")) return "Rum shaken with pineapple and coconut—creamy, tropical and smooth.";
-    if (n.includes("sex on the beach")) return "Vodka with peach, orange and cranberry—juicy, refreshing and summery.";
-    if (n.includes("whiskey sour")) return "Whiskey shaken with lemon and sugar, optionally with egg white—tangy and silky.";
-    if (n.includes("salty dog")) return "Gin or vodka with grapefruit over a salt‑rim—brisk citrus with a savory edge.";
-    if (n.includes("jäger bomb") || n.includes("jager bomb")) return "A lively blend of herbal liqueur and energy drink—sweet, herbal and effervescent.";
-    if (n.includes("cream of tomato")) return "Silky purée of tomatoes simmered with butter and cream—comforting and mildly tangy.";
-    if (n.includes("lemon") && n.includes("coriander")) return "Light broth scented with fresh coriander and lemon—bright and aromatic.";
-    if (n.includes("lung fung")) return "Indo‑Chinese style soup with egg drop texture and peppery warmth.";
-    if (n.includes("munchow") || n.includes("manchow") || n.includes("hot & sour") || n.includes("hot and sour")) return "Spicy‑tangy Indo‑Chinese broth with soy, vinegar and chilies—lively and robust.";
-    if (n.includes("green salad") || n.includes("salad")) return "A crisp medley of seasonal greens with simple seasoning for freshness.";
-    if (n.includes("burger")) return "Toasted bun with seasoned patty and toppings—grilled for a juicy, layered bite.";
-    if (n.includes("pizza")) return "Hand‑stretched base baked hot for a blistered crust, topped with cheese and sauce.";
-    if (n.includes("pasta")) return "Durum wheat pasta tossed in house sauces—al dente for a perfect bite.";
-    if (n.includes("malai paneer") || n.includes("paneer tikka")) return "Paneer marinated in cream, yogurt and spices, skewered and roasted in a tandoor.";
-    if (n.includes("soya") || n.includes("chaap")) return "Soya protein marinated and charred for a smoky, succulent finish.";
-    if (n.includes("seekh kebab")) return "Minced mix shaped on skewers, spiced and cooked over high heat for a smoky edge.";
-    if (n.includes("tandoori")) return "Marinated in yogurt and spices, roasted in a clay oven for char and tenderness.";
-    if (n.includes("murg tikka") || n.includes("chicken tikka")) return "Boneless chicken marinated overnight and seared in a tandoor for juicy bites.";
-    if (n.includes("fish tikka") || n.includes("machi")) return "Fish fillets marinated with spices and grilled hot for flaky, aromatic pieces.";
-    if (n.includes("dal makhani")) return "Slow‑cooked black lentils finished with butter and cream for a velvety texture.";
-    if (n.includes("shahi paneer") || n.includes("paneer butter")) return "Paneer in a rich tomato‑cashew gravy with butter and gentle spices.";
-    if (n.includes("kadai paneer")) return "Paneer tossed with capsicum, onion and kadai masala for a rustic, spiced flavor.";
-    if (n.includes("butter chicken") || n.includes("makhan wala")) return "Tandoor‑roasted chicken simmered in a creamy tomato gravy with butter.";
-    if (n.includes("rogan josh") || n.includes("lal maas")) return "Slow‑braised meat in a robust Kashmiri‑style gravy with aromatic spices.";
-    if (n.includes("egg curry")) return "Boiled eggs in a spiced onion‑tomato gravy—comforting and hearty.";
-    if (n.includes("biryani")) return "Layers of aromatic basmati and spiced curry gently steamed for infused flavor.";
-    if (n.includes("naan") || n.includes("roti")) return "Hand‑rolled bread baked on tandoor walls for a soft center and charred blisters.";
-    if (n.includes("mojito")) return "Mint and lime muddled with soda over ice—crisp and refreshing.";
-    if (n.includes("blue lagoon")) return "Citrusy blue cooler with lemon notes and a sparkling finish.";
-    if (n.includes("smoothie") || n.includes("shake")) return "Creamy blended drink with fruit or chocolate—cooling and satisfying.";
-    if (n.includes("fresh lime")) return "Lime juice with sugar and soda or water—bright, zesty and cooling.";
-    return "Prepared with care using fresh ingredients and balanced seasoning, offering an authentic, satisfying taste.";
+
+  const hashText = (text: string) => {
+    let hash = 0;
+    for (let i = 0; i < text.length; i++) {
+      hash = (hash * 31 + text.charCodeAt(i)) | 0;
+    }
+    return Math.abs(hash);
   };
-  const story = item.story ?? getItemStory(item.name);
+
+  const getItemStory = (currentItem: { id: string; name: string; desc: string; price: number; veg: boolean }) => {
+    const n = currentItem.name.toLowerCase();
+    const d = (currentItem.desc || "").trim();
+
+    if (n.includes("water")) {
+      return `${currentItem.name} is a packaged beverage served chilled and billed at printed MRP, ideal for clean hydration with your meal.`;
+    }
+    if (n.includes("soda")) {
+      return `${currentItem.name} is served cold with lively carbonation, making it a crisp and refreshing mixer or standalone sip.`;
+    }
+
+    const dishStyle = currentItem.veg
+      ? ["vegetarian signature", "veg favorite", "plant-forward preparation", "chef-crafted veg option"]
+      : ["non-veg specialty", "protein-rich signature", "chef-crafted non-veg pick", "house non-veg favorite"];
+    const finishStyle = [
+      "built for a balanced, restaurant-style finish.",
+      "crafted to deliver depth without overpowering the palate.",
+      "designed for clean flavors and a satisfying aftertaste.",
+      "layered for aroma, texture, and a polished final bite.",
+      "prepared to stay flavorful from first bite to last.",
+    ];
+    const occasionStyle = [
+      "A strong choice for guests who enjoy classic flavors.",
+      "Works well as a standalone order or part of a larger spread.",
+      "Popular when you want something familiar yet premium.",
+      "A reliable pick for both quick dining and longer meals.",
+      "Great for pairing with sides, breads, or beverages.",
+    ];
+
+    const h = hashText(`${currentItem.id}|${currentItem.name}|${currentItem.price}|${currentItem.veg ? "veg" : "non-veg"}`);
+    const style = dishStyle[h % dishStyle.length];
+    const finish = finishStyle[h % finishStyle.length];
+    const occasion = occasionStyle[h % occasionStyle.length];
+    const base = d.length > 0 ? d : "House-special preparation";
+
+    return `${currentItem.name}: ${base} This ${style} is ${finish} ${occasion}`;
+  };
+
+  const story = item.story ?? getItemStory(item);
   
   const stopPropagation = (e: React.MouseEvent | React.TouchEvent | React.PointerEvent) => {
     e.stopPropagation();
