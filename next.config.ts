@@ -32,6 +32,18 @@ const nextConfig: NextConfig = {
         hostname: 'assets.zeezest.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.elrincontx.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.loveandlemons.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

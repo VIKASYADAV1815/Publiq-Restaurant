@@ -89,7 +89,7 @@
         {"id": "ap2", "name": "Dilli Ki Aloo Chaat", "price": 169, "veg": true, "desc": "Crispy fried potato cubes tossed in a spicy, tangy tamarind chutney and topped with fresh pomegranate.", "image": "https://i.pinimg.com/736x/d7/84/0e/d7840ee6dc17b5f4fffb5d794c5bc28c.jpg"},
         {"id": "ap3", "name": "Chatpata Papad", "price": 149, "veg": true, "desc": "Crispy roasted papads topped with a vibrant mixture of onions, tomatoes, and a squeeze of fresh lime.", "image": "https://i.pinimg.com/736x/51/25/31/51253187c3e83c98daba937066f89f00.jpg"},
         {"id": "ap4", "name": "Desi Nachos", "price": 229, "veg": true, "desc": "Indian Style", "image": "https://i.pinimg.com/1200x/97/e1/5e/97e15e9372707a0284d9b7a621a8aca2.jpg"},
-        {"id": "ap5", "name": "Mexican Tortilla", "price": 265, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://i.pinimg.com/1200x/9f/06/d1/9f06d1df9e7a2ea7e4d8ac06a49d4696.jpg"},
+        {"id": "ap5", "name": "Mexican Tortilla", "price": 265, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://www.elrincontx.com/wp-content/uploads/2023/07/mexican-tortillas-1000x550.jpg"},
         {"id": "ap6", "name": "Cheesy Jalapeño Rolls", "price": 289, "veg": true, "desc": "Cheese Filled", "image": "https://i.pinimg.com/1200x/e3/a9/d3/e3a9d35be13688277359a43cd8574f70.jpg"},
         {"id": "ap7", "name": "Crispy Corn", "price": 265, "veg": true, "desc": "Fried Corn", "image": "https://i.pinimg.com/1200x/95/39/38/95393802c8d66335f2ae32196b865e87.jpg"},
         {"id": "ap8", "name": "Fish Finger", "price": 519, "veg": false, "desc": "Crispy Fish", "image": "https://i.pinimg.com/1200x/99/e0/90/99e0904037a5a24d616fc769be87c39b.jpg"},
@@ -181,8 +181,8 @@
     "description": "Refreshing Drinks",
     "items": [
         {"id": "ms1", "name": "Fresh Lime Soda", "price": 149, "veg": true, "desc": "Refreshing", "image": "https://i.pinimg.com/736x/f8/98/74/f8987473c38e50ef49ac0ac0388ee123.jpg"},
-        {"id": "ms2", "name": "Mojito", "price": 265, "veg": true, "desc": "Mint & Lime", "image": "https://i.pinimg.com/736x/21/e8/fa/21e8fa254c60508f22d29a01991c0fb1.jpg"},
-        {"id": "ms3", "name": "Virgin Colada", "price": 265, "veg": true, "desc": "Coconut & Pineapple", "image": "https://i.pinimg.com/1200x/17/b5/5b/17b55b028056316e22ab2295e38a750d.jpg"},
+        {"id": "ms2", "name": "Mojito", "price": 265, "veg": true, "desc": "Mint & Lime", "image": "https://cdn.loveandlemons.com/wp-content/uploads/2020/07/mojito.jpg"},
+        {"id": "ms3", "name": "Virgin Colada", "price": 265, "veg": true, "desc": "Coconut & Pineapple", "image": "https://i.pinimg.com/originals/41/31/e0/4131e0fd86c5a3156467833b1183b4a5.jpg"},
         {"id": "ms4", "name": "Blue Lagoon", "price": 265, "veg": true, "desc": "Blue Curacao", "image": "https://i.pinimg.com/736x/3d/fe/33/3dfe33b1f02d115a99789538a9c246b7.jpg"},
         {"id": "ms5", "name": "Smoothies", "price": 309, "veg": true, "desc": "Mango/Banana/Strawberry/Peach", "image": "https://i.pinimg.com/736x/33/be/45/33be457f40db9eef579aed839935912a.jpg"},
         {"id": "ms6", "name": "Shakes", "price": 309, "veg": true, "desc": "Oreo/Kit Kat/Nutella/Peanut Butter", "image": "https://i.pinimg.com/736x/0b/af/df/0bafdf329898702a386392d96bb0af49.jpg"}

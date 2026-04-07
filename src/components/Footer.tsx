@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F0F0F] text-parchment pt-12 md:pt-16 pb-12 relative overflow-hidden border-t border-parchment/10">
+    <footer className="bg-[#141514] text-parchment pt-12 md:pt-16 pb-12 relative overflow-hidden border-t border-parchment/10">
       {/* Texture */}
       <div 
         className="absolute inset-0 opacity-30 mix-blend-overlay" 

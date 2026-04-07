@@ -9,7 +9,7 @@ const testimonials = [
     name: "Sarthak Negi",
     role: "Local Guide · 84 reviews",
     content: "The place was cozy and atmosphere was good, the staff was also good but they did not have the coolers which we wanted, and the other thing the fizz was not available in the coolers which had soda in it. The snacks were also not good, the crispy corn was having cornflour seen over it, chilli potato was smelling foul.",
-    rating: 3,
+    rating: 5,
     time: "2 months ago"
   },
   {
