@@ -45,7 +45,7 @@ export default function AboutPage() {
               
               <div className="grid grid-cols-2 gap-8 pt-8 border-t border-deep-brown/10">
                 <div>
-                  <h4 className="font-cinzel text-2xl font-bold text-golden-highlight">2024</h4>
+                  <h4 className="font-cinzel text-2xl font-bold text-golden-highlight">2023</h4>
                   <p className="font-libre text-xs uppercase tracking-widest text-deep-brown/60">Established</p>
                 </div>
                 <div>

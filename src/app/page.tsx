@@ -8,6 +8,7 @@ import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import BookMenu from "@/components/BookMenu";
 import Testimonials from "@/components/Testimonials";
+import PubliqPrivilege from "@/components/PubliqPrivilege";
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
       <Hero />
       {/* <HeroDish /> */}
       <StorySection />
+            <PubliqPrivilege />
       <MenuCategories />
+
           {/* <FeaturedDishes /> */}
       <BookMenu />
       <Testimonials />

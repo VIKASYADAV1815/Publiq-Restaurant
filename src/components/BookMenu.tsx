@@ -83,7 +83,7 @@ const CoverPage = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement
       <div className="absolute right-0 top-2 bottom-2 w-1.5 bg-[#111111] shadow-lg transform translate-x-0.75 opacity-80" />
 
       <div className="relative z-20 text-center w-full transform group-hover:scale-[1.02] transition-transform duration-700">
-        <span className="font-cinzel text-[10px] tracking-[0.4em] uppercase mb-6 block text-golden-highlight opacity-90 drop-shadow-md">Est. 2024</span>
+        <span className="font-cinzel text-[10px] tracking-[0.4em] uppercase mb-6 block text-golden-highlight opacity-90 drop-shadow-md">Est. 2023</span>
         
         <div className="relative inline-block">
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-3 text-parchment drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] tracking-wide bg-clip-text bg-linear-to-b from-[#FFF8E1] to-golden-highlight select-none">
@@ -172,7 +172,7 @@ const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
              />
            </div>
            <div className="absolute bottom-4 left-0 w-full text-center">
-             <p className="font-cinzel text-[10px] tracking-widest text-deep-brown/60">EST. 2024</p>
+             <p className="font-cinzel text-[10px] tracking-widest text-deep-brown/60">EST. 2023</p>
            </div>
         </div>
       </div>

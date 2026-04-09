@@ -56,7 +56,7 @@ export default function StorySection({
               {/* Minimalist Year Tag */}
               <div className="absolute bottom-0 right-0 bg-parchment p-6 z-20 shadow-[-10px_-10px_30px_rgba(0,0,0,0.05)]">
                 <span className="font-cinzel text-[9px] tracking-[0.4em] text-deep-brown/40 block mb-1">SINCE</span>
-                <span className="font-playfair text-3xl font-bold text-deep-brown">2024</span>
+                <span className="font-playfair text-3xl font-bold text-deep-brown">2023</span>
               </div>
             </div>
 

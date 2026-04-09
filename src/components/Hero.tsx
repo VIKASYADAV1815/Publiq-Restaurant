@@ -63,7 +63,7 @@ export default function Hero() {
           <div className="flex items-center justify-center gap-4 mb-8">
              <div className="h-px w-8 bg-golden-highlight/50" />
              <span className="font-cinzel text-golden-highlight text-[10px] tracking-[0.5em] uppercase">
-               Est. 2024
+               Est. 2023
              </span>
              <div className="h-px w-8 bg-golden-highlight/50" />
           </div>
