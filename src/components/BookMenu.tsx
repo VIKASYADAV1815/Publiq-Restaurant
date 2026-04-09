@@ -167,6 +167,7 @@ const InsideCoverLeft = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
                src="/images/1000148496.jpg.jpeg" 
                alt="Restaurant Interior" 
                fill 
+               sizes="(max-width: 768px) 100vw, 500px"
                className="object-cover opacity-100 shadow-deep-brown"
                priority
              />
@@ -314,6 +315,7 @@ const MenuItem = ({ item }: { item: { id: string; name: string; price: number; v
             src={imageSrc} 
             alt={item.name}
             fill
+            sizes="64px"
             className="object-cover"
             onError={() => setImageSrc(getFallbackImage(item.name))}
           />

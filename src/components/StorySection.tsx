@@ -50,6 +50,7 @@ export default function StorySection({
                 src={imageSrc}
                 alt="Heritage Interior"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                 className="object-cover transition-transform duration-1000 scale-105 group-hover:scale-100"
               />
 

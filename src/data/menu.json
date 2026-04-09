@@ -60,13 +60,13 @@
     "image": "https://images.unsplash.com/photo-1618885472179-5e474019f2a9?q=80&w=800&auto=format&fit=crop",
     "description": "Chilled Perfection",
     "items": [
-        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "A strong, full-bodied beer with a rich, malty flavor and a smooth, crisp finish.", "image": "https://i.pinimg.com/736x/ad/2b/29/ad2b29b5852ae25f8f26c407da33ce54.jpg"},
-        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "A premium Danish pilsner with a perfectly balanced taste and a light, refreshing aroma.", "image": "https://i.pinimg.com/736x/12/1a/f1/121af1f3db64ec31635826c345ebc16c.jpg"},
+        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "A strong, full-bodied beer with a rich, malty flavor and a smooth, crisp finish.", "image": "https://tse1.mm.bing.net/th/id/OIP.coRVaqGOBnPh2QUzksE9AwHaHa?pid=Api&P=0&h=220"},
+        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "A premium Danish pilsner with a perfectly balanced taste and a light, refreshing aroma.", "image": "https://s3.amazonaws.com/images.ecwid.com/images/33380020/1564917976.jpg"},
         {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "A light, clean lager brewed for a smooth and easy-drinking experience with lower calories.", "image": "https://i.pinimg.com/1200x/b3/7a/05/b37a055e246e378c6c0baa316a1ff8bc.jpg"},
         {"id": "bb4", "name": "Breezer", "price": 249, "veg": true, "desc": "A refreshing, fruit-flavored alcoholic beverage made with premium rum and natural fruit juices.", "image": "https://i.pinimg.com/1200x/5a/20/21/5a202109854e62ba802e4f1342a865d6.jpg"},
-        {"id": "bb5", "name": "Corona", "price": 319, "veg": true, "desc": "An iconic Mexican lager known for its light, refreshing taste—best served with a wedge of lime.", "image": "https://i.pinimg.com/1200x/f8/f3/0a/f8f30a911797e59c26211604a372146e.jpg"},
+        {"id": "bb5", "name": "Corona", "price": 319, "veg": true, "desc": "An iconic Mexican lager known for its light, refreshing taste—best served with a wedge of lime.", "image": "https://tse4.mm.bing.net/th/id/OIP.3qPhw5KZJyrlysRJkVdHWwHaHa?pid=Api&P=0&h=220"},
         {"id": "bb6", "name": "Bucket: Bud Magnum/Carlsberg", "price": 999, "veg": true, "desc": "Bucket deal with three chilled bottles of Bud Magnum or Carlsberg.", "image": "https://i.pinimg.com/736x/4a/99/e5/4a99e5011be4dc2085052f9fdccc4803.jpg"},
-        {"id": "bb7", "name": "Bucket: Bud Light/Corona", "price": 889, "veg": true, "desc": "Value bucket featuring three bottles of Bud Light or Corona.", "image": "https://i.pinimg.com/1200x/3f/d6/85/3fd685ba15b6d1479628883b8cfe490f.jpg"}
+        {"id": "bb7", "name": "Bucket: Bud Light/Corona", "price": 889, "veg": true, "desc": "Value bucket featuring three bottles of Bud Light or Corona.", "image": "https://images.heb.com/is/image/HEBGrocery/000208691-1?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1"}
     ]
   },
   {
@@ -95,9 +95,9 @@
     "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
     "description": "Fresh & Hot",
     "items": [
-        {"id": "ss1", "name": "Cream of Tomato", "price": 229, "veg": true, "desc": "Silky tomato and cream—classic comfort.", "image": "https://i.pinimg.com/736x/8d/62/8d/8d628d0879626f2e8f3bc9df7bafc18d6.jpg"},
+        {"id": "ss1", "name": "Cream of Tomato", "price": 229, "veg": true, "desc": "Silky tomato and cream—classic comfort.", "image": "https://tse1.mm.bing.net/th/id/OIP.NMPW9kqrSWD0WOTBKMUTgQHaHa?pid=Api&P=0&h=220"},
         {"id": "ss2", "name": "Lemon & Coriander (Veg)", "price": 229, "veg": true, "desc": "Light broth scented with coriander and lemon.", "image": "https://i.pinimg.com/1200x/e1/64/8e/e1648e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"},
-        {"id": "ss3", "name": "Hot and Sour (Veg)", "price": 229, "veg": true, "desc": "Tangy and spicy vegetable soup.", "image": "https://i.pinimg.com/1200x/84/2d/93/842d930a618c03bcae72e36a9b0ee69e.jpg"},
+        {"id": "ss3", "name": "Hot and Sour (Veg)", "price": 229, "veg": true, "desc": "Tangy and spicy vegetable soup.", "image": "https://recipezed.com/wp-content/uploads/2025/09/pakoblog_Hot_and_Sour_Soup_angle_shot_kitchen_background_We_wan_0727cf19-9cc7-4216-b853-c69086e8509a.webp"},
         {"id": "ss4", "name": "Manchow Soup (Veg)", "price": 229, "veg": true, "desc": "Robust veg soup with crispy noodles.", "image": "https://images.unsplash.com/photo-1672667509988-baade9ade083?q=80&w=1147&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         {"id": "ss5", "name": "Cream of Chicken", "price": 289, "veg": false, "desc": "A rich and comforting chicken soup simmered to perfection with tender chicken bits and cream.", "image": "https://images.unsplash.com/photo-1705234384050-ee4f35382eb7?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         {"id": "ss6", "name": "Green Salad", "price": 169, "veg": true, "desc": "A crisp and refreshing medley of seasonal garden greens served with a light vinaigrette.", "image": "https://i.pinimg.com/736x/56/f8/56/56f85668ca50748a1f863f07e8c8b0b0.jpg"},
@@ -122,12 +122,12 @@
         {"id": "ap2", "name": "Dilli Ki Aloo Chaat", "price": 169, "veg": true, "desc": "Crispy fried potato cubes tossed in a spicy, tangy tamarind chutney and topped with fresh pomegranate.", "image": "https://i.pinimg.com/736x/d7/84/0e/d7840ee6dc17b5f4fffb5d794c5bc28c.jpg"},
         {"id": "ap3", "name": "Chatpata Papad", "price": 149, "veg": true, "desc": "Crispy roasted papads topped with a vibrant mixture of onions, tomatoes, and a squeeze of fresh lime.", "image": "https://i.pinimg.com/736x/51/25/31/51253187c3e83c98daba937066f89f00.jpg"},
         {"id": "ap4", "name": "Desi Nachos", "price": 229, "veg": true, "desc": "Indian Style", "image": "https://i.pinimg.com/1200x/97/e1/5e/97e15e9372707a0284d9b7a621a8aca2.jpg"},
-        {"id": "ap5", "name": "Mexican Tortilla", "price": 265, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://www.elrincontx.com/wp-content/uploads/2023/07/mexican-tortillas-1000x550.jpg"},
+        {"id": "ap5", "name": "Mexican Tortilla", "price": 265, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://tse3.mm.bing.net/th/id/OIP.TCWYzPUsItOAem1eL7TmjAHaE7?pid=Api&P=0&h=220"},
         {"id": "ap6", "name": "Cheesy Jalapeño Rolls", "price": 289, "veg": true, "desc": "Cheese Filled", "image": "https://i.pinimg.com/1200x/e3/a9/d3/e3a9d35be13688277359a43cd8574f70.jpg"},
         {"id": "ap7", "name": "Crispy Corn", "price": 265, "veg": true, "desc": "Fried Corn", "image": "https://i.pinimg.com/1200x/95/39/38/95393802c8d66335f2ae32196b865e87.jpg"},
         {"id": "ap8", "name": "Fish Finger", "price": 519, "veg": false, "desc": "Crispy Fish", "image": "https://i.pinimg.com/1200x/99/e0/90/99e0904037a5a24d616fc769be87c39b.jpg"},
         {"id": "ap9", "name": "Grilled Chicken", "price": 499, "veg": false, "desc": "Grilled Perfection", "image": "https://i.pinimg.com/736x/09/c1/78/09c178fb597ac4d6ba22a03b20b6cc3a.jpg"},
-        {"id": "ap10", "name": "Grilled Fish", "price": 519, "veg": false, "desc": "Grilled Fillet", "image": "https://i.pinimg.com/736x/6a/8b/85/6a8b859724691787d17f1ebe120ebd80.jpg"},
+        {"id": "ap10", "name": "Grilled Fish", "price": 519, "veg": false, "desc": "Grilled Fillet", "image": "https://tse4.mm.bing.net/th/id/OIP.kq9r0CzjxnJGDv8PB5JSqAHaHa?pid=Api&P=0&h=220"},
         {"id": "ap11", "name": "Hot Wings", "price": 379, "veg": false, "desc": "Spicy Wings", "image": "https://images.unsplash.com/photo-1625937759420-26d7e003e04c?q=80&w=921&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
     ]
   },
@@ -144,9 +144,9 @@
         {"id": "bp4", "name": "Margherita Pizza", "price": 309, "veg": true, "desc": "Classic Cheese", "image": "https://i.pinimg.com/1200x/9d/2f/62/9d2f62b46c1a23bd26df0d455c3a388f.jpg"},
         {"id": "bp5", "name": "Paneer Tikka Pizza", "price": 379, "veg": true, "desc": "Spicy Paneer", "image": "https://i.pinimg.com/736x/89/6a/b5/896ab511d008d04a163d1e0e63de9b21.jpg"},
         {"id": "bp6", "name": "Veggie Supreme Pizza", "price": 379, "veg": true, "desc": "Loaded Veggies", "image": "https://i.pinimg.com/1200x/a8/8c/2c/a88c2ce74540b197423377db49c8844c.jpg"},
-        {"id": "bp7", "name": "Butter Chicken Pizza", "price": 499, "veg": false, "desc": "Chicken Topping", "image": "https://i.pinimg.com/736x/90/48/2b/90482b91d44128162c61c632e89a821e.jpg"},
-        {"id": "bp8", "name": "Pasta (Red/White)", "price": 239, "veg": true, "desc": "Choice of creamy white or tangy red sauce; non-veg upgrade available.", "image": "https://i.pinimg.com/736x/b3/ec/28/b3ec2895d01681ba28d53d58f0677d6a.jpg"},
-        {"id": "bp9", "name": "Pasta (Bechamel/Marinara)", "price": 265, "veg": true, "desc": "Penne in bechamel or marinara with optional chicken add-on.", "image": "https://i.pinimg.com/736x/6e/8e/30/6e8e30f8ece30c1f524371c96f2c73d3.jpg"}
+        {"id": "bp7", "name": "Butter Chicken Pizza", "price": 499, "veg": false, "desc": "Chicken Topping", "image": "https://i.pinimg.com/736x/f3/7e/02/f37e024e432e3d93e650494589f96fd8.jpg"},
+        {"id": "bp8", "name": "Pasta (Bechamel / Marinara) Non-Veg", "price": 265, "veg": false, "desc": "Choice of creamy white or tangy red sauce with chicken.", "image": "https://images.heb.com/is/image/HEBGrocery/Test/baked-pasta-with-bechamel-and-marinara-recipe.jpg"},
+        {"id": "bp9", "name": "Pasta (Bechamel/Marinara)", "price": 239, "veg": true, "desc": "Penne in bechamel or marinara with optional chicken add-on.", "image": "https://i.pinimg.com/736x/6e/8e/30/6e8e30f8ece30c1f524371c96f2c73d3.jpg"}
     ]
   },
   {
@@ -225,13 +225,13 @@
         {"id": "rb8", "name": "Mutton Biryani", "price": 689, "veg": false, "desc": "Slow‑cooked mutton biryani.", "image": "https://tse1.mm.bing.net/th/id/OIP.MUgHlUP9l9EW2BlwZB_LqwHaHa?pid=Api&P=0&h=220"},
         {"id": "rb9", "name": "Egg Biryani", "price": 479, "veg": false, "desc": "Fragrant egg biryani.", "image": "https://tse4.mm.bing.net/th/id/OIP.I0OK89SinKW4qh3vDp0XtgHaHa?pid=Api&P=0&h=220"},
         {"id": "rb10", "name": "Tandoori Roti", "price": 49, "veg": true, "desc": "Whole‑wheat roti.", "image": "https://tse4.mm.bing.net/th/id/OIP.3RV1ckpc8J397LBLRa1XnQHaE8?pid=Api&P=0&h=220"},
-        {"id": "rb11", "name": "Butter Roti", "price": 59, "veg": true, "desc": "Roti brushed with butter.", "image": "https://tse2.mm.bing.net/th/id/OIP.fJ02Vp-uObL89KThVTs5wQHaHa?pid=Api&P=0&h=220"},
-        {"id": "rb12", "name": "Naan Bread", "price": 79, "veg": true, "desc": "Classic tandoori naan.", "image": "https://tse1.mm.bing.net/th/id/OIP.wN0fk1_svRlNHr8ZR6QNrQHaJ4?pid=Api&P=0&h=220"},
+        {"id": "rb11", "name": "Butter Roti", "price": 59, "veg": true, "desc": "Roti brushed with butter.", "image": "https://freshflavour.in/wp-content/uploads/2024/03/butter-roti-final.jpg"},
+        {"id": "rb12", "name": "Naan Bread", "price": 79, "veg": true, "desc": "Classic tandoori naan.", "image": "https://www.cookingclassy.com/wp-content/uploads/2021/01/naan-30.jpg"},
         {"id": "rb13", "name": "Butter Naan", "price": 89, "veg": true, "desc": "Buttered naan.", "image": "https://tse2.mm.bing.net/th/id/OIP.kdQ9s9I-w7yJ6p-QL66Y5QHaHa?pid=Api&P=0&h=220"},
         {"id": "rb14", "name": "Garlic Naan", "price": 115, "veg": true, "desc": "Garlic‑topped naan.", "image": "https://tse1.mm.bing.net/th/id/OIP.lkPWURkryALyGCsRfjm8KQHaJ4?pid=Api&P=0&h=220"},
         {"id": "rb15", "name": "Garlic Cheese Naan", "price": 149, "veg": true, "desc": "Cheesy garlic naan.", "image": "https://tse1.mm.bing.net/th/id/OIP.YYD-rg_vxNYflTwLmaczUQHaGL?pid=Api&P=0&h=220"},
         {"id": "rb16", "name": "Lachcha Paratha", "price": 89, "veg": true, "desc": "Layered paratha.", "image": "https://tse4.mm.bing.net/th/id/OIP.Bysf1JumEPyu9AsYs6Y9ogHaE8?pid=Api&P=0&h=220"},
-        {"id": "rb17", "name": "Stuffed Kulcha", "price": 119, "veg": true, "desc": "Amritsari style stuffed kulcha.", "image": "https://i.ytimg.com/vi/_dHK6fe-AYM/maxresdefault.jpg"},
+        {"id": "rb17", "name": "Stuffed Kulcha", "price": 119, "veg": true, "desc": "Amritsari style stuffed kulcha.", "image": "https://tse4.mm.bing.net/th/id/OIP.3bp6XbjhkqIEk28ePGa99QHaFj?pid=Api&P=0&h=220"},
         {"id": "rb18", "name": "Missi Roti", "price": 69, "veg": true, "desc": "Gram‑flour roti.", "image": "https://tse3.mm.bing.net/th/id/OIP.3eYkr-gAyU5Fm5EHS8clKAHaFP?pid=Api&P=0&h=220"},
         {"id": "rb19", "name": "Bread Basket", "price": 459, "veg": true, "desc": "Assorted breads basket.", "image": "https://tse4.mm.bing.net/th/id/OIP.I0ygCaWMK6P4MQjnU504sAHaEo?pid=Api&P=0&h=220"},
         {"id": "rb20", "name": "Keema Naan", "price": 209, "veg": false, "desc": "Naan stuffed with minced meat.", "image": "https://tse1.mm.bing.net/th/id/OIP.N-TdtPFs6fTpL6cCAWMbEAHaFj?pid=Api&P=0&h=220"}
@@ -261,7 +261,7 @@
         {"id": "ms15", "name": "Virgin Martini", "price": 265, "veg": true, "desc": "Zero‑alcohol martini twist.", "image": "https://tse2.mm.bing.net/th/id/OIP.Y9sGCmaH85_iYX7ecI1GzgHaD4?pid=Api&P=0&h=220"},
         {"id": "ms16", "name": "Iced Tea (Peach/Lemon)", "price": 265, "veg": true, "desc": "Chilled peach or lemon tea.", "image": "https://www.vegetarianventures.com/wp-content/uploads/2019/07/PeachLemonadeBlog-16-of-18-683x1024.jpg"},
         {"id": "ms17", "name": "Mango Berry Cooler", "price": 265, "veg": true, "desc": "Mango with berries.", "image": "https://tse3.mm.bing.net/th/id/OIP.y3bBdaDBXEdIcD1zXwZn2QHaE7?pid=Api&P=0&h=220"},
-        {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "https://tse2.mm.bing.net/th/id/OIP.tNOxABv9l851q-irdocq6QHaD4?pid=Api&P=0&h=220"},
+        {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "/green sec.jfif"},
         {"id": "ms19", "name": "Bartender’s Special", "price": 265, "veg": true, "desc": "Ask for today’s creation.", "image": "https://tse2.mm.bing.net/th/id/OIP.zfjtrtWtYFRpCPz7WT6KuQHaE7?pid=Api&P=0&h=220"},
         {"id": "ms20", "name": "Kala Khatta Nimbu", "price": 265, "veg": true, "desc": "Tangy kala khatta with lemon.", "image": "https://tse4.mm.bing.net/th/id/OIP.asrNMSx6w6V-4BREQt90PAHaEK?pid=Api&P=0&h=220"},
         {"id": "ms21", "name": "Mango Smoothie", "price": 309, "veg": true, "desc": "Thick mango smoothie.", "image": "https://tse4.mm.bing.net/th/id/OIP.AN1793IfjCTtdsUNp7zBHAHaJ3?pid=Api&P=0&h=220"},
@@ -302,8 +302,8 @@
         {"id": "bs3", "name": "Ginger Ale", "price": 89, "veg": true, "desc": "Sparkling", "image": "https://i.pinimg.com/1200x/85/60/c3/8560c3bac79267de30f23760698a2296.jpg"},
         {"id": "bs4", "name": "Tea", "price": 79, "veg": true, "desc": "Hot Tea", "image": "https://i.pinimg.com/736x/7c/a6/54/7ca65499d4a7d6ee290c2edd656a46f2.jpg"},
         {"id": "bs5", "name": "Red Bull", "price": 229, "veg": true, "desc": "Energy Drink", "image": "https://i.pinimg.com/736x/e7/b6/ab/e7b6ab528a44270c773cc53e18e4d9f6.jpg"},
-        {"id": "bs6", "name": "Tonic Water", "price": 0, "veg": true, "desc": "Served chilled at printed MRP.", "image": "https://tse1.mm.bing.net/th/id/OIP.wjOxtXx60FEev5nFuYpnzQHaHa?pid=Api&P=0&h=220"},
-        {"id": "bs7", "name": "Mineral Water", "price": 0, "veg": true, "desc": "Packaged drinking water, billed at MRP.", "image": "https://i.pinimg.com/1200x/d9/cf/b3/d9cfb329b9b48737bf12c2f20c3cd3eb.jpg"}
+        {"id": "bs6", "name": "Tonic Water", "price":  89, "veg": true, "desc": "Served chilled at printed MRP.", "image": "https://tse1.mm.bing.net/th/id/OIP.wjOxtXx60FEev5nFuYpnzQHaHa?pid=Api&P=0&h=220"},
+        {"id": "bs7", "name": "Mineral Water", "price": 0, "veg": true, "desc": "Packaged drinking water, billed at MRP.", "image": "https://tse4.mm.bing.net/th/id/OIP.Rt6v0RYx7FEWKbYlVdIHWwHaHa?pid=Api&P=0&h=220"}
     ]
   }
 ]

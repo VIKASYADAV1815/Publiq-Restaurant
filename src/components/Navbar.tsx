@@ -72,6 +72,7 @@ export default function Navbar() {
                   src="/logo1.png" 
                   alt="PUBLIQ Dehradun"   
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-contain"
                   priority
                 />
@@ -98,32 +99,32 @@ export default function Navbar() {
           {/* Social Icons - Right aligned but with equal container space */}
           <div className="w-50 flex justify-end gap-2">
             <a
-            href="tel:+917251991199"
-            className="text-parchment hover:text-golden-highlight transition-colors p-2"
-            aria-label="Call Us"
-          >
-            <Phone size={20} strokeWidth={1.5} />
-          </a>
-          <a
-            href="https://www.instagram.com/publiq_doon/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-parchment hover:text-golden-highlight transition-colors p-2"
-            aria-label="Instagram"
-          >
-            <Instagram size={20} strokeWidth={1.5} />
-          </a>
-          <a
-            href="https://wa.me/917251991199"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-parchment hover:text-[#25D366] transition-colors p-2"
-            aria-label="WhatsApp"
-          >
-            <WhatsAppIcon size={20} />
-          </a>
+              href="tel:+917251991199"
+              className="text-parchment hover:text-golden-highlight transition-colors p-2"
+              aria-label="Call Us"
+            >
+              <Phone size={20} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.instagram.com/publiq_doon/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-parchment hover:text-golden-highlight transition-colors p-2"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://wa.me/917251991199"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-parchment hover:text-[#25D366] transition-colors p-2"
+              aria-label="WhatsApp"
+            >
+              <WhatsAppIcon size={20} />
+            </a>
+          </div>
         </div>
-      </div>
 
         {/* Mobile Layout (Logo Center, Icons Right) */}
         <div className="flex md:hidden flex-none justify-center">
@@ -133,6 +134,7 @@ export default function Navbar() {
                 src="/logo1.png" 
                 alt="PUBLIQ Dehradun"   
                 fill
+                sizes="(max-width: 768px) 100vw, 200px"
                 className="object-contain"
                 priority
               />

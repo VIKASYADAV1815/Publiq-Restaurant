@@ -16,22 +16,64 @@ const WhatsAppIcon = ({ size = 20, className = "" }) => (
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    subject: "",
+    phone: "",
+    date: "",
+    day: "",
+    time: "",
+    guests: "2",
     message: "",
   });
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    
+    // Auto-select day if date is chosen
+    if (name === 'date') {
+      const selectedDate = new Date(value);
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const dayName = days[selectedDate.getDay()];
+      setFormData(prev => ({
+        ...prev,
+        [name]: value,
+        day: dayName
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Message sent 🚀");
+    
+    if (!formData.name || !formData.date || !formData.time || !formData.phone) {
+      alert("Please fill in your Name, Phone, Date, and Time for the reservation.");
+      return;
+    }
+
+    // Format the date to be more readable
+    const formattedDate = formData.date ? new Date(formData.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'short', day: 'numeric' }) : 'N/A';
+
+    // Construct the WhatsApp message with proper URL encoding for clean line breaks
+    const messageText = `*Table Reservation Request* 🍽️
+
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Guests:* ${formData.guests} Person(s)
+*Date:* ${formattedDate} (${formData.day})
+*Time:* ${formData.time}
+
+*Special Requests / Message:*
+${formData.message || 'None'}`;
+
+    // Encode the entire string so newlines (%0A) and spaces are handled perfectly by the browser
+    const encodedText = encodeURIComponent(messageText);
+    
+    // Redirect to WhatsApp using the provided test number
+    const whatsappUrl = `https://wa.me/917251991199?text=${encodedText}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -40,133 +82,138 @@ export default function ContactPage() {
 
       <PageHero
         bgSrc="/images/1000148491.jpg.jpeg"
-        eyebrow="Get In Touch"
-        title="Contact Us"
-        description="We would love to hear from you. Reach out for reservations, events, or just to say hello."
+        eyebrow="Reservations"
+        title="Book A Table"
+        description="Experience the finest culinary art in Dehradun. Reserve your table for an unforgettable dining experience."
       />
 
       {/* CONTACT SECTION */}
       <section className="py-24 bg-parchment relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-golden-highlight/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-deep-brown/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
             
             {/* LEFT SIDE */}
             <div className="space-y-12">
-              <h2 className="font-playfair text-3xl font-bold border-b border-golden-highlight/30 pb-4">
-                Reach Us
-              </h2>
-
-              {/* LOCATION */}
-              <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 bg-deep-brown text-parchment rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <h4 className="font-cinzel text-sm font-bold mb-1">
-                    Our Location
-                  </h4>
-                  <p className="text-sm text-deep-brown/70 leading-relaxed">
-                    Bansal Plaza, 5, Kaulagarh Rd, Rajender Nagar,<br />
-                    Dehradun, Uttarakhand 248001, India
-                  </p>
-                </div>
+              <div className="space-y-4">
+                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-deep-brown">
+                  Get in Touch
+                </h2>
+                <div className="w-20 h-1 bg-golden-highlight" />
+                <p className="text-deep-brown/70 leading-relaxed max-w-md">
+                  Whether it's a romantic dinner, a family gathering, or a corporate event, we're here to make it special.
+                </p>
               </div>
 
-              {/* PHONE */}
-              <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 bg-deep-brown text-parchment rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h4 className="font-cinzel text-sm font-bold mb-1">
-                    Call Us
-                  </h4>
-                  <p className="text-sm text-deep-brown/70">
-                    +91 72519 91199
-                  </p>
-                </div>
-              </div>
-
-              {/* EMAIL */}
-              <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 bg-deep-brown text-parchment rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <h4 className="font-cinzel text-sm font-bold mb-1">
-                    Email Us
-                  </h4>
-                  <p className="text-sm text-deep-brown/70">
-                    ssdhospitality@gmail.com
-                  </p>
-                </div>
-              </div>
-
-              {/* WHATSAPP BOOKING */}
-              <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                  <MessageCircle size={20} />
-                </div>
-                <div>
-                  <h4 className="font-cinzel text-sm font-bold mb-2">
-                    Book a Table via WhatsApp
-                  </h4>
-                  <div className="space-y-2">
-                    <a
-                      href="https://wa.me/917251991199?text=Hi%20PUBLIQ%20Dehradun,%20I%20would%20like%20to%20book%20a%20table"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-deep-brown/70 hover:text-green-600 transition-colors"
-                    >
-                      <WhatsAppIcon size={16} /> +91 72519 91199
-                    </a>
-                    <a
-                      href="https://wa.me/919997740501?text=Hi%20PUBLIQ%20Dehradun,%20I%20would%20like%20to%20book%20a%20table"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-deep-brown/70 hover:text-green-600 transition-colors"
-                    >
-                      <WhatsAppIcon size={16} /> +91 99977 40501
-                    </a>
-                    <a
-                      href="https://wa.me/919119779191?text=Hi%20PUBLIQ%20Dehradun,%20I%20would%20like%20to%20book%20a%20table"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-deep-brown/70 hover:text-green-600 transition-colors"
-                    >
-                      <WhatsAppIcon size={16} /> +91 91197 79191
-                    </a>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {/* LOCATION */}
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300">
+                    <MapPin size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                      Location
+                    </h4>
+                    <p className="text-sm font-medium text-deep-brown/80 leading-relaxed">
+                      Bansal Plaza, 5, Kaulagarh Rd,<br />
+                      Rajender Nagar, Dehradun
+                    </p>
                   </div>
                 </div>
+
+                {/* PHONE */}
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300">
+                    <Phone size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                      Reservations
+                    </h4>
+                    <p className="text-sm font-medium text-deep-brown/80">
+                      +91 72519 91199
+                    </p>
+                  </div>
+                </div>
+
+                {/* EMAIL */}
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300">
+                    <Mail size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                      Email
+                    </h4>
+                    <p className="text-sm font-medium text-deep-brown/80">
+                      ssdhospitality@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                {/* WHATSAPP */}
+                <a 
+                  href="https://wa.me/917251991199"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 group"
+                >
+                  <div className="w-12 h-12 bg-white text-green-500 border border-green-500/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-green-500 group-hover:text-white transition-all duration-300">
+                    <MessageCircle size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                      WhatsApp
+                    </h4>
+                    <p className="text-sm font-medium text-deep-brown/80">
+                      Chat with us
+                    </p>
+                  </div>
+                </a>
               </div>
 
               {/* WHY CONTACT */}
-              <div className="space-y-3 pt-4">
-                <h3 className="font-cinzel text-xs tracking-widest text-deep-brown/60">
-                  WHY CONTACT US
+              <div className="bg-white/50 backdrop-blur-sm p-8 border border-golden-highlight/10 rounded-sm space-y-4">
+                <h3 className="font-cinzel text-xs tracking-[0.2em] text-golden-highlight font-bold uppercase">
+                  Planning an Event?
                 </h3>
-                <p className="text-sm text-deep-brown/70">• Table Reservations</p>
-                <p className="text-sm text-deep-brown/70">• Private Events & Parties</p>
-                <p className="text-sm text-deep-brown/70">• Corporate Bookings</p>
+                <p className="text-sm text-deep-brown/70 leading-relaxed">
+                  We host private parties, corporate events, and live music nights. Contact our events team for custom packages and arrangements.
+                </p>
+                <div className="flex flex-wrap gap-x-6 gap-y-2">
+                  <span className="text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
+                    <div className="w-1 h-1 bg-golden-highlight rounded-full" /> Private Dining
+                  </span>
+                  <span className="text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
+                    <div className="w-1 h-1 bg-golden-highlight rounded-full" /> Birthdays
+                  </span>
+                  <span className="text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
+                    <div className="w-1 h-1 bg-golden-highlight rounded-full" /> Corporate
+                  </span>
+                </div>
               </div>
 
               {/* SOCIAL */}
               <div className="space-y-6">
-                <h2 className="font-playfair text-2xl font-bold border-b border-golden-highlight/30 pb-4">
-                  Follow Us
-                </h2>
+                <h4 className="font-cinzel text-xs tracking-[0.2em] text-deep-brown/40 font-bold uppercase">
+                  Follow Our Story
+                </h4>
                 <div className="flex gap-4">
                   <a
                     href="https://www.instagram.com/publiq_doon/"
                     target="_blank"
-                    className="w-12 h-12 bg-white/50 border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110"
+                    className="w-12 h-12 bg-white border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110 shadow-sm"
                   >
                     <Instagram size={20} />
                   </a>
                   <a
                     href="https://facebook.com/publiqdehradun"
                     target="_blank"
-                    className="w-12 h-12 bg-white/50 border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110"
+                    className="w-12 h-12 bg-white border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110 shadow-sm"
                   >
                     <Facebook size={20} />
                   </a>
@@ -175,58 +222,124 @@ export default function ContactPage() {
             </div>
 
             {/* FORM */}
-            <div className="bg-white/40 backdrop-blur-md p-8 rounded-sm shadow-xl border border-deep-brown/5">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input
-                    name="name"
-                    type="text"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 text-sm focus:border-golden-highlight outline-none transition-all focus:scale-[1.02]"
-                  />
+            <div className="bg-white p-8 md:p-10 rounded-sm shadow-2xl border border-deep-brown/5 relative">
+              <div className="absolute top-0 right-0 p-4">
+                <div className="w-16 h-16 border-t-2 border-r-2 border-golden-highlight/20" />
+              </div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <div className="w-16 h-16 border-b-2 border-l-2 border-golden-highlight/20" />
+              </div>
 
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 text-sm focus:border-golden-highlight outline-none transition-all focus:scale-[1.02]"
-                  />
+              <div className="relative z-10">
+                <div className="mb-10 text-center">
+                  <h3 className="font-playfair text-3xl font-bold text-deep-brown mb-2">Book a Table</h3>
+                  <p className="text-sm text-deep-brown/50 font-libre">Fill out the form to request a reservation</p>
                 </div>
 
-                <input
-                  name="subject"
-                  type="text"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 text-sm focus:border-golden-highlight outline-none transition-all focus:scale-[1.02]"
-                />
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="relative group">
+                      <input
+                        name="name"
+                        type="text"
+                        required
+                        placeholder="Full Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-deep-brown/20 py-3 text-sm focus:border-golden-highlight outline-none transition-all placeholder:text-deep-brown/30"
+                      />
+                    </div>
 
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full bg-parchment/30 border-b border-deep-brown/20 p-2 text-sm min-h-30 focus:border-golden-highlight outline-none transition-all focus:scale-[1.02]"
-                />
+                    <div className="relative group">
+                      <input
+                        name="phone"
+                        type="tel"
+                        required
+                        placeholder="Phone Number"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-deep-brown/20 py-3 text-sm focus:border-golden-highlight outline-none transition-all placeholder:text-deep-brown/30"
+                      />
+                    </div>
+                  </div>
 
-                <button className="w-full bg-deep-brown text-parchment font-cinzel py-4 tracking-widest font-bold hover:bg-golden-highlight hover:text-deep-brown transition-all duration-300 shadow-lg hover:shadow-2xl active:scale-95 relative overflow-hidden group">
-                  <span className="relative z-10">Send Message</span>
-                  <span className="absolute inset-0 bg-golden-highlight opacity-0 group-hover:opacity-20 transition-all duration-500"></span>
-                </button>
-              </form>
-              <div className="mt-8 relative aspect-video overflow-hidden rounded-sm border border-deep-brown/10">
-                <Image
-                  src="/images/1000148497.jpg.jpeg"
-                  alt="Contact visual"
-                  fill
-                  className="object-cover"
-                />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Date</label>
+                      <input
+                        name="date"
+                        type="date"
+                        required
+                        value={formData.date}
+                        onChange={handleChange}
+                        className="w-full bg-parchment/50 border border-deep-brown/10 rounded-sm p-3 text-sm focus:border-golden-highlight outline-none transition-all text-deep-brown"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Day</label>
+                      <select
+                        name="day"
+                        value={formData.day}
+                        onChange={handleChange}
+                        className="w-full bg-parchment/50 border border-deep-brown/10 rounded-sm p-3 text-sm focus:border-golden-highlight outline-none transition-all text-deep-brown appearance-none"
+                      >
+                        <option value="">Select Day</option>
+                        {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(day => (
+                          <option key={day} value={day}>{day}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Time</label>
+                      <input
+                        name="time"
+                        type="time"
+                        required
+                        value={formData.time}
+                        onChange={handleChange}
+                        className="w-full bg-parchment/50 border border-deep-brown/10 rounded-sm p-3 text-sm focus:border-golden-highlight outline-none transition-all text-deep-brown"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Guests</label>
+                      <select
+                        name="guests"
+                        value={formData.guests}
+                        onChange={handleChange}
+                        className="w-full bg-parchment/50 border border-deep-brown/10 rounded-sm p-3 text-sm focus:border-golden-highlight outline-none transition-all text-deep-brown appearance-none"
+                      >
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "10+"].map(num => (
+                          <option key={num} value={num}>{num} Person{num !== 1 ? 's' : ''}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Special Requests</label>
+                    <textarea
+                      name="message"
+                      placeholder="Any allergies, special occasions, or preferred seating?"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full bg-parchment/50 border border-deep-brown/10 rounded-sm p-3 text-sm min-h-24 focus:border-golden-highlight outline-none transition-all placeholder:text-deep-brown/30"
+                    />
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    className="w-full bg-[#25D366] text-white font-cinzel py-5 tracking-[0.2em] font-bold hover:bg-[#128C7E] transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-[0.98] flex items-center justify-center gap-3 rounded-sm group overflow-hidden relative"
+                  >
+                    <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                    <WhatsAppIcon size={20} className="relative z-10" />
+                    <span className="relative z-10">Confirm Reservation</span>
+                  </button>
+                </form>
               </div>
             </div>
           </div>

@@ -23,6 +23,7 @@ export default function HeroDish() {
             src="/restaurent/h3.png"
             alt="Signature Dish"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             className="object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.4)]"
             priority
           />

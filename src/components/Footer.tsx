@@ -24,6 +24,7 @@ export default function Footer() {
                 src="/logo1.png" 
                 alt="PUBLIQ Dehradun"  
                 fill
+                sizes="(max-width: 768px) 100vw, 320px"
                 className="object-contain object-center md:object-left"
               />
             </div>

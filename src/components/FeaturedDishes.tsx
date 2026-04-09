@@ -96,6 +96,7 @@ export default function FeaturedDishes() {
                     src={dish.categoryImage || "https://images.unsplash.com/photo-1546833999-b9f5816029bd?q=80&w=800&auto=format&fit=crop"}
                     alt={dish.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-sm z-10">

@@ -38,7 +38,7 @@ export default function WelcomePopup() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-100 flex items-center justify-center px-4">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -52,7 +52,7 @@ export default function WelcomePopup() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.97 }}
             transition={{ duration: 0.2, ease: "easeOut" }} // Simple ease is lighter than spring
-            className="relative w-full max-w-[340px] bg-white p-8 rounded-sm shadow-xl border border-neutral-100"
+            className="relative w-full max-w-85 bg-white p-8 rounded-sm shadow-xl border border-neutral-100"
           >
             <button
               onClick={() => setIsVisible(false)}
