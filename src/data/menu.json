@@ -60,9 +60,9 @@
     "image": "https://images.unsplash.com/photo-1618885472179-5e474019f2a9?q=80&w=800&auto=format&fit=crop",
     "description": "Chilled Perfection",
     "items": [
-        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "A strong, full-bodied beer with a rich, malty flavor and a smooth, crisp finish.", "image": "https://tse1.mm.bing.net/th/id/OIP.coRVaqGOBnPh2QUzksE9AwHaHa?pid=Api&P=0&h=220"},
-        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "A premium Danish pilsner with a perfectly balanced taste and a light, refreshing aroma.", "image": "https://s3.amazonaws.com/images.ecwid.com/images/33380020/1564917976.jpg"},
-        {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "A light, clean lager brewed for a smooth and easy-drinking experience with lower calories.", "image": "https://i.pinimg.com/1200x/b3/7a/05/b37a055e246e378c6c0baa316a1ff8bc.jpg"},
+        {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "A strong, full-bodied beer with a rich, malty flavor and a smooth, crisp finish.", "image": "/budweiser.jpeg"},
+        {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "A premium Danish pilsner with a perfectly balanced taste and a light, refreshing aroma.", "image": "/carlsberg.jpeg"},
+        {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "A light, clean lager brewed for a smooth and easy-drinking experience with lower calories.", "image": "/budwieser%20premium%20king.jpeg"},
         {"id": "bb4", "name": "Breezer", "price": 249, "veg": true, "desc": "A refreshing, fruit-flavored alcoholic beverage made with premium rum and natural fruit juices.", "image": "https://tse1.mm.bing.net/th/id/OIP.vRMOg41-EUkVDrUhUlAfhAHaHa?pid=Api&P=0&h=220"},
         {"id": "bb5", "name": "Corona", "price": 319, "veg": true, "desc": "An iconic Mexican lager known for its light, refreshing taste—best served with a wedge of lime.", "image": "https://tse4.mm.bing.net/th/id/OIP.3qPhw5KZJyrlysRJkVdHWwHaHa?pid=Api&P=0&h=220"},
         {"id": "bb6", "name": "Bucket: Bud Magnum/Carlsberg", "price": 999, "veg": true, "desc": "Bucket deal with three chilled bottles of Bud Magnum or Carlsberg.", "image": "https://i.pinimg.com/736x/4a/99/e5/4a99e5011be4dc2085052f9fdccc4803.jpg"},
@@ -119,7 +119,7 @@
     "description": "Small Bites",
     "items": [
         {"id": "ap1", "name": "Peanuts Ka Chakna", "price": 169, "veg": true, "desc": "Crunchy roasted peanuts tossed with finely chopped onions, tomatoes, green chilies, and tangy chaat masala.", "image": "https://i.pinimg.com/1200x/fd/f0/27/fdf0270ad329f26e6817fdee10db169e.jpg"},
-        {"id": "ap2", "name": "Dilli Ki Aloo Chaat", "price": 169, "veg": true, "desc": "Crispy fried potato cubes tossed in a spicy, tangy tamarind chutney and topped with fresh pomegranate.", "image": "https://i.pinimg.com/736x/d7/84/0e/d7840ee6dc17b5f4fffb5d794c5bc28c.jpg"},
+        {"id": "ap2", "name": "Dilli Ki Aloo Chaat", "price": 169, "veg": true, "desc": "Crispy fried potato cubes tossed in a spicy, tangy tamarind chutney and topped with fresh pomegranate.", "image": "https://assets.thehansindia.com/h-upload/2023/02/04/1333736-aloo-chat.jpg"},
         {"id": "ap3", "name": "Chatpata Papad", "price": 149, "veg": true, "desc": "Crispy roasted papads topped with a vibrant mixture of onions, tomatoes, and a squeeze of fresh lime.", "image": "https://i.pinimg.com/736x/51/25/31/51253187c3e83c98daba937066f89f00.jpg"},
         {"id": "ap4", "name": "Desi Nachos", "price": 229, "veg": true, "desc": "Indian Style", "image": "https://i.pinimg.com/1200x/97/e1/5e/97e15e9372707a0284d9b7a621a8aca2.jpg"},
         {"id": "ap5", "name": "Mexican Tortilla", "price": 265, "veg": true, "desc": "Veg / Non-Veg (289)", "image": "https://tse3.mm.bing.net/th/id/OIP.TCWYzPUsItOAem1eL7TmjAHaE7?pid=Api&P=0&h=220"},
@@ -149,7 +149,7 @@
         {"id": "bp8b", "name": "White Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Creamy and rich bechamel sauce with chicken, finished with parmesan cheese and black pepper.", "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2024/04/white-sauce-pasta.jpg"},
         {"id": "bp8c", "name": "Bechamel Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Classic French-style white sauce pasta with chicken, exceptionally smooth and creamy.", "image": "https://www.whiskaffair.com/wp-content/uploads/2021/05/White-Sauce-Paste-2-1-1200x1800.jpg"},
         {"id": "bp8d", "name": "Marinara Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Traditional Italian red sauce pasta with succulent chicken and aromatic basil.", "image": "https://tse3.mm.bing.net/th/id/OIP.cEGSPX7txl7LFXeEsTWNVQHaE7?pid=Api&P=0&h=220"},
-        {"id": "bp9", "name": "Pasta (Bechamel/Marinara) - Veg", "price": 239, "veg": true, "desc": "Penne in your choice of creamy bechamel or tangy marinara sauce with fresh vegetables.", "image": "https://i.pinimg.com/736x/6e/8e/30/6e8e30f8ece30c1f524371c96f2c73d3.jpg"}
+        {"id": "bp9", "name": "Pasta (Bechamel/Marinara) - Veg", "price": 239, "veg": true, "desc": "Penne in your choice of creamy bechamel or tangy marinara sauce with fresh vegetables.", "image": "/pasta.jpeg"}
     ]
   },
   {
@@ -161,17 +161,17 @@
     "items": [
         {"id": "ts1", "name": "Malai Paneer Tikka", "price": 379, "veg": true, "desc": "Creamy Paneer", "image": "https://i.pinimg.com/1200x/c6/33/a9/c633a9e1ffbdd97e534593417307873d.jpg"},
         {"id": "ts2", "name": "Paneer Seekh Wala", "price": 379, "veg": true, "desc": "Paneer Skewers", "image": "https://tse3.mm.bing.net/th/id/OIP.fUjh7cQJPmQh8GkF4otPMgHaDp?pid=Api&P=0&h=220"},
-        {"id": "ts3", "name": "Soya Malai Chaap", "price": 379, "veg": true, "desc": "Soya Chunks", "image": "https://i.pinimg.com/736x/ca/85/64/ca8564710216125367120eff66eefcb5.jpg"},
+        {"id": "ts3", "name": "Soya Malai Chaap", "price": 379, "veg": true, "desc": "Soya Chunks", "image": "/soya%20chaap.jpeg"},
         {"id": "ts3b", "name": "Soya Masala Chaap", "price": 349, "veg": true, "desc": "Smoky masala‑marinated soya chaap.", "image": "https://tse3.mm.bing.net/th/id/OIP.Zo-hUgYIsxesAmH2kNSFRgHaE8?pid=Api&P=0&h=220"},
         {"id": "ts4", "name": "Mushroom Kurkure", "price": 399, "veg": true, "desc": "Crispy Mushroom", "image": "https://i.pinimg.com/736x/67/72/97/677297f32e774e33f875c52328dbc790.jpg"},
         {"id": "ts5", "name": "Veg Seekh Kebab", "price": 399, "veg": true, "desc": "Veg Skewers", "image": "https://i.pinimg.com/736x/11/77/e6/1177e6bfa9102ff4d2c1777a7dce0a4a.jpg"},
-        {"id": "ts5b", "name": "Sabji Seekh Platter", "price": 459, "veg": true, "desc": "Assorted veg seekh selection.", "image": "https://tse1.mm.bing.net/th/id/OIP.Y__DC2TXww5n_ByBChhkzgHaFk?pid=Api&P=0&h=220"},
-        {"id": "ts6", "name": "Tandoori Chooza (Half)", "price": 375, "veg": false, "desc": "Half spring chicken marinated in tandoori spices and flame-roasted.", "image": "https://i.pinimg.com/736x/fc/c7/84/fcc78436df44fc2e54649ddc0ab2dbce.jpg"},
-        {"id": "ts7", "name": "Tandoori Chooza (Full)", "price": 750, "veg": false, "desc": "Full tandoori chicken, char-grilled for a smoky and juicy finish.", "image": "https://i.pinimg.com/736x/31/91/69/319169e205115417d3d6cbc52ca6c1a5.jpg"},
+        {"id": "ts5b", "name": "Sabji Seekh Platter", "price": 459, "veg": true, "desc": "Assorted veg seekh selection.", "image": "https://img.freepik.com/premium-photo/festive-platter-seekh-kebabs-samosas_1179130-184578.jpg"},
+        {"id": "ts6", "name": "Tandoori Chooza (Half)", "price": 375, "veg": false, "desc": "Half spring chicken marinated in tandoori spices and flame-roasted.", "image": "/tandoori%20chooza.jpeg"},
+        {"id": "ts7", "name": "Tandoori Chooza (Full)", "price": 750, "veg": false, "desc": "Full tandoori chicken, char-grilled for a smoky and juicy finish.", "image": "/tandoori%20chooza.jpeg"},
         {"id": "ts8", "name": "Murg Tikka", "price": 475, "veg": false, "desc": "Chicken Tikka", "image": "https://i.pinimg.com/736x/67/52/09/675209ed468cb5cbe26f5136e1040fac.jpg"},
         {"id": "ts9", "name": "Murg Achari Tikka", "price": 499, "veg": false, "desc": "Pickled Chicken", "image": "https://i.pinimg.com/1200x/07/a4/62/07a4622d93782f2e76d8f27cb7baca4a.jpg"},
-        {"id": "ts9b", "name": "Malai Murg", "price": 519, "veg": false, "desc": "Creamy chicken tikka.", "image": "https://tse2.mm.bing.net/th/id/OIP.WAku1eT1u2eVp9It6qPvfQHaE8?pid=Api&P=0&h=220"},
-        {"id": "ts10", "name": "Fish Tikka", "price": 549, "veg": false, "desc": "Fish Skewers", "image": "https://i.pinimg.com/736x/28/d4/21/28d42174130b90594ab46fd09fb8a79c.jpg"},
+        {"id": "ts9b", "name": "Malai Murg", "price": 519, "veg": false, "desc": "Creamy chicken tikka.", "image": "/malai%20murg.jpeg"},
+        {"id": "ts10", "name": "Fish Tikka", "price": 549, "veg": false, "desc": "Fish Skewers", "image": "https://tse1.mm.bing.net/th/id/OIP.V31YLMb2vaIdYn0evKR-wgHaE8?pid=Api&P=0&h=220"},
         {"id": "ts11", "name": "Machi Amritsar Wali", "price": 519, "veg": false, "desc": "Fried Fish", "image": "https://i.pinimg.com/736x/6d/89/2d/6d892d499ef59f266b9be530b7c6e199.jpg"},
         {"id": "ts12", "name": "Non-Veg Platter", "price": 759, "veg": false, "desc": "Assorted Non-Veg", "image": "https://i.pinimg.com/1200x/63/ee/89/63ee89f3e840c57193b8f92fe60ba85d.jpg"},
         {"id": "ts13", "name": "Mutton Seekh Kebab", "price": 549, "veg": false, "desc": "Mutton Skewers", "image": "https://i.pinimg.com/736x/2e/f1/90/2ef190d59d0138b26ccc99cc01772e11.jpg"}
@@ -198,7 +198,7 @@
         {"id": "mc12", "name": "Paneer Lababdar", "price": 499, "veg": true, "desc": "Creamy lababdar gravy.", "image": "https://tse4.mm.bing.net/th/id/OIP.Arl3TKcsLKPpfOWtTQE-WAHaHa?pid=Api&P=0&h=220"},
         {"id": "mc13", "name": "Paneer Do Pyaza", "price": 499, "veg": true, "desc": "Paneer with double onion tadka.", "image": "https://tse3.mm.bing.net/th/id/OIP.0sPGqM2MMmQ-fXmTCym-gAHaEz?pid=Api&P=0&h=220"},
         {"id": "mc14", "name": "Mushroom Masala", "price": 499, "veg": true, "desc": "Mushrooms in spiced masala.", "image": "https://tse4.mm.bing.net/th/id/OIP.dkalnPDQHEB5_bNGWO3pmwHaE7?pid=Api&P=0&h=220"},
-        {"id": "mc15", "name": "Paneer Matar Methi Malai", "price": 499, "veg": true, "desc": "Paneer with peas in creamy methi gravy.", "image": "https://tse3.mm.bing.net/th/id/OIP.zwS0x-s2ieHxHPONCF6aTgHaHG?pid=Api&P=0&h=220"},
+        {"id": "mc15", "name": "Paneer Matar Methi Malai", "price": 499, "veg": true, "desc": "Paneer with peas in creamy methi gravy.", "image": "https://img.freepik.com/premium-photo/methi-malai-paneer-with-matar-popular-indian-vegetarian-main-course-served-karahi-with-roti-chapati-selective-focus_466689-16844.jpg?w=2000"},
         {"id": "mc16", "name": "Malai Kofta", "price": 499, "veg": true, "desc": "Soft koftas in cashew gravy.", "image": "https://tse2.mm.bing.net/th/id/OIP.Q9Au0pSwH8dBYHEpXmfO6gHaHa?pid=Api&P=0&h=220"},
         {"id": "mc17", "name": "Paneer Bhurji", "price": 349, "veg": true, "desc": "Scrambled paneer.", "image": "https://tse2.mm.bing.net/th/id/OIP.8-IQmHwfzIuD7m48E3pf9gHaHa?pid=Api&P=0&h=220"},
         {"id": "mc18", "name": "Mushroom Peas", "price": 429, "veg": true, "desc": "Mushrooms with peas.", "image": "https://tse1.mm.bing.net/th/id/OIP.V8NO_N7e0KY8N6SfIIfmiAHaHa?pid=Api&P=0&h=220"},
@@ -236,7 +236,7 @@
         {"id": "rb16", "name": "Lachcha Paratha", "price": 89, "veg": true, "desc": "Layered paratha.", "image": "https://tse4.mm.bing.net/th/id/OIP.Bysf1JumEPyu9AsYs6Y9ogHaE8?pid=Api&P=0&h=220"},
         {"id": "rb17", "name": "Stuffed Kulcha", "price": 119, "veg": true, "desc": "Amritsari style stuffed kulcha.", "image": "https://tse4.mm.bing.net/th/id/OIP.3bp6XbjhkqIEk28ePGa99QHaFj?pid=Api&P=0&h=220"},
         {"id": "rb18", "name": "Missi Roti", "price": 69, "veg": true, "desc": "Gram‑flour roti.", "image": "https://tse3.mm.bing.net/th/id/OIP.3eYkr-gAyU5Fm5EHS8clKAHaFP?pid=Api&P=0&h=220"},
-        {"id": "rb19", "name": "Bread Basket", "price": 459, "veg": true, "desc": "Assorted breads basket.", "image": "https://tse4.mm.bing.net/th/id/OIP.I0ygCaWMK6P4MQjnU504sAHaEo?pid=Api&P=0&h=220"},
+        {"id": "rb19", "name": "Bread Basket", "price": 459, "veg": true, "desc": "Assorted breads basket.", "image": "/basket.jpeg"},
         {"id": "rb20", "name": "Keema Naan", "price": 209, "veg": false, "desc": "Naan stuffed with minced meat.", "image": "https://tse1.mm.bing.net/th/id/OIP.N-TdtPFs6fTpL6cCAWMbEAHaFj?pid=Api&P=0&h=220"}
     ]
   },
@@ -264,7 +264,7 @@
         {"id": "ms15", "name": "Virgin Martini", "price": 265, "veg": true, "desc": "Zero‑alcohol martini twist.", "image": "https://tse2.mm.bing.net/th/id/OIP.Y9sGCmaH85_iYX7ecI1GzgHaD4?pid=Api&P=0&h=220"},
         {"id": "ms16", "name": "Iced Tea (Peach/Lemon)", "price": 265, "veg": true, "desc": "Chilled peach or lemon tea.", "image": "https://www.vegetarianventures.com/wp-content/uploads/2019/07/PeachLemonadeBlog-16-of-18-683x1024.jpg"},
         {"id": "ms17", "name": "Mango Berry Cooler", "price": 265, "veg": true, "desc": "Mango with berries.", "image": "https://tse3.mm.bing.net/th/id/OIP.y3bBdaDBXEdIcD1zXwZn2QHaE7?pid=Api&P=0&h=220"},
-        {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "/green sec.jfif"},
+        {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "/green%20sec.jfif"},
         {"id": "ms19", "name": "Bartender’s Special", "price": 265, "veg": true, "desc": "Ask for today’s creation.", "image": "https://tse2.mm.bing.net/th/id/OIP.zfjtrtWtYFRpCPz7WT6KuQHaE7?pid=Api&P=0&h=220"},
         {"id": "ms20", "name": "Kala Khatta Nimbu", "price": 265, "veg": true, "desc": "Tangy kala khatta with lemon.", "image": "/kala khatta nimbu.jpeg"},
         {"id": "ms21", "name": "Mango Smoothie", "price": 309, "veg": true, "desc": "Thick mango smoothie.", "image": "https://tse4.mm.bing.net/th/id/OIP.AN1793IfjCTtdsUNp7zBHAHaJ3?pid=Api&P=0&h=220"},

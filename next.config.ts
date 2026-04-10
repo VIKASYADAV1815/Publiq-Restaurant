@@ -227,6 +227,12 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
+        protocol: 'https',
+        hostname: 'assets.thehansindia.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
   protocol: 'https',
   hostname: 'www.whiskaffair.com',
   port: '',
