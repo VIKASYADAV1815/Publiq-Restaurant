@@ -161,19 +161,19 @@
     "items": [
         {"id": "ts1", "name": "Malai Paneer Tikka", "price": 379, "veg": true, "desc": "Creamy Paneer", "image": "https://i.pinimg.com/1200x/c6/33/a9/c633a9e1ffbdd97e534593417307873d.jpg"},
         {"id": "ts2", "name": "Paneer Seekh Wala", "price": 379, "veg": true, "desc": "Paneer Skewers", "image": "https://tse3.mm.bing.net/th/id/OIP.fUjh7cQJPmQh8GkF4otPMgHaDp?pid=Api&P=0&h=220"},
-        {"id": "ts3", "name": "Soya Malai Chaap", "price": 379, "veg": true, "desc": "Soya Chunks", "image": "/soya-chaap.jpeg"},
-        {"id": "ts3b", "name": "Soya Masala Chaap", "price": 349, "veg": true, "desc": "Smoky masala‑marinated soya chaap.", "image": "https://tse3.mm.bing.net/th/id/OIP.Zo-hUgYIsxesAmH2kNSFRgHaE8?pid=Api&P=0&h=220"},
+        {"id": "ts3", "name": "Soya Malai Chaap", "price": 379, "veg": true, "desc": "Soya Chunks", "image": "/soya-malai.jpeg"},
+        {"id": "ts3b", "name": "Soya Masala Chaap", "price": 349, "veg": true, "desc": "Smoky masala‑marinated soya chaap.", "image": "/soya-chaap.jpeg"},
         {"id": "ts4", "name": "Mushroom Kurkure", "price": 399, "veg": true, "desc": "Crispy Mushroom", "image": "https://i.pinimg.com/736x/67/72/97/677297f32e774e33f875c52328dbc790.jpg"},
         {"id": "ts5", "name": "Veg Seekh Kebab", "price": 399, "veg": true, "desc": "Veg Skewers", "image": "https://i.pinimg.com/736x/11/77/e6/1177e6bfa9102ff4d2c1777a7dce0a4a.jpg"},
         {"id": "ts5b", "name": "Sabji Seekh Platter", "price": 459, "veg": true, "desc": "Assorted veg seekh selection.", "image": "https://img.freepik.com/premium-photo/festive-platter-seekh-kebabs-samosas_1179130-184578.jpg"},
         {"id": "ts6", "name": "Tandoori Chooza (Half)", "price": 375, "veg": false, "desc": "Half spring chicken marinated in tandoori spices and flame-roasted.", "image": "/tandoori-chooza.jpeg"},
         {"id": "ts7", "name": "Tandoori Chooza (Full)", "price": 750, "veg": false, "desc": "Full tandoori chicken, char-grilled for a smoky and juicy finish.", "image": "/tandoori-chooza.jpeg"},
-        {"id": "ts8", "name": "Murg Tikka", "price": 475, "veg": false, "desc": "Chicken Tikka", "image": "https://i.pinimg.com/736x/67/52/09/675209ed468cb5cbe26f5136e1040fac.jpg"},
+        {"id": "ts8", "name": "Murg Tikka", "price": 475, "veg": false, "desc": "Chicken Tikka", "image": "/murg-tikka.jpeg"},
         {"id": "ts9", "name": "Murg Achari Tikka", "price": 499, "veg": false, "desc": "Pickled Chicken", "image": "https://i.pinimg.com/1200x/07/a4/62/07a4622d93782f2e76d8f27cb7baca4a.jpg"},
         {"id": "ts9b", "name": "Malai Murg", "price": 519, "veg": false, "desc": "Creamy chicken tikka.", "image": "/malai-murg.jpeg"},
         {"id": "ts10", "name": "Fish Tikka", "price": 549, "veg": false, "desc": "Fish Skewers", "image": "https://tse1.mm.bing.net/th/id/OIP.V31YLMb2vaIdYn0evKR-wgHaE8?pid=Api&P=0&h=220"},
         {"id": "ts11", "name": "Machi Amritsar Wali", "price": 519, "veg": false, "desc": "Fried Fish", "image": "https://i.pinimg.com/736x/6d/89/2d/6d892d499ef59f266b9be530b7c6e199.jpg"},
-        {"id": "ts12", "name": "Non-Veg Platter", "price": 759, "veg": false, "desc": "Assorted Non-Veg", "image": "https://i.pinimg.com/1200x/63/ee/89/63ee89f3e840c57193b8f92fe60ba85d.jpg"},
+        {"id": "ts12", "name": "Non-Veg Platter", "price": 759, "veg": false, "desc": "Assorted Non-Veg", "image": "/non-veg-platter.jpeg"},
         {"id": "ts13", "name": "Mutton Seekh Kebab", "price": 549, "veg": false, "desc": "Mutton Skewers", "image": "https://i.pinimg.com/736x/2e/f1/90/2ef190d59d0138b26ccc99cc01772e11.jpg"}
     ]
   },
