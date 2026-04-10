@@ -88,37 +88,37 @@ ${formData.message || 'None'}`;
       />
 
       {/* CONTACT SECTION */}
-      <section className="py-24 bg-parchment relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-parchment relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-golden-highlight/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-deep-brown/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             
             {/* LEFT SIDE */}
-            <div className="space-y-12">
+            <div className="space-y-10 md:space-y-12">
               <div className="space-y-4">
-                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-deep-brown">
+                <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-deep-brown">
                   Get in Touch
                 </h2>
-                <div className="w-20 h-1 bg-golden-highlight" />
-                <p className="text-deep-brown/70 leading-relaxed max-w-md">
+                <div className="w-16 md:w-20 h-1 bg-golden-highlight" />
+                <p className="text-deep-brown/70 leading-relaxed max-w-md text-sm md:text-base">
                   Whether it's a romantic dinner, a family gathering, or a corporate event, we're here to make it special.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                 {/* LOCATION */}
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300">
-                    <MapPin size={22} />
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300 shrink-0">
+                    <MapPin size={20} className="md:w-[22px] md:h-[22px]" />
                   </div>
                   <div>
-                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                    <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
                       Location
                     </h4>
-                    <p className="text-sm font-medium text-deep-brown/80 leading-relaxed">
+                    <p className="text-xs md:text-sm font-medium text-deep-brown/80 leading-relaxed">
                       Bansal Plaza, 5, Kaulagarh Rd,<br />
                       Rajender Nagar, Dehradun
                     </p>
@@ -127,14 +127,14 @@ ${formData.message || 'None'}`;
 
                 {/* PHONE */}
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300">
-                    <Phone size={22} />
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300 shrink-0">
+                    <Phone size={20} className="md:w-[22px] md:h-[22px]" />
                   </div>
                   <div>
-                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                    <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
                       Reservations
                     </h4>
-                    <p className="text-sm font-medium text-deep-brown/80">
+                    <p className="text-xs md:text-sm font-medium text-deep-brown/80">
                       +91 72519 91199
                     </p>
                   </div>
@@ -142,14 +142,14 @@ ${formData.message || 'None'}`;
 
                 {/* EMAIL */}
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300">
-                    <Mail size={22} />
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300 shrink-0">
+                    <Mail size={20} className="md:w-[22px] md:h-[22px]" />
                   </div>
                   <div>
-                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                    <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
                       Email
                     </h4>
-                    <p className="text-sm font-medium text-deep-brown/80">
+                    <p className="text-xs md:text-sm font-medium text-deep-brown/80 break-all">
                       ssdhospitality@gmail.com
                     </p>
                   </div>
@@ -162,14 +162,14 @@ ${formData.message || 'None'}`;
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-white text-green-500 border border-green-500/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-green-500 group-hover:text-white transition-all duration-300">
-                    <MessageCircle size={22} />
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-green-500 border border-green-500/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shrink-0">
+                    <MessageCircle size={20} className="md:w-[22px] md:h-[22px]" />
                   </div>
                   <div>
-                    <h4 className="font-cinzel text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
+                    <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
                       WhatsApp
                     </h4>
-                    <p className="text-sm font-medium text-deep-brown/80">
+                    <p className="text-xs md:text-sm font-medium text-deep-brown/80">
                       Chat with us
                     </p>
                   </div>
@@ -177,67 +177,67 @@ ${formData.message || 'None'}`;
               </div>
 
               {/* WHY CONTACT */}
-              <div className="bg-white/50 backdrop-blur-sm p-8 border border-golden-highlight/10 rounded-sm space-y-4">
-                <h3 className="font-cinzel text-xs tracking-[0.2em] text-golden-highlight font-bold uppercase">
+              <div className="bg-white/50 backdrop-blur-sm p-6 md:p-8 border border-golden-highlight/10 rounded-sm space-y-4">
+                <h3 className="font-cinzel text-[10px] md:text-xs tracking-[0.2em] text-golden-highlight font-bold uppercase">
                   Planning an Event?
                 </h3>
-                <p className="text-sm text-deep-brown/70 leading-relaxed">
+                <p className="text-xs md:text-sm text-deep-brown/70 leading-relaxed">
                   We host private parties, corporate events, and live music nights. Contact our events team for custom packages and arrangements.
                 </p>
-                <div className="flex flex-wrap gap-x-6 gap-y-2">
-                  <span className="text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
+                <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2">
+                  <span className="text-[10px] md:text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
                     <div className="w-1 h-1 bg-golden-highlight rounded-full" /> Private Dining
                   </span>
-                  <span className="text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
+                  <span className="text-[10px] md:text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
                     <div className="w-1 h-1 bg-golden-highlight rounded-full" /> Birthdays
                   </span>
-                  <span className="text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
+                  <span className="text-[10px] md:text-[11px] font-bold text-deep-brown/40 uppercase tracking-widest flex items-center gap-2">
                     <div className="w-1 h-1 bg-golden-highlight rounded-full" /> Corporate
                   </span>
                 </div>
               </div>
 
               {/* SOCIAL */}
-              <div className="space-y-6">
-                <h4 className="font-cinzel text-xs tracking-[0.2em] text-deep-brown/40 font-bold uppercase">
+              <div className="space-y-4 md:space-y-6">
+                <h4 className="font-cinzel text-[10px] md:text-xs tracking-[0.2em] text-deep-brown/40 font-bold uppercase">
                   Follow Our Story
                 </h4>
                 <div className="flex gap-4">
                   <a
                     href="https://www.instagram.com/publiq_doon/"
                     target="_blank"
-                    className="w-12 h-12 bg-white border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110 shadow-sm"
+                    className="w-10 h-10 md:w-12 md:h-12 bg-white border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110 shadow-sm"
                   >
-                    <Instagram size={20} />
+                    <Instagram size={18} className="md:w-5 md:h-5" />
                   </a>
                   <a
                     href="https://facebook.com/publiqdehradun"
                     target="_blank"
-                    className="w-12 h-12 bg-white border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110 shadow-sm"
+                    className="w-10 h-10 md:w-12 md:h-12 bg-white border border-deep-brown/10 rounded-full flex items-center justify-center hover:bg-deep-brown hover:text-parchment transition-all hover:scale-110 shadow-sm"
                   >
-                    <Facebook size={20} />
+                    <Facebook size={18} className="md:w-5 md:h-5" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* FORM */}
-            <div className="bg-white p-8 md:p-10 rounded-sm shadow-2xl border border-deep-brown/5 relative">
+            <div className="bg-white p-6 sm:p-8 md:p-10 rounded-sm shadow-2xl border border-deep-brown/5 relative">
               <div className="absolute top-0 right-0 p-4">
-                <div className="w-16 h-16 border-t-2 border-r-2 border-golden-highlight/20" />
+                <div className="w-12 h-12 md:w-16 md:h-16 border-t-2 border-r-2 border-golden-highlight/20" />
               </div>
               <div className="absolute bottom-0 left-0 p-4">
-                <div className="w-16 h-16 border-b-2 border-l-2 border-golden-highlight/20" />
+                <div className="w-12 h-12 md:w-16 md:h-16 border-b-2 border-l-2 border-golden-highlight/20" />
               </div>
 
               <div className="relative z-10">
-                <div className="mb-10 text-center">
-                  <h3 className="font-playfair text-3xl font-bold text-deep-brown mb-2">Book a Table</h3>
-                  <p className="text-sm text-deep-brown/50 font-libre">Fill out the form to request a reservation</p>
+                <div className="mb-8 md:mb-10 text-center">
+                  <h3 className="font-playfair text-2xl md:text-3xl font-bold text-deep-brown mb-2">Book a Table</h3>
+                  <p className="text-xs md:text-sm text-deep-brown/50 font-libre">Fill out the form to request a reservation</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                     <div className="relative group">
                       <input
                         name="name"
@@ -263,7 +263,7 @@ ${formData.message || 'None'}`;
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                     <div className="space-y-1">
                       <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Date</label>
                       <input
@@ -292,7 +292,7 @@ ${formData.message || 'None'}`;
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                     <div className="space-y-1">
                       <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-golden-highlight ml-1">Time</label>
                       <input
@@ -333,11 +333,11 @@ ${formData.message || 'None'}`;
 
                   <button 
                     type="submit" 
-                    className="w-full bg-[#25D366] text-white font-cinzel py-5 tracking-[0.2em] font-bold hover:bg-[#128C7E] transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-[0.98] flex items-center justify-center gap-3 rounded-sm group overflow-hidden relative"
+                    className="w-full bg-[#25D366] text-white font-cinzel py-4 md:py-5 tracking-[0.2em] font-bold hover:bg-[#128C7E] transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-[0.98] flex items-center justify-center gap-3 rounded-sm group overflow-hidden relative"
                   >
                     <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                     <WhatsAppIcon size={20} className="relative z-10" />
-                    <span className="relative z-10">Confirm Reservation</span>
+                    <span className="relative z-10 text-xs md:text-sm">Confirm Reservation</span>
                   </button>
                 </form>
               </div>

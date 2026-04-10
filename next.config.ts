@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      
       {
         protocol: 'https',
         hostname: 'source.unsplash.com',
@@ -218,7 +219,19 @@ const nextConfig: NextConfig = {
         hostname: 's3.amazonaws.com',
         port: '',
         pathname: '/**',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'vegecravings.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+  protocol: 'https',
+  hostname: 'www.whiskaffair.com',
+  port: '',
+  pathname: '/**',
+}
     ],
   },
 };

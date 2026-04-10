@@ -17,7 +17,7 @@
         {"id": "ba9", "name": "Jack Daniel's", "price": 999, "veg": true, "desc": "Charcoal-mellowed Tennessee Whiskey with rich notes of caramel, vanilla, and toasted oak.", "image": "https://i.pinimg.com/736x/ac/34/69/ac3469396baa5caa4b8a5c8f1cd0718f.jpg"},
         {"id": "ba10", "name": "Jim Beam", "price": 549, "veg": true, "desc": "The world's finest bourbon, aged for four years in newly charred oak barrels for a smooth, mellow taste.", "image": "https://i.pinimg.com/1200x/ec/d3/f0/ecd3f096e77ec2a3c21b070a3ed65d52.jpg"},
         {"id": "ba11", "name": "Red Label", "price": 699, "veg": true, "desc": "A bold, smoky scotch whisky with a vibrant finish, perfect for mixing or enjoying on the rocks.", "image": "https://i.pinimg.com/1200x/7f/13/72/7f13724fc01578c2a009a8fabeebdae8.jpg"},
-        {"id": "ba12", "name": "Black Label", "price": 999, "veg": true, "desc": "A deep and complex 12-year-old scotch blend with layers of fruit, vanilla, and smoky intensity.", "image": "https://i.pinimg.com/736x/ac/34/69/ac3469396baa5caa4b8a5c8f1cd0718f.jpg"},
+        {"id": "ba12", "name": "Black Label", "price": 999, "veg": true, "desc": "A deep and complex 12-year-old scotch blend with layers of fruit, vanilla, and smoky intensity.", "image": "https://tse4.mm.bing.net/th/id/OIP.STAcVoHey8ABApSYTVyUPAHaHa?pid=Api&P=0&h=220"},
         {"id": "ba13", "name": "Bacardi White", "price": 399, "veg": true, "desc": "A classic white rum with subtle notes of almond and vanilla, aged in white oak for a clean finish.", "image": "https://i.pinimg.com/1200x/5a/20/21/5a202109854e62ba802e4f1342a865d6.jpg"},
         {"id": "ba14", "name": "Jägermeister", "price": 799, "veg": true, "desc": "A complex herbal liqueur crafted from 56 botanicals, offering a unique, bittersweet flavor.", "image": "https://i.pinimg.com/1200x/b2/52/22/b252225be142762aa82d06a8be2bdd4f.jpg"},
         {"id": "ba15", "name": "100 Pipers 8 Years", "price": 499, "veg": true, "desc": "A smooth, smoky scotch whisky aged for eight years to achieve a perfectly balanced character.", "image": "https://i.pinimg.com/1200x/1b/da/4e/1bda4e7ae26dc7155a8837360e9c38d4.jpg"},
@@ -37,7 +37,7 @@
         {"id": "ww2", "name": "Momos (Chicken)", "price": 349, "veg": false, "desc": "Steamed chicken dumplings.", "image": "https://images.unsplash.com/photo-1738608084602-f9543952188e?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         {"id": "ww3", "name": "Kurkure Momos (Veg)", "price": 289, "veg": true, "desc": "Crispy fried veg momos.", "image": "https://i.ytimg.com/vi/BYe5YeWc_dk/maxresdefault.jpg"},
         {"id": "ww4", "name": "Kurkure Momos (Chicken)", "price": 379, "veg": false, "desc": "Crispy fried chicken momos.", "image": "https://c.ndtvimg.com/2022-10/57qe3h68_kurkure-momo_625x300_28_October_22.png?im=FeatureCrop,algorithm=dnn,width=1200,height=675"},
-        {"id": "ww5", "name": "Honey Chilli Potato", "price": 289, "veg": true, "desc": "Crisp potatoes tossed in honey‑chilli glaze.", "image": "https://images.unsplash.com/photo-1676976197916-7a4d25ffa37a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+        {"id": "ww5", "name": "Honey Chilli Potato", "price": 289, "veg": true, "desc": "Crisp potatoes tossed in honey‑chilli glaze.", "image": "https://vegecravings.com/wp-content/uploads/2023/08/Honey-Chilli-Potato-Recipe-Step-By-Step-Instructions-scaled.jpg"},
         {"id": "ww6", "name": "Veg Spring Rolls", "price": 269, "veg": true, "desc": "Golden fried veg rolls.", "image": "https://images.unsplash.com/photo-1633945488007-0d579b145361?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         {"id": "ww7", "name": "Chilli Paneer", "price": 379, "veg": true, "desc": "Cubes of paneer in chilli‑soy.", "image": "https://images.unsplash.com/photo-1690401767645-595de0e0e5f8?q=80&w=1013&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         {"id": "ww8", "name": "Veg Manchurian (Dry)", "price": 309, "veg": true, "desc": "Crispy veg balls tossed with sauce.", "image": "https://i.ytimg.com/vi/xkMbJCtaaqA/maxresdefault.jpg"},
@@ -63,7 +63,7 @@
         {"id": "bb1", "name": "Budweiser Magnum", "price": 395, "veg": true, "desc": "A strong, full-bodied beer with a rich, malty flavor and a smooth, crisp finish.", "image": "https://tse1.mm.bing.net/th/id/OIP.coRVaqGOBnPh2QUzksE9AwHaHa?pid=Api&P=0&h=220"},
         {"id": "bb2", "name": "Carlsberg", "price": 395, "veg": true, "desc": "A premium Danish pilsner with a perfectly balanced taste and a light, refreshing aroma.", "image": "https://s3.amazonaws.com/images.ecwid.com/images/33380020/1564917976.jpg"},
         {"id": "bb3", "name": "Budweiser Light", "price": 319, "veg": true, "desc": "A light, clean lager brewed for a smooth and easy-drinking experience with lower calories.", "image": "https://i.pinimg.com/1200x/b3/7a/05/b37a055e246e378c6c0baa316a1ff8bc.jpg"},
-        {"id": "bb4", "name": "Breezer", "price": 249, "veg": true, "desc": "A refreshing, fruit-flavored alcoholic beverage made with premium rum and natural fruit juices.", "image": "https://i.pinimg.com/1200x/5a/20/21/5a202109854e62ba802e4f1342a865d6.jpg"},
+        {"id": "bb4", "name": "Breezer", "price": 249, "veg": true, "desc": "A refreshing, fruit-flavored alcoholic beverage made with premium rum and natural fruit juices.", "image": "https://tse1.mm.bing.net/th/id/OIP.vRMOg41-EUkVDrUhUlAfhAHaHa?pid=Api&P=0&h=220"},
         {"id": "bb5", "name": "Corona", "price": 319, "veg": true, "desc": "An iconic Mexican lager known for its light, refreshing taste—best served with a wedge of lime.", "image": "https://tse4.mm.bing.net/th/id/OIP.3qPhw5KZJyrlysRJkVdHWwHaHa?pid=Api&P=0&h=220"},
         {"id": "bb6", "name": "Bucket: Bud Magnum/Carlsberg", "price": 999, "veg": true, "desc": "Bucket deal with three chilled bottles of Bud Magnum or Carlsberg.", "image": "https://i.pinimg.com/736x/4a/99/e5/4a99e5011be4dc2085052f9fdccc4803.jpg"},
         {"id": "bb7", "name": "Bucket: Bud Light/Corona", "price": 889, "veg": true, "desc": "Value bucket featuring three bottles of Bud Light or Corona.", "image": "https://images.heb.com/is/image/HEBGrocery/000208691-1?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1"}
@@ -96,12 +96,12 @@
     "description": "Fresh & Hot",
     "items": [
         {"id": "ss1", "name": "Cream of Tomato", "price": 229, "veg": true, "desc": "Silky tomato and cream—classic comfort.", "image": "https://tse1.mm.bing.net/th/id/OIP.NMPW9kqrSWD0WOTBKMUTgQHaHa?pid=Api&P=0&h=220"},
-        {"id": "ss2", "name": "Lemon & Coriander (Veg)", "price": 229, "veg": true, "desc": "Light broth scented with coriander and lemon.", "image": "https://i.pinimg.com/1200x/e1/64/8e/e1648e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"},
-        {"id": "ss3", "name": "Hot and Sour (Veg)", "price": 229, "veg": true, "desc": "Tangy and spicy vegetable soup.", "image": "https://recipezed.com/wp-content/uploads/2025/09/pakoblog_Hot_and_Sour_Soup_angle_shot_kitchen_background_We_wan_0727cf19-9cc7-4216-b853-c69086e8509a.webp"},
+        {"id": "ss2", "name": "Lemon & Coriander (Veg)", "price": 229, "veg": true, "desc": "Light broth scented with coriander and lemon.", "image": "https://tse4.mm.bing.net/th/id/OIP.QT-5stMsO_sHPklOx-yuUAHaGa?pid=Api&P=0&h=220"},
+        {"id": "ss3", "name": "Hot and Sour (Veg)", "price": 229, "veg": true, "desc": "Tangy and spicy vegetable soup.", "image": "https://tse4.mm.bing.net/th/id/OIP.qkiYKQXbZ70xFMyRcqdPqgHaJQ?pid=Api&P=0&h=220"},
         {"id": "ss4", "name": "Manchow Soup (Veg)", "price": 229, "veg": true, "desc": "Robust veg soup with crispy noodles.", "image": "https://images.unsplash.com/photo-1672667509988-baade9ade083?q=80&w=1147&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         {"id": "ss5", "name": "Cream of Chicken", "price": 289, "veg": false, "desc": "A rich and comforting chicken soup simmered to perfection with tender chicken bits and cream.", "image": "https://images.unsplash.com/photo-1705234384050-ee4f35382eb7?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
-        {"id": "ss6", "name": "Green Salad", "price": 169, "veg": true, "desc": "A crisp and refreshing medley of seasonal garden greens served with a light vinaigrette.", "image": "https://i.pinimg.com/736x/56/f8/56/56f85668ca50748a1f863f07e8c8b0b0.jpg"},
-        {"id": "ss7", "name": "Spicy Indian Cucumber Salad", "price": 169, "veg": true, "desc": "Chilled cucumber with lime, chilli and roasted cumin.", "image": "https://i.pinimg.com/1200x/8f/0a/ca/8f0aca054d09192231ea8a077e6974b4.jpg"},
+        {"id": "ss6", "name": "Green Salad", "price": 169, "veg": true, "desc": "A crisp and refreshing medley of seasonal garden greens served with a light vinaigrette.", "image": "https://tse1.mm.bing.net/th/id/OIP.mZ-pvucNg94qtCcjcLz7ywHaE9?pid=Api&P=0&h=220"},
+        {"id": "ss7", "name": "Spicy Indian Cucumber Salad", "price": 169, "veg": true, "desc": "Chilled cucumber with lime, chilli and roasted cumin.", "image": "https://i.pinimg.com/originals/ff/2e/18/ff2e18708290aa707d28671ba6ffc719.png"},
         {"id": "ss8", "name": "Indian Tomato Salad", "price": 169, "veg": true, "desc": "Slices of vine-ripened tomatoes with herbs.", "image": "https://i.pinimg.com/736x/a2/67/89/a267897dcb605878976958bb3170d525.jpg"},
         {"id": "ss9", "name": "Cream of Mushroom", "price": 229, "veg": true, "desc": "Creamy mushroom soup with buttery notes.", "image": "https://tse2.mm.bing.net/th/id/OIP.CjLSBBrW1sL4jzIOjFqYewHaE8?pid=Api&P=0&h=220"},
         {"id": "ss10", "name": "Lung Fung (Veg)", "price": 229, "veg": true, "desc": "Indo‑Chinese egg‑drop style soup, vegetarian base.", "image": "https://tse2.mm.bing.net/th/id/OIP.c4PyCccrutdNIyAiJvCb5AHaE8?pid=Api&P=0&h=220"},
@@ -128,7 +128,7 @@
         {"id": "ap8", "name": "Fish Finger", "price": 519, "veg": false, "desc": "Crispy Fish", "image": "https://i.pinimg.com/1200x/99/e0/90/99e0904037a5a24d616fc769be87c39b.jpg"},
         {"id": "ap9", "name": "Grilled Chicken", "price": 499, "veg": false, "desc": "Grilled Perfection", "image": "https://i.pinimg.com/736x/09/c1/78/09c178fb597ac4d6ba22a03b20b6cc3a.jpg"},
         {"id": "ap10", "name": "Grilled Fish", "price": 519, "veg": false, "desc": "Grilled Fillet", "image": "https://tse4.mm.bing.net/th/id/OIP.kq9r0CzjxnJGDv8PB5JSqAHaHa?pid=Api&P=0&h=220"},
-        {"id": "ap11", "name": "Hot Wings", "price": 379, "veg": false, "desc": "Spicy Wings", "image": "https://images.unsplash.com/photo-1625937759420-26d7e003e04c?q=80&w=921&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+        {"id": "ap11", "name": "Hot Wings", "price": 379, "veg": false, "desc": "Spicy Wings", "image": "https://tse2.mm.bing.net/th/id/OIP.0znFNfvuLVPmA6faOLT4-QHaHa?pid=Api&P=0&h=220"}
     ]
   },
   {
@@ -145,8 +145,11 @@
         {"id": "bp5", "name": "Paneer Tikka Pizza", "price": 379, "veg": true, "desc": "Spicy Paneer", "image": "https://i.pinimg.com/736x/89/6a/b5/896ab511d008d04a163d1e0e63de9b21.jpg"},
         {"id": "bp6", "name": "Veggie Supreme Pizza", "price": 379, "veg": true, "desc": "Loaded Veggies", "image": "https://i.pinimg.com/1200x/a8/8c/2c/a88c2ce74540b197423377db49c8844c.jpg"},
         {"id": "bp7", "name": "Butter Chicken Pizza", "price": 499, "veg": false, "desc": "Chicken Topping", "image": "https://i.pinimg.com/736x/f3/7e/02/f37e024e432e3d93e650494589f96fd8.jpg"},
-        {"id": "bp8", "name": "Pasta (Bechamel / Marinara) Non-Veg", "price": 265, "veg": false, "desc": "Choice of creamy white or tangy red sauce with chicken.", "image": "https://images.heb.com/is/image/HEBGrocery/Test/baked-pasta-with-bechamel-and-marinara-recipe.jpg"},
-        {"id": "bp9", "name": "Pasta (Bechamel/Marinara)", "price": 239, "veg": true, "desc": "Penne in bechamel or marinara with optional chicken add-on.", "image": "https://i.pinimg.com/736x/6e/8e/30/6e8e30f8ece30c1f524371c96f2c73d3.jpg"}
+        {"id": "bp8a", "name": "Red Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Tender chicken pieces tossed in a tangy and spicy tomato-based marinara sauce with Italian herbs.", "image": "https://tse3.mm.bing.net/th/id/OIP.cEGSPX7txl7LFXeEsTWNVQHaE7?pid=Api&P=0&h=220"},
+        {"id": "bp8b", "name": "White Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Creamy and rich bechamel sauce with chicken, finished with parmesan cheese and black pepper.", "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2024/04/white-sauce-pasta.jpg"},
+        {"id": "bp8c", "name": "Bechamel Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Classic French-style white sauce pasta with chicken, exceptionally smooth and creamy.", "image": "https://www.whiskaffair.com/wp-content/uploads/2021/05/White-Sauce-Paste-2-1-1200x1800.jpg"},
+        {"id": "bp8d", "name": "Marinara Sauce Pasta (Non-Veg)", "price": 349, "veg": false, "desc": "Traditional Italian red sauce pasta with succulent chicken and aromatic basil.", "image": "https://tse3.mm.bing.net/th/id/OIP.cEGSPX7txl7LFXeEsTWNVQHaE7?pid=Api&P=0&h=220"},
+        {"id": "bp9", "name": "Pasta (Bechamel/Marinara) - Veg", "price": 239, "veg": true, "desc": "Penne in your choice of creamy bechamel or tangy marinara sauce with fresh vegetables.", "image": "https://i.pinimg.com/736x/6e/8e/30/6e8e30f8ece30c1f524371c96f2c73d3.jpg"}
     ]
   },
   {
@@ -157,7 +160,7 @@
     "description": "Clay Oven Specials",
     "items": [
         {"id": "ts1", "name": "Malai Paneer Tikka", "price": 379, "veg": true, "desc": "Creamy Paneer", "image": "https://i.pinimg.com/1200x/c6/33/a9/c633a9e1ffbdd97e534593417307873d.jpg"},
-        {"id": "ts2", "name": "Paneer Seekh Wala", "price": 379, "veg": true, "desc": "Paneer Skewers", "image": "https://i.pinimg.com/1200x/ee/bd/13/eebd136985d96eeeae8a718831a73dca.jpg"},
+        {"id": "ts2", "name": "Paneer Seekh Wala", "price": 379, "veg": true, "desc": "Paneer Skewers", "image": "https://tse3.mm.bing.net/th/id/OIP.fUjh7cQJPmQh8GkF4otPMgHaDp?pid=Api&P=0&h=220"},
         {"id": "ts3", "name": "Soya Malai Chaap", "price": 379, "veg": true, "desc": "Soya Chunks", "image": "https://i.pinimg.com/736x/ca/85/64/ca8564710216125367120eff66eefcb5.jpg"},
         {"id": "ts3b", "name": "Soya Masala Chaap", "price": 349, "veg": true, "desc": "Smoky masala‑marinated soya chaap.", "image": "https://tse3.mm.bing.net/th/id/OIP.Zo-hUgYIsxesAmH2kNSFRgHaE8?pid=Api&P=0&h=220"},
         {"id": "ts4", "name": "Mushroom Kurkure", "price": 399, "veg": true, "desc": "Crispy Mushroom", "image": "https://i.pinimg.com/736x/67/72/97/677297f32e774e33f875c52328dbc790.jpg"},
@@ -263,7 +266,7 @@
         {"id": "ms17", "name": "Mango Berry Cooler", "price": 265, "veg": true, "desc": "Mango with berries.", "image": "https://tse3.mm.bing.net/th/id/OIP.y3bBdaDBXEdIcD1zXwZn2QHaE7?pid=Api&P=0&h=220"},
         {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "/green sec.jfif"},
         {"id": "ms19", "name": "Bartender’s Special", "price": 265, "veg": true, "desc": "Ask for today’s creation.", "image": "https://tse2.mm.bing.net/th/id/OIP.zfjtrtWtYFRpCPz7WT6KuQHaE7?pid=Api&P=0&h=220"},
-        {"id": "ms20", "name": "Kala Khatta Nimbu", "price": 265, "veg": true, "desc": "Tangy kala khatta with lemon.", "image": "https://tse4.mm.bing.net/th/id/OIP.asrNMSx6w6V-4BREQt90PAHaEK?pid=Api&P=0&h=220"},
+        {"id": "ms20", "name": "Kala Khatta Nimbu", "price": 265, "veg": true, "desc": "Tangy kala khatta with lemon.", "image": "/kala khatta nimbu.jpeg"},
         {"id": "ms21", "name": "Mango Smoothie", "price": 309, "veg": true, "desc": "Thick mango smoothie.", "image": "https://tse4.mm.bing.net/th/id/OIP.AN1793IfjCTtdsUNp7zBHAHaJ3?pid=Api&P=0&h=220"},
         {"id": "ms22", "name": "Banana Smoothie", "price": 309, "veg": true, "desc": "Creamy banana smoothie.", "image": "https://tse3.mm.bing.net/th/id/OIP.VRdX8DhdtBjxjjPbj4PLNwHaI9?pid=Api&P=0&h=220"},
         {"id": "ms23", "name": "Strawberry Smoothie", "price": 309, "veg": true, "desc": "Fresh strawberry blend.", "image": "https://tse2.mm.bing.net/th/id/OIP.NanIu1mTaSCqrVC057D86gHaLG?pid=Api&P=0&h=220"},
