@@ -112,7 +112,7 @@ ${formData.message || 'None'}`;
                 {/* LOCATION */}
                 <div className="flex items-start gap-4 group">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300 shrink-0">
-                    <MapPin size={20} className="md:w-[22px] md:h-[22px]" />
+                    <MapPin size={20} className="md:w-5.5 md:h-5.5" />
                   </div>
                   <div>
                     <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
@@ -128,7 +128,7 @@ ${formData.message || 'None'}`;
                 {/* PHONE */}
                 <div className="flex items-start gap-4 group">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300 shrink-0">
-                    <Phone size={20} className="md:w-[22px] md:h-[22px]" />
+                    <Phone size={20} className="md:w-5.5 md:h-5.5" />
                   </div>
                   <div>
                     <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
@@ -143,7 +143,7 @@ ${formData.message || 'None'}`;
                 {/* EMAIL */}
                 <div className="flex items-start gap-4 group">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-golden-highlight border border-golden-highlight/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-golden-highlight group-hover:text-white transition-all duration-300 shrink-0">
-                    <Mail size={20} className="md:w-[22px] md:h-[22px]" />
+                    <Mail size={20} className="md:w-5.5 md:h-5.5" />
                   </div>
                   <div>
                     <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
@@ -163,7 +163,7 @@ ${formData.message || 'None'}`;
                   className="flex items-start gap-4 group"
                 >
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white text-green-500 border border-green-500/20 rounded-full flex items-center justify-center shadow-md group-hover:bg-green-500 group-hover:text-white transition-all duration-300 shrink-0">
-                    <MessageCircle size={20} className="md:w-[22px] md:h-[22px]" />
+                    <MessageCircle size={20} className="md:w-5.5 md:h-5.5" />
                   </div>
                   <div>
                     <h4 className="font-cinzel text-[10px] md:text-xs font-bold mb-1 tracking-widest text-deep-brown/50 uppercase">
