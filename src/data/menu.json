@@ -264,7 +264,7 @@
         {"id": "ms15", "name": "Virgin Martini", "price": 265, "veg": true, "desc": "Zero‑alcohol martini twist.", "image": "https://tse2.mm.bing.net/th/id/OIP.Y9sGCmaH85_iYX7ecI1GzgHaD4?pid=Api&P=0&h=220"},
         {"id": "ms16", "name": "Iced Tea (Peach/Lemon)", "price": 265, "veg": true, "desc": "Chilled peach or lemon tea.", "image": "https://www.vegetarianventures.com/wp-content/uploads/2019/07/PeachLemonadeBlog-16-of-18-683x1024.jpg"},
         {"id": "ms17", "name": "Mango Berry Cooler", "price": 265, "veg": true, "desc": "Mango with berries.", "image": "https://tse3.mm.bing.net/th/id/OIP.y3bBdaDBXEdIcD1zXwZn2QHaE7?pid=Api&P=0&h=220"},
-        {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "/green-sec.jfif"},
+        {"id": "ms18", "name": "Green Sec Mocktail", "price": 265, "veg": true, "desc": "Citrusy green blend.", "image": "/green-sec.webp"},
         {"id": "ms19", "name": "Bartender’s Special", "price": 265, "veg": true, "desc": "Ask for today’s creation.", "image": "https://tse2.mm.bing.net/th/id/OIP.zfjtrtWtYFRpCPz7WT6KuQHaE7?pid=Api&P=0&h=220"},
         {"id": "ms20", "name": "Kala Khatta Nimbu", "price": 265, "veg": true, "desc": "Tangy kala khatta with lemon.", "image": "/kala-khatta-nimbu.jpeg"},
         {"id": "ms21", "name": "Mango Smoothie", "price": 309, "veg": true, "desc": "Thick mango smoothie.", "image": "https://tse4.mm.bing.net/th/id/OIP.AN1793IfjCTtdsUNp7zBHAHaJ3?pid=Api&P=0&h=220"},
