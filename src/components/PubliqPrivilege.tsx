@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Wine, GlassWater, Beer, Crown, ArrowRight } from "lucide-react";
+import { Wine, GlassWater, Beer, Crown, ArrowRight, Coffee } from "lucide-react";
 
 export default function PubliqPrivilege() {
   return (
@@ -67,7 +67,8 @@ export default function PubliqPrivilege() {
                 {[
                   { icon: GlassWater, name: "Cocktails", desc: "Buy Two, Get One Complimented" },
                   { icon: Wine, name: "Liquors", desc: "One Enjoyed, One Presented" },
-                  { icon: Beer, name: "Beers", desc: "Curated Combos & Buckets" }
+                  { icon: Beer, name: "Beers", desc: "Curated Combos & Buckets" },
+                  { icon: Coffee, name: "Mocktails & Shakes", desc: "Savour Three, Pay for Two" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 group">
                     <div className="p-2 bg-white rounded-full shadow-sm border border-neutral-100">
