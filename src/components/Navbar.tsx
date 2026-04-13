@@ -50,21 +50,42 @@ export default function Navbar() {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 left-0 w-full z-50 bg-[#141514] border-b border-parchment/10 transition-colors duration-300 text-parchment shadow-md"
+      className="fixed top-0 left-0 w-full z-50 bg-[#141514] transition-colors duration-300 text-parchment shadow-md flex flex-col"
     >
-      <div className="max-w-[1920px] mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-24 flex items-center justify-between h-16 md:h-20 transition-all duration-300">
-        {/* Left: Mobile Menu Button (Only visible on mobile) */}
-        <div className="flex-1 flex items-center md:hidden">
-          <button 
-            className="text-parchment p-2 -ml-2"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle Menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
-          </button>
-        </div>
+      {/* Mobile Top Bar for Social Icons */}
+      <div className="md:hidden flex justify-center items-center gap-8 py-2 border-b border-golden-highlight/20 bg-[#1a1b1a]">
+        <a
+          href="tel:+917251991199"
+          className="text-parchment hover:text-golden-highlight transition-colors flex items-center gap-1.5"
+          aria-label="Call Us"
+        >
+          <Phone size={14} strokeWidth={1.5} />
+          <span className="text-[10px] font-cinzel tracking-wider">CALL</span>
+        </a>
+        <a
+          href="https://www.instagram.com/publiq_doon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-parchment hover:text-golden-highlight transition-colors flex items-center gap-1.5"
+          aria-label="Instagram"
+        >
+          <Instagram size={14} strokeWidth={1.5} />
+          <span className="text-[10px] font-cinzel tracking-wider">INSTA</span>
+        </a>
+        <a
+          href="https://wa.me/917251991199"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-parchment hover:text-[#25D366] transition-colors flex items-center gap-1.5"
+          aria-label="WhatsApp"
+        >
+          <WhatsAppIcon size={14} />
+          <span className="text-[10px] font-cinzel tracking-wider">CHAT</span>
+        </a>
+      </div>
 
-        {/* Desktop Layout (Split into Logo, Links, Socials) */}
+      <div className="max-w-[1920px] mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-24 flex items-center justify-between h-16 md:h-20 transition-all duration-300 border-b border-parchment/10">
+          {/* Desktop Layout (Split into Logo, Links, Socials) */}
         <div className="hidden md:flex w-full items-center justify-between h-full">
           {/* Logo - Left aligned but with equal container space */}
           <div className="flex-1 flex justify-start items-center h-full">
@@ -134,10 +155,22 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Layout (Logo Center, Icons Right) */}
-        <div className="flex md:hidden flex-none justify-center">
+        {/* Mobile Layout (Hamburger Left, Logo Center, Button Right) */}
+        <div className="flex md:hidden flex-1 justify-center items-center relative h-full">
+          {/* Left: Hamburger */}
+          <div className="absolute left-0 flex items-center">
+            <button 
+              className="text-parchment p-2 -ml-2"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle Menu"
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <MenuIcon size={28} />}
+            </button>
+          </div>
+
+          {/* Center: Logo (Larger on mobile) */}
           <Link href="/" className="group flex items-center py-1">
-            <div className="relative w-44 h-14 transition-all duration-300">
+            <div className="relative w-48 sm:w-56 h-14 sm:h-16 transition-all duration-300">
               <Image 
                 src="/logo1.png" 
                 alt="PUBLIQ Dehradun"   
@@ -148,40 +181,16 @@ export default function Navbar() {
               />
             </div>
           </Link>
-        </div>
 
-        <div className="flex md:hidden flex-1 items-center justify-end gap-1">
-          <a
-            href="tel:+917251991199"
-            className="text-parchment hover:text-golden-highlight transition-colors p-1 hidden sm:block"
-            aria-label="Call Us"
-          >
-            <Phone size={18} strokeWidth={1.5} />
-          </a>
-          <a
-            href="https://www.instagram.com/publiq_doon/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-parchment hover:text-golden-highlight transition-colors p-1 hidden sm:block"
-            aria-label="Instagram"
-          >
-            <Instagram size={18} strokeWidth={1.5} />
-          </a>
-          <a
-            href="https://wa.me/917251991199"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-parchment hover:text-[#25D366] transition-colors p-1"
-            aria-label="WhatsApp"
-          >
-            <WhatsAppIcon size={18} />
-          </a>
-          <Link 
-            href="/contact" 
-            className="ml-1 px-2 py-1.5 border border-golden-highlight text-golden-highlight hover:bg-golden-highlight hover:text-[#141514] font-cinzel text-[10px] font-bold tracking-wider transition-all duration-300 whitespace-nowrap"
-          >
-            BOOK TABLE
-          </Link>
+          {/* Right: Book Table Button */}
+          <div className="absolute right-0 flex items-center">
+            <Link 
+              href="/contact" 
+              className="px-2.5 py-1.5 border border-golden-highlight text-golden-highlight hover:bg-golden-highlight hover:text-[#141514] font-cinzel text-[10px] font-bold tracking-wider transition-all duration-300 whitespace-nowrap"
+            >
+              BOOK TABLE
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -189,10 +198,16 @@ export default function Navbar() {
       {pathname === '/' && (
         <div className="w-full bg-[#141514] border-t border-b border-golden-highlight/20 py-1.5 sm:py-2 marquee-container">
           <div className="marquee-content">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(15)].map((_, i) => (
               <span key={i} className="px-4 md:px-8 font-cinzel text-[10px] sm:text-xs text-golden-highlight tracking-[0.2em] uppercase font-semibold flex items-center whitespace-nowrap">
                 <Star size={10} className="text-golden-highlight mr-4 md:mr-8" />
                 Avail 20% discount on bookings through website.
+                <Star size={10} className="text-golden-highlight mx-4 md:mx-8" />
+                Cocktails: Buy Two, Get One Complimented
+                <Star size={10} className="text-golden-highlight mx-4 md:mx-8" />
+                Liquors: One Enjoyed, One Presented
+                <Star size={10} className="text-golden-highlight mx-4 md:mx-8" />
+                Mocktails & Shakes: Savour Three, Pay for Two
               </span>
             ))}
           </div>
