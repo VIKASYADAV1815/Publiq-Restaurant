@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Instagram, Phone, Menu as MenuIcon, X, MessageCircle, Star } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 // import { useCartStore } from "@/store/cartStore";
@@ -19,6 +20,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
+  const pathname = usePathname();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -50,7 +52,7 @@ export default function Navbar() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 left-0 w-full z-50 bg-[#141514] border-b border-parchment/10 transition-colors duration-300 text-parchment shadow-md"
     >
-      <div className="container-custom flex items-center justify-between h-16 md:h-20 transition-all duration-300">
+      <div className="max-w-[1920px] mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-24 flex items-center justify-between h-16 md:h-20 transition-all duration-300">
         {/* Left: Mobile Menu Button (Only visible on mobile) */}
         <div className="flex-1 flex items-center md:hidden">
           <button 
@@ -65,7 +67,7 @@ export default function Navbar() {
         {/* Desktop Layout (Split into Logo, Links, Socials) */}
         <div className="hidden md:flex w-full items-center justify-between h-full">
           {/* Logo - Left aligned but with equal container space */}
-          <div className="w-50 flex justify-start items-center h-full">
+          <div className="flex-1 flex justify-start items-center h-full">
             <Link href="/" className="group flex items-center py-1 transition-all duration-300 h-full">
               <div className="relative w-64 h-18 transition-all duration-300">
                 <Image 
@@ -81,8 +83,8 @@ export default function Navbar() {
           </div>
 
           {/* Center: Navigation Links */}
-          <div className="flex-1 flex justify-center items-center h-full">
-            <div className="flex items-center gap-8">
+          <div className="flex-auto flex justify-center items-center h-full">
+            <div className="flex items-center gap-8 xl:gap-12">
               {navLinks.map((item) => (
                 <Link
                   key={item.name}
@@ -97,10 +99,10 @@ export default function Navbar() {
           </div>
 
           {/* Social Icons - Right aligned but with equal container space */}
-          <div className="w-50 flex justify-end gap-2">
+          <div className="flex-1 flex justify-end items-center gap-2 lg:gap-4">
             <a
               href="tel:+917251991199"
-              className="text-parchment hover:text-golden-highlight transition-colors p-2"
+              className="text-parchment hover:text-golden-highlight transition-colors p-1.5 lg:p-2"
               aria-label="Call Us"
             >
               <Phone size={20} strokeWidth={1.5} />
@@ -109,7 +111,7 @@ export default function Navbar() {
               href="https://www.instagram.com/publiq_doon/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-parchment hover:text-golden-highlight transition-colors p-2"
+              className="text-parchment hover:text-golden-highlight transition-colors p-1.5 lg:p-2"
               aria-label="Instagram"
             >
               <Instagram size={20} strokeWidth={1.5} />
@@ -118,11 +120,17 @@ export default function Navbar() {
               href="https://wa.me/917251991199"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-parchment hover:text-[#25D366] transition-colors p-2"
+              className="text-parchment hover:text-[#25D366] transition-colors p-1.5 lg:p-2"
               aria-label="WhatsApp"
             >
               <WhatsAppIcon size={20} />
             </a>
+            <Link 
+              href="/contact" 
+              className="ml-2 px-4 py-2 border border-golden-highlight text-golden-highlight hover:bg-golden-highlight hover:text-[#141514] font-cinzel text-xs font-bold tracking-widest transition-all duration-300 whitespace-nowrap"
+            >
+              BOOK TABLE
+            </Link>
           </div>
         </div>
 
@@ -142,10 +150,10 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex md:hidden flex-1 items-center justify-end gap-2">
+        <div className="flex md:hidden flex-1 items-center justify-end gap-1">
           <a
             href="tel:+917251991199"
-            className="text-parchment hover:text-golden-highlight transition-colors p-2"
+            className="text-parchment hover:text-golden-highlight transition-colors p-1 hidden sm:block"
             aria-label="Call Us"
           >
             <Phone size={18} strokeWidth={1.5} />
@@ -154,7 +162,7 @@ export default function Navbar() {
             href="https://www.instagram.com/publiq_doon/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-parchment hover:text-golden-highlight transition-colors p-2"
+            className="text-parchment hover:text-golden-highlight transition-colors p-1 hidden sm:block"
             aria-label="Instagram"
           >
             <Instagram size={18} strokeWidth={1.5} />
@@ -163,13 +171,33 @@ export default function Navbar() {
             href="https://wa.me/917251991199"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-parchment hover:text-[#25D366] transition-colors p-2"
+            className="text-parchment hover:text-[#25D366] transition-colors p-1"
             aria-label="WhatsApp"
           >
             <WhatsAppIcon size={18} />
           </a>
+          <Link 
+            href="/contact" 
+            className="ml-1 px-2 py-1.5 border border-golden-highlight text-golden-highlight hover:bg-golden-highlight hover:text-[#141514] font-cinzel text-[10px] font-bold tracking-wider transition-all duration-300 whitespace-nowrap"
+          >
+            BOOK TABLE
+          </Link>
         </div>
       </div>
+
+      {/* Premium Moving Banner - Only show on home page */}
+      {pathname === '/' && (
+        <div className="w-full bg-[#141514] border-t border-b border-golden-highlight/20 py-1.5 sm:py-2 marquee-container">
+          <div className="marquee-content">
+            {[...Array(20)].map((_, i) => (
+              <span key={i} className="px-4 md:px-8 font-cinzel text-[10px] sm:text-xs text-golden-highlight tracking-[0.2em] uppercase font-semibold flex items-center whitespace-nowrap">
+                <Star size={10} className="text-golden-highlight mr-4 md:mr-8" />
+                Avail 20% discount on bookings through website.
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Mobile Menu Dropdown */}
       <AnimatePresence>

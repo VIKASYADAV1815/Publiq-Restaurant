@@ -41,6 +41,28 @@ body::before {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
+  .marquee-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 50s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
   .heading-primary {
     @apply font-playfair text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
   }
